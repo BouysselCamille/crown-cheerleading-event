@@ -7,6 +7,7 @@ from openpyxl.styles import (
 )
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.formatting.rule import FormulaRule
 
 # ── Couleurs ──────────────────────────────────────────────────────────────────
 GOLD        = "D4AF37"
@@ -301,7 +302,7 @@ ws2.row_dimensions[3].height = 20
 merge_style(ws2, "A3:F3", '← Équipe : voir feuille "Accueil"', GRAY, MID_GRAY, size=8)
 
 ws2.row_dimensions[4].height = 28
-for col, label in [(1,"#"),(2,"Nom"),(3,"Prénom"),(4,"Date de naissance\n(AAAA/MM/JJ)"),(5,"Sexe"),(6,"Remarque")]:
+for col, label in [(1,"#"),(2,"Nom"),(3,"Prénom"),(4,"Date de naissance\n(JJ/MM/AAAA)"),(5,"Sexe"),(6,"Remarque")]:
     header_cell(ws2, 4, col, label, bg=GRAY2, fg=GOLD, size=9)
 
 dv_sex = DataValidation(type="list", formula1='"Féminin,Masculin"', showDropDown=False)
@@ -326,7 +327,7 @@ for row in range(5, 40):
     cd.fill = fill(bg)
     cd.font = font(color=WHITE, size=10)
     cd.alignment = align(h="center")
-    cd.number_format = "YYYY/MM/DD"
+    cd.number_format = "DD/MM/YYYY"
     cd.border = Border(bottom=Side(style="hair", color=GRAY2))
     cd.protection = Protection(locked=False)
     cs = ws2.cell(row=row, column=5)

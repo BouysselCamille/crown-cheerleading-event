@@ -163,6 +163,10 @@ export const FAQ = [
         a: 'Il est formellement interdit aux athlètes de se changer dans les gradins ou dans toute zone visible du public. Les équipes ont accès à un vestiare privé avant leur passage en salle d\'échauffement. Ces espaces n\'étant pas surveillés, l\'organisation ne peut être tenue responsable de toute perte ou vol.',
       },
       {
+        q: 'Y a-t-il des règles concernant le bruit à l\'extérieur ?',
+        a: 'Le lieu de la compétition est situé dans un quartier résidentiel. Nous demandons à tous les athlètes, accompagnateurs et supporters de rester attentifs au niveau sonore à l\'extérieur du bâtiment — notamment lors des arrivées, départs et pauses. Merci de limiter les cris, la musique forte et tout bruit excessif par respect pour les riverains.',
+      },
+      {
         q: 'Y a-t-il un dispositif de signalement VSS ?',
         a: 'La compétition s\'engage à garantir un environnement sûr et respectueux. Un système de signalement anonyme des violences sexistes et sexuelles (VSS) est mis en place. Les coordonnées du responsable VSS seront communiquées aux clubs en amont de l\'événement. Tout signalement sera traité avec la plus stricte confidentialité.',
       },

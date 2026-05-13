@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { EVENT } from '../constants/competitionData';
 
 const BLOCK1 = [
   { num: 1, vesIn: '10:02', vesOut: '10:12', depot: '10:17', tapis1: '10:21', tapis2: null, dyn: '10:28', musique: '10:32', competition: '10:45' },
@@ -127,7 +128,7 @@ export function Planning() {
           </Link>
           <div className="flex flex-col sm:flex-row sm:items-end gap-4 justify-between">
             <div>
-              <p className="text-gold font-display font-black text-xs tracking-widest uppercase mb-2">4 Avril 2027</p>
+              <p className="text-gold font-display font-black text-xs tracking-widest uppercase mb-2">{EVENT.dateDisplay}</p>
               <h1 className="font-display font-black text-3xl md:text-4xl text-white">Planning de la compétition</h1>
               <p className="text-gray-500 mt-2 text-sm">43 équipes · Dojo de Paris · 10h00 – 18h00</p>
             </div>

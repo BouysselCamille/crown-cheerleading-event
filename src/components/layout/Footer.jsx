@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import { EVENT, NAV_LINKS } from '../../constants/competitionData';
 
+const EXTRA_LINKS = [
+  { label: 'Récompenses', href: '#awards' },
+  { label: "Plan d'accès", href: '#acces' },
+  { label: 'Partenaires', href: '#sponsors' },
+  { label: 'FAQ', href: '#faq' },
+];
+
 export function Footer() {
   return (
     <footer className="bg-crown-dark border-t border-gold/20 py-12">
@@ -18,8 +25,8 @@ export function Footer() {
           {/* Links */}
           <div>
             <h4 className="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Navigation</h4>
-            <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+              {[...NAV_LINKS, ...EXTRA_LINKS].map((link) => (
                 <li key={link.href}>
                   <a href={link.href} className="text-gray-500 hover:text-gold text-sm transition-colors">
                     {link.label}

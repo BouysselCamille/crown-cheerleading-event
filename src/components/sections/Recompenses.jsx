@@ -50,9 +50,9 @@ export function Recompenses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
-              className="flex items-start gap-4 bg-crown-gray border border-gold/15 rounded-xl px-5 py-4 hover:border-gold/40 transition-colors"
+              className="flex items-center gap-4 bg-crown-gray border border-gold/15 rounded-xl px-5 py-4 hover:border-gold/40 transition-colors"
             >
-              <span className="text-2xl flex-shrink-0 mt-0.5">{r.icon}</span>
+              <span className="text-2xl flex-shrink-0">{r.icon}</span>
               <p className="text-gray-300 text-sm leading-snug">{r.text}</p>
             </motion.div>
           ))}
