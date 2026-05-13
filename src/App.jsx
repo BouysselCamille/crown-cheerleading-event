@@ -15,7 +15,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="/planning" element={<Planning />} />
         </Routes>
       </main>
       <Footer />
