@@ -1,0 +1,90 @@
+import { motion } from 'framer-motion';
+import { Button } from '../ui/Button';
+import { CountdownTimer } from '../ui/CountdownTimer';
+import { EVENT } from '../../constants/competitionData';
+
+export function Hero() {
+  return (
+    <section
+      id="hero"
+      className="relative min-h-screen flex flex-col overflow-hidden bg-crown-black pt-20"
+    >
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-gold/3 blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold/3 blur-3xl" />
+        <div className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: 'linear-gradient(#D4AF37 1px, transparent 1px), linear-gradient(90deg, #D4AF37 1px, transparent 1px)',
+            backgroundSize: '80px 80px',
+          }}
+        />
+      </div>
+
+      {/* Main content — flex-1 so it fills available space */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-16 max-w-5xl mx-auto w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <span className="inline-block text-gold font-display font-bold text-xs tracking-[0.4em] uppercase mb-6 border border-gold/40 px-4 py-2">
+            {EVENT.edition}
+          </span>
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-black leading-none tracking-tighter mb-4"
+        >
+          <span className="text-gold-gradient">CROWN</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="text-gray-400 text-lg md:text-xl font-display tracking-widest uppercase mb-3"
+        >
+          Cheerleading Events
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
+          className="text-gold font-display font-semibold tracking-wider text-base md:text-lg mb-12"
+        >
+          {EVENT.dateDisplay} &nbsp;|&nbsp; {EVENT.city || 'Lieu à confirmer'}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="mb-12"
+        >
+          <p className="text-gray-600 text-xs uppercase tracking-widest font-display mb-4">Compte à rebours</p>
+          <CountdownTimer targetDate={EVENT.date} />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.75 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <Button href="#tickets" variant="primary">
+            Acheter des billets
+          </Button>
+          <Button href="#divisions" variant="outline">
+            Inscrire mon équipe
+          </Button>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

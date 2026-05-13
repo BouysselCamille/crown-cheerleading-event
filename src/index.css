@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-light: #F0D060;
+  --color-gold-dark: #A0820A;
+  --color-crown-black: #0A0A0A;
+  --color-crown-dark: #111111;
+  --color-crown-gray: #1E1E1E;
+
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0A0A0A;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: #D4AF37;
+  }
+
+  .text-gold-light {
+    color: #F0D060;
+  }
+
+  .bg-crown-black {
+    background-color: #0A0A0A;
+  }
+
+  .bg-crown-dark {
+    background-color: #111111;
+  }
+
+  .bg-crown-gray {
+    background-color: #1E1E1E;
+  }
+
+  .border-gold {
+    border-color: #D4AF37;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #A0820A, #D4AF37, #F0D060);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #A0820A, #D4AF37, #F0D060);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

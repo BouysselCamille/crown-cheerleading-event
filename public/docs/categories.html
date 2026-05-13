@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crown Cheerleading Events — Catégories</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F0D060;
+      --gold-dark: #A0820A;
+      --black: #0A0A0A;
+      --dark: #111111;
+      --gray: #1E1E1E;
+    }
+
+    body {
+      background: var(--black);
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--dark);
+      border-bottom: 2px solid var(--gold);
+      padding: 28px 48px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 28pt;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -1px;
+    }
+
+    .header-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7pt;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 2px;
+    }
+
+    .header-right {
+      text-align: right;
+    }
+
+    .doc-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13pt;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .doc-date {
+      font-size: 8pt;
+      color: #6b7280;
+      margin-top: 3px;
+    }
+
+    /* ── Main ── */
+    .main {
+      padding: 36px 48px 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ── Division block ── */
+    .division {
+      margin-bottom: 40px;
+      break-inside: avoid;
+    }
+
+    .division-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .division-bar {
+      width: 4px;
+      height: 28px;
+      background: linear-gradient(180deg, var(--gold-dark), var(--gold-light));
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .division-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16pt;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    /* ── Table ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 10pt;
+    }
+
+    thead tr {
+      background: var(--gray);
+      border-bottom: 1px solid var(--gold);
+    }
+
+    thead th {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(30, 30, 30, 0.5);
+    }
+
+    tbody td {
+      padding: 7px 12px;
+      color: #d1d5db;
+      vertical-align: top;
+    }
+
+    /* ── Notes box ── */
+    .notes {
+      background: var(--gray);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-left: 3px solid var(--gold);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-top: 10px;
+    }
+
+    .notes-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .notes p,
+    .notes li {
+      font-size: 9pt;
+      color: #9ca3af;
+      line-height: 1.55;
+      margin-bottom: 4px;
+    }
+
+    .notes ul {
+      padding-left: 16px;
+      list-style: disc;
+    }
+
+    .notes ul li {
+      margin-bottom: 3px;
+    }
+
+    strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+      margin: 32px 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 14px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer p {
+      font-size: 8pt;
+      color: #4b5563;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body {
+        background: #fff;
+        color: #111;
+      }
+
+      .header {
+        background: #f9f9f9;
+        border-bottom-color: var(--gold);
+      }
+
+      .division-name {
+        color: #111;
+      }
+
+      table thead tr {
+        background: #f0f0f0;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      tbody td {
+        color: #333;
+      }
+
+      .notes {
+        background: #f5f5f5;
+        border-left-color: var(--gold);
+      }
+
+      .notes p,
+      .notes li {
+        color: #444;
+      }
+
+      .footer p {
+        color: #888;
+      }
+
+      .logo {
+        -webkit-text-fill-color: var(--gold-dark);
+      }
+
+      .doc-title {
+        color: var(--gold-dark);
+      }
+
+      @page {
+        margin: 1cm 1.5cm;
+        size: A4;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <div class="logo">CROWN</div>
+      <div class="header-sub">Cheerleading Events</div>
+    </div>
+    <div class="header-right">
+      <div class="doc-title">Catégories de compétition</div>
+      <div class="doc-date">Saison 2026–2027 · Document officiel</div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- ── CHEER NOVICE ── -->
+    <div class="division">
+      <div class="division-header">
+        <div class="division-bar"></div>
+        <div class="division-name">Cheer Novice</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Âge</th>
+            <th>Nombre d'athlètes</th>
+            <th>Niveau</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>U6, U8</td>
+            <td>5 – 30</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notes">
+        <div class="notes-title">Règles supplémentaires</div>
+        <p>Les équipes seront évaluées uniquement avec un <strong>système de classement</strong> (Remarquable,
+          Excellent, Supérieur) et ne seront pas notées en compétition directe contre les autres équipes.</p>
+        <p style="margin-top:6px">Les équipes Novice suivront les règles du niveau IASF correspondant, avec les ajouts
+          suivants :</p>
+        <ul style="margin-top:6px">
+          <li>Les éléments de tumbling sont autorisés et doivent suivre les règles du niveau correspondant, mais ils ne
+            sont ni notés ni obligatoires.</li>
+        </ul>
+
+        <p style="margin-top:10px"><strong>U6 Novice uniquement</strong></p>
+        <ul>
+          <li>Aucun stunt n'est autorisé (toss, stunts et pyramides).</li>
+          <li>Seuls deux éléments tumbling sont autorisés : roue et roulade avant. Les équilibres en handstand,
+            ponts/backbends, etc. ne sont pas autorisés.</li>
+        </ul>
+
+        <p style="margin-top:10px"><strong>U8 Novice</strong></p>
+        <ul>
+          <li>Le tumbling est autorisé et suit les règles du niveau correspondant, mais n'est ni noté ni obligatoire.
+          </li>
+          <li><strong>STUNTS B1</strong> — Les stunts à deux jambes ne peuvent pas passer immédiatement par une position
+            extended.</li>
+          <li><strong>STUNTS B1</strong> — Les stunts sur une jambe sont autorisés uniquement à hauteur de la taille.
+            Les walk-up shoulder stands sont interdits.</li>
+          <li><strong>STUNTS D1</strong> — Jusqu'à ¼ de tour (twist) est autorisé. Les rebound ½ turn to prone, wrap
+            around, et départs avec ½ twist soutenus uniquement à la taille sont interdits.</li>
+          <li><strong>STUNTS C1</strong> — Les transitions vers une position prone sont interdites.</li>
+          <li><strong>DISMOUNTS B1</strong> — Les straight pop down dismounts sont interdits.</li>
+          <li><strong>PYRAMIDES</strong> — Doivent suivre les règles IASF Cheer Level 1, ainsi que les règles
+            supplémentaires sur les stunts et dismounts mentionnées ci-dessus.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ── CHEER PREP ── -->
+    <div class="division">
+      <div class="division-header">
+        <div class="division-bar"></div>
+        <div class="division-name">Cheer Prep</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Âge</th>
+            <th>Nombre d'athlètes</th>
+            <th>Niveau</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>U12, U16, U18, Open</td>
+            <td>5 – 30</td>
+            <td>1, 2, 2.1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notes">
+        <div class="notes-title">Règles supplémentaires</div>
+        <ul>
+          <li>Aucun toss n'est autorisé dans ces divisions (inclut les toss appelés « Sponge », load in ou smoosh).
+            Toutes les cradles à hauteur de la taille sont interdites.</li>
+          <li><strong>Prep Level 2.1</strong> suit les règles de building du niveau 2 et les règles de tumbling du
+            niveau 1.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ── CHEER ALL STAR ── -->
+    <div class="division">
+      <div class="division-header">
+        <div class="division-bar"></div>
+        <div class="division-name">Cheer All Star</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Âge</th>
+            <th>Nb. hommes min.</th>
+            <th>Nombre d'athlètes</th>
+            <th>Niveau</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4"
+              style="color:var(--gold);font-family:'Montserrat',sans-serif;font-size:8pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px 4px">
+              Tumbling</td>
+          </tr>
+          <tr>
+            <td>U12</td>
+            <td>Libre</td>
+            <td>10 – 30</td>
+            <td>1, 2</td>
+          </tr>
+          <tr>
+            <td>U16</td>
+            <td>Libre</td>
+            <td>10 – 30</td>
+            <td>1, 2, 3</td>
+          </tr>
+          <tr>
+            <td>U18</td>
+            <td>Libre</td>
+            <td>10 – 30</td>
+            <td>1, 2, 3, 4</td>
+          </tr>
+          <tr>
+            <td>Open</td>
+            <td>Libre</td>
+            <td>10 – 30</td>
+            <td>1, 2</td>
+          </tr>
+          <tr>
+            <td>Open All Girl</td>
+            <td>Aucun</td>
+            <td>10 – 30</td>
+            <td>3, 4, 5, 6, 7</td>
+          </tr>
+          <tr>
+            <td>Open Coed</td>
+            <td>1+</td>
+            <td>10 – 30</td>
+            <td>3, 4, 5, 6, 7</td>
+          </tr>
+          <tr>
+            <td colspan="4"
+              style="color:var(--gold);font-family:'Montserrat',sans-serif;font-size:8pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px 4px">
+              Non Tumbling</td>
+          </tr>
+          <tr>
+            <td>Open NT</td>
+            <td>Libre</td>
+            <td>10 – 30</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Open All Girl NT</td>
+            <td>Aucun</td>
+            <td>10 – 30</td>
+            <td>3, 4, 5, 6, 7</td>
+          </tr>
+          <tr>
+            <td>Open Coed NT</td>
+            <td>1+</td>
+            <td>10 – 30</td>
+            <td>3, 4, 5, 6, 7</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notes">
+        <div class="notes-title">Règles supplémentaires</div>
+        <ul>
+          <li>Les athlètes de niveau 7 doivent être nés en <strong>2010 ou avant</strong>.</li>
+          <li>Des divisions pourront être séparées en <strong>Small vs Large</strong> (point de séparation déterminé en
+            fonction du nombre d'athlètes à l'inscription et non le jour-J), ou <strong>All Girl vs Coed</strong>, dans
+            le cas où cela laisse au minimum 2 équipes par division. Ces séparations restent à la discrétion de l'équipe
+            organisatrice.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ── UNIVERSITAIRE ── -->
+    <div class="division">
+      <div class="division-header">
+        <div class="division-bar"></div>
+        <div class="division-name">Universitaire</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nb. hommes min.</th>
+            <th>Nombre d'athlètes</th>
+            <th>Niveau</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Libre</td>
+            <td>10 – 30</td>
+            <td>2, 3</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notes">
+        <div class="notes-title">Règles supplémentaires</div>
+        <ul>
+          <li><strong>90 %</strong> de l'équipe doit être composée d'étudiants actuellement inscrits dans l'université
+            mentionnée.</li>
+          <li><strong>10 %</strong> de l'équipe peuvent être d'anciens étudiants, à condition d'avoir obtenu leur
+            diplôme de cette université au cours des <strong>4 dernières années</strong>.</li>
+          <li>Une preuve d'éligibilité universitaire est requise : carte étudiante et/ou preuve d'obtention du diplôme
+            dans une période de 4 ans précédant la date de l'événement.</li>
+          <li>Les équipes universitaires sont notées sur la rubrique <strong>University</strong> (Voir United Scoring ›
+            United Kingdom › University).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── RÈGLEMENT IASF ── -->
+    <hr class="divider" />
+    <div class="division" style="text-align:center; padding: 12px 0 4px;">
+      <p style="font-size:9pt; color:#6b7280; margin-bottom:8px;">Scoring</p>
+      <a href="https://www.iasfworlds.net/cheer/" target="_blank"
+        style="color:var(--gold); font-family:'Montserrat',sans-serif; font-weight:700; font-size:10pt; text-decoration:underline; text-underline-offset:3px; letter-spacing:0.03em;">
+        https://www.unitedscoringpartners.com/international/
+      </a>
+    </div>
+    <div class="division" style="text-align:center; padding: 12px 0 4px;">
+      <p style="font-size:9pt; color:#6b7280; margin-bottom:8px;">Règlement officiel applicable</p>
+      <a href="https://www.iasfworlds.net/cheer/" target="_blank"
+        style="color:var(--gold); font-family:'Montserrat',sans-serif; font-weight:700; font-size:10pt; text-decoration:underline; text-underline-offset:3px; letter-spacing:0.03em;">
+        https://www.iasfworlds.net/cheer/
+      </a>
+    </div>
+
+  </div><!-- /main -->
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; Crown Cheerleading Events · Saison 2026–2027</p>
+    <p>Document non contractuel · Susceptible d'évoluer</p>
+  </div>
+
+</body>
+
+</html>
