@@ -4,7 +4,6 @@ import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { PolitiqueConfidentialite } from './pages/PolitiqueConfidentialite';
 import { MentionsLegales } from './pages/MentionsLegales';
-import { Planning } from './pages/Planning';
 
 function App() {
   return (
