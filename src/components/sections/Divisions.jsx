@@ -69,7 +69,7 @@ function PricingCard({ plan, index }) {
 
 export function Divisions() {
   return (
-    <section id="divisions" className="py-24 bg-crown-black">
+    <section id="tarifs" className="py-24 bg-crown-black">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export function Divisions() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4"
+          className="mt-16"
         >
           <a
             href="/docs/categories.html"
@@ -143,23 +143,6 @@ export function Divisions() {
             <div>
               <p className="text-white font-display font-bold text-sm group-hover:text-gold transition-colors">Catégories de compétition</p>
               <p className="text-gray-500 text-xs mt-0.5">Consulter le document</p>
-            </div>
-          </a>
-
-          <a
-            href="/docs/inscription-equipe.xlsx"
-            download="Crown_CE_Inscription_Equipe.xlsx"
-            className="flex items-center gap-4 border border-gold/30 bg-crown-gray hover:border-gold hover:bg-crown-black rounded-xl px-6 py-5 transition-all group"
-          >
-            <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
-              <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-white font-display font-bold text-sm group-hover:text-gold transition-colors">Dossier d'inscription</p>
-              <p className="text-gray-500 text-xs mt-0.5">Télécharger le fichier Excel (.xlsx)</p>
             </div>
           </a>
         </motion.div>

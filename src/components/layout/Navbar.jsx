@@ -1,14 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
-
-const NAV_LINKS = [
-  { label: 'La compétition', href: '#about' },
-  { label: 'Galerie', href: '#gallery' },
-  { label: 'Programme', href: '#schedule' },
-  { label: 'Divisions', href: '#divisions' },
-  { label: 'Contact', href: '#contact' },
-];
+import { NAV_LINKS } from '../../constants/competitionData';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

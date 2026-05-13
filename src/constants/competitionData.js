@@ -1,3 +1,12 @@
+export const NAV_LINKS = [
+  { label: 'La compétition', href: '#about' },
+  { label: 'Galerie', href: '#gallery' },
+  { label: 'Programme', href: '#schedule' },
+  { label: 'Tarifs', href: '#tarifs' },
+  { label: 'Inscription', href: '#inscription' },
+  { label: 'Contact', href: '#contact' },
+];
+
 export const EVENT = {
   name: 'Crown Cheerleading Events',
   edition: '1ère édition',
@@ -52,8 +61,12 @@ export const FAQ = [
         a: 'Les modes de paiement sont :\n• Par chèque à l\'ordre de Crown Cheerleading Events\n• Par virement bancaire\n\nAucune inscription ne sera validée sans acompte de 30 %. Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 % du montant total. Les 30 % restants (acompte) sont retenus à titre de frais d\'annulation.',
       },
       {
+        q: 'Quand est-ce que mon inscription est confirmée ?',
+        a: 'En raison du fort nombre de demandes et des places limitées, la pré-inscription de votre équipe sera confirmée par mail accompagné de la facture d\'inscription.\n\nPour garantir votre place, l\'acompte doit être réglé dans les plus brefs délais. Sans paiement, l\'équipe risque de perdre sa place au profit des équipes en liste d\'attente.',
+      },
+      {
         q: 'Que se passe-t-il en cas de défaut de paiement ?',
-        a: 'En cas de défaut de paiement, le tarif de l\'inscription changera automatiquement pour le tarif suivant, et ainsi de suite jusqu\'à ce que 100 % de la facture soit acquittée.',
+        a: 'L\'équipe doit régler le solde restant (70 % du montant total) avant la fin de la période tarifaire en cours. Sans règlement dans ce délai, l\'inscription basculera automatiquement au tarif suivant.\n\nTout retard de paiement après la date limite entraîne une majoration de 20 % ou l\'annulation de la participation de l\'équipe, sans remboursement possible.',
       },
       {
         q: 'Que se passe-t-il si l\'événement est annulé ?',

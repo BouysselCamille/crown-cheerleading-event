@@ -3,6 +3,7 @@ import { About } from '../components/sections/About';
 import { Divisions } from '../components/sections/Divisions';
 import { Schedule } from '../components/sections/Schedule';
 import { Tickets } from '../components/sections/Tickets';
+import { Inscription } from '../components/sections/Inscription';
 import { Gallery } from '../components/sections/Gallery';
 import { Sponsors } from '../components/sections/Sponsors';
 import { FAQ } from '../components/sections/FAQ';
@@ -18,6 +19,7 @@ export function Home() {
       <Recompenses />
       <Schedule />
       <Divisions />
+      <Inscription />
       <Tickets />
       <FAQ />
       <Contact />

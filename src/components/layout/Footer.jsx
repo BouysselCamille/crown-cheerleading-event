@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { EVENT } from '../../constants/competitionData';
+import { EVENT, NAV_LINKS } from '../../constants/competitionData';
 
 export function Footer() {
   return (
@@ -19,10 +19,10 @@ export function Footer() {
           <div>
             <h4 className="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Navigation</h4>
             <ul className="space-y-2">
-              {['#about', '#gallery', '#awards', '#schedule', '#divisions', '#tickets', '#contact'].map((href) => (
-                <li key={href}>
-                  <a href={href} className="text-gray-500 hover:text-gold text-sm transition-colors capitalize">
-                    {href.replace('#', '').charAt(0).toUpperCase() + href.slice(2)}
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="text-gray-500 hover:text-gold text-sm transition-colors">
+                    {link.label}
                   </a>
                 </li>
               ))}

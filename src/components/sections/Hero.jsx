@@ -80,7 +80,7 @@ export function Hero() {
           <Button href="#tickets" variant="primary">
             Acheter des billets
           </Button>
-          <Button href="#divisions" variant="outline">
+          <Button href="#inscription" variant="outline">
             Inscrire mon équipe
           </Button>
         </motion.div>
