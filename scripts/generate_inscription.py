@@ -141,7 +141,7 @@ cd = input_cell(ws1, 8, 3)
 cd.alignment = align(h="left")
 ws1.merge_cells("C8:G8")
 dv_div = DataValidation(type="list",
-    formula1="Listes!$A$1:$A$49",
+    formula1="Listes!$A$1:$A$45",
     showDropDown=False, showErrorMessage=True,
     error="Choisissez une division dans la liste", errorTitle="Valeur invalide")
 ws1.add_data_validation(dv_div)
@@ -383,16 +383,12 @@ DIVISIONS = [
     "U8 Novice L1",
     "U12 Prep L1",
     "U12 Prep L2.1",
-    "U12 Prep L2",
     "U16 Prep L1",
     "U16 Prep L2.1",
-    "U16 Prep L2",
     "U18 Prep L1",
     "U18 Prep L2.1",
-    "U18 Prep L2",
     "Open Prep L1",
     "Open Prep L2.1",
-    "Open Prep L2",
     "U12 Allstar L1",
     "U12 Allstar L2",
     "U16 Allstar L1",
