@@ -131,74 +131,21 @@ for row, label in [(5, "Nom de l'équipe"), (6, "Nom du club")]:
     input_cell(ws1, row, 3)
     ws1.merge_cells(f"C{row}:G{row}")
 
-# ── Ligne 7 : Labels Division | Type | Âge | Niveau ──────────────────────────
-ws1.row_dimensions[7].height = 18
-# B7 = label "Division" (résultat calculé)
-c = ws1.cell(row=7, column=2, value="Division")
-c.fill = fill(GRAY)
-c.font = font(color=MID_GRAY, size=9)
-c.alignment = align()
-c.protection = Protection(locked=True)
-# C7 = sous-label "Type"
-c = ws1.cell(row=7, column=3, value="Type")
-c.fill = fill(GRAY)
-c.font = font(color=MID_GRAY, size=8)
-c.alignment = align(h="center")
-c.protection = Protection(locked=True)
-# E7 = sous-label "Âge"
-c = ws1.cell(row=7, column=5, value="Âge")
-c.fill = fill(GRAY)
-c.font = font(color=MID_GRAY, size=8)
-c.alignment = align(h="center")
-c.protection = Protection(locked=True)
-# G7 = sous-label "Niveau"
-c = ws1.cell(row=7, column=7, value="Niveau")
-c.fill = fill(GRAY)
-c.font = font(color=MID_GRAY, size=8)
-c.alignment = align(h="center")
-c.protection = Protection(locked=True)
+# ── Ligne 7 : spacer ─────────────────────────────────────────────────────────
+ws1.row_dimensions[7].height = 8
 
-# ── Ligne 8 : Division (concat) + dropdowns Type / Âge / Niveau ──────────────
+# ── Ligne 8 : Division — liste déroulante unique ──────────────────────────────
 ws1.row_dimensions[8].height = 26
-
-# B8 : Division = concaténation calculée (verrouillée)
-cb = ws1.cell(row=8, column=2,
-    value='=IFERROR(TRIM(C8&IF(E8<>"", " "&E8,"")&IF(G8<>"", " L"&G8,""))&IF(C8="","",""),"" )')
-cb.fill = fill(GRAY2)
-cb.font = font(color=GOLD_DARK, size=10, bold=True)
-cb.alignment = align()
-cb.border = Border(bottom=Side(style="thin", color=GOLD_DARK))
-cb.protection = Protection(locked=True)
-
-# C8 : Type dropdown (éditable)
-ct = input_cell(ws1, 8, 3)
-ct.alignment = align(h="center")
-dv_type = DataValidation(type="list",
-    formula1='"AllStar,Novice,Prep,Universitaire,Démo"',
+label_cell(ws1, 8, 2, "Division", fg=LIGHT_GRAY, size=10)
+cd = input_cell(ws1, 8, 3)
+cd.alignment = align(h="left")
+ws1.merge_cells("C8:G8")
+dv_div = DataValidation(type="list",
+    formula1="Listes!$A$1:$A$49",
     showDropDown=False, showErrorMessage=True,
-    error="Choisissez un type", errorTitle="Valeur invalide")
-ws1.add_data_validation(dv_type)
-dv_type.add(ct)
-
-# E8 : Âge dropdown (éditable)
-ca = input_cell(ws1, 8, 5)
-ca.alignment = align(h="center")
-dv_age = DataValidation(type="list",
-    formula1='"U6,U8,U12,U16,U18,Open"',
-    showDropDown=False, showErrorMessage=True,
-    error="Choisissez un âge", errorTitle="Valeur invalide")
-ws1.add_data_validation(dv_age)
-dv_age.add(ca)
-
-# G8 : Niveau dropdown (éditable)
-cn = input_cell(ws1, 8, 7)
-cn.alignment = align(h="center")
-dv_niv = DataValidation(type="list",
-    formula1='"1,2,2.1,3,4,5,6,7,NT3,NT4,NT5,NT6,NT7"',
-    showDropDown=False, showErrorMessage=True,
-    error="Choisissez un niveau", errorTitle="Valeur invalide")
-ws1.add_data_validation(dv_niv)
-dv_niv.add(cn)
+    error="Choisissez une division dans la liste", errorTitle="Valeur invalide")
+ws1.add_data_validation(dv_div)
+dv_div.add(cd)
 
 ws1.row_dimensions[9].height = 10
 
@@ -224,7 +171,7 @@ ws1.row_dimensions[16].height = 10
 ws1.row_dimensions[17].height = 26
 merge_style(ws1, "A17:B17", "  Prix par athlète (€)", GRAY, MID_GRAY, size=9)
 cprix = ws1["C17"]
-cprix.value = '=IF(C8="Novice",40,IF(C8="Démo",ROUND(50*0.75,2),IF(OR(C8="AllStar",C8="Universitaire",C8="Prep"),50,"")))'
+cprix.value = '=IF(C8="Démo",37.5,IF(ISNUMBER(SEARCH("Novice",C8)),40,IF(OR(ISNUMBER(SEARCH("Allstar",C8)),ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),50,IF(C8<>"","50",""))))'
 cprix.fill = fill(GRAY2)
 cprix.font = font(color=GOLD_DARK, size=11, bold=True)
 cprix.alignment = align(h="center")
@@ -232,7 +179,7 @@ cprix.border = Border(bottom=Side(style="thin", color=GOLD_DARK))
 cprix.protection = Protection(locked=True)
 
 cnote17 = ws1.cell(row=17, column=4,
-    value='=IF(C8="Démo","Démo : 75% x 50 = 37,50 €",IF(C8="Novice","Novice : 40 €",IF(OR(C8="AllStar",C8="Universitaire",C8="Prep"),"AllStar/Univ./Prep : 50 €","← sélectionnez un type")))')
+    value='=IF(C8="Démo","Démo : 37,50 €",IF(ISNUMBER(SEARCH("Novice",C8)),"Novice : 40 €",IF(OR(ISNUMBER(SEARCH("Allstar",C8)),ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),"AllStar / Prep / Univ. : 50 €",IF(C8<>"","50 €","← sélectionnez une division"))))')
 cnote17.fill = fill(GRAY2)
 cnote17.font = font(color=MID_GRAY, size=8, italic=True)
 cnote17.alignment = align(h="left")
@@ -423,6 +370,67 @@ merge_style(ws3, "A26:E26",
 ws3.protection.sheet = True
 ws3.protection.password = ""
 ws3.protection.enable()
+
+# ══════════════════════════════════════════════════════════════════════════════
+# FEUILLE CACHÉE — Listes (source des dropdowns)
+# ══════════════════════════════════════════════════════════════════════════════
+ws_lists = wb.create_sheet("Listes")
+ws_lists.sheet_state = "hidden"
+
+DIVISIONS = [
+    "Démo",
+    "U6 Novice L1",
+    "U8 Novice L1",
+    "U12 Prep L1",
+    "U12 Prep L2.1",
+    "U12 Prep L2",
+    "U16 Prep L1",
+    "U16 Prep L2.1",
+    "U16 Prep L2",
+    "U18 Prep L1",
+    "U18 Prep L2.1",
+    "U18 Prep L2",
+    "Open Prep L1",
+    "Open Prep L2.1",
+    "Open Prep L2",
+    "U12 Allstar L1",
+    "U12 Allstar L2",
+    "U16 Allstar L1",
+    "U16 Allstar L2",
+    "U16 Allstar L3",
+    "U18 Allstar L1",
+    "U18 Allstar L2",
+    "U18 Allstar L3",
+    "U18 Allstar L4",
+    "Open Allstar L1",
+    "Open Allstar L2",
+    "Open AG Allstar L3",
+    "Open AG Allstar L4",
+    "Open AG Allstar L5",
+    "Open AG Allstar L6",
+    "Open AG Allstar L7",
+    "Open Coed Allstar L3",
+    "Open Coed Allstar L4",
+    "Open Coed Allstar L5",
+    "Open Coed Allstar L6",
+    "Open Coed Allstar L7",
+    "Open NT Allstar L2",
+    "Open AG NT Allstar L3",
+    "Open AG NT Allstar L4",
+    "Open AG NT Allstar L5",
+    "Open AG NT Allstar L6",
+    "Open AG NT Allstar L7",
+    "Open Coed NT Allstar L3",
+    "Open Coed NT Allstar L4",
+    "Open Coed NT Allstar L5",
+    "Open Coed NT Allstar L6",
+    "Open Coed NT Allstar L7",
+    "Universitaire L2",
+    "Universitaire L3",
+]
+
+for i, div in enumerate(DIVISIONS, start=1):
+    ws_lists.cell(row=i, column=1, value=div)
 
 # ── Sauvegarde ────────────────────────────────────────────────────────────────
 output = "/Users/camille.bouyssel/Cheer/crown-cheerleading-event/public/docs/inscription-equipe.xlsx"
