@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
-import { NAV_LINKS } from '../../constants/competitionData';
+import { useTranslation } from '../../i18n/index.jsx';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, switchLang, t } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -31,7 +31,7 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <ul className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
+          {t.nav.links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
@@ -43,11 +43,27 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA + Lang selector */}
         <div className="hidden lg:flex items-center gap-3">
           <Button href="#tickets" variant="primary" className="text-xs px-6 py-3">
-            Billetterie
+            {t.nav.tickets}
           </Button>
+          <div className="flex items-center gap-1 ml-1">
+            <button
+              onClick={() => switchLang('fr')}
+              title="Français"
+              className={`text-lg transition-opacity ${lang === 'fr' ? 'opacity-100' : 'opacity-35 hover:opacity-70'}`}
+            >
+              🇫🇷
+            </button>
+            <button
+              onClick={() => switchLang('en')}
+              title="English"
+              className={`text-lg transition-opacity ${lang === 'en' ? 'opacity-100' : 'opacity-35 hover:opacity-70'}`}
+            >
+              🇬🇧
+            </button>
+          </div>
         </div>
 
         {/* Mobile burger */}
@@ -66,7 +82,7 @@ export function Navbar() {
       {menuOpen && (
         <div className="lg:hidden bg-crown-dark border-t border-gold/20">
           <ul className="flex flex-col py-4">
-            {NAV_LINKS.map((link) => (
+            {t.nav.links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
@@ -79,8 +95,24 @@ export function Navbar() {
             ))}
             <li className="px-6 pt-3">
               <Button href="#tickets" variant="primary" className="w-full text-xs py-3">
-                Billetterie
+                {t.nav.tickets}
               </Button>
+            </li>
+            <li className="px-6 pt-4 pb-2 flex items-center gap-3">
+              <button
+                onClick={() => switchLang('fr')}
+                title="Français"
+                className={`text-xl transition-opacity ${lang === 'fr' ? 'opacity-100' : 'opacity-35'}`}
+              >
+                🇫🇷
+              </button>
+              <button
+                onClick={() => switchLang('en')}
+                title="English"
+                className={`text-xl transition-opacity ${lang === 'en' ? 'opacity-100' : 'opacity-35'}`}
+              >
+                🇬🇧
+              </button>
             </li>
           </ul>
         </div>

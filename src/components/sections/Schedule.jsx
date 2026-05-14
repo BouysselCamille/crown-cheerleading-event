@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
-import { SCHEDULE, EVENT } from '../../constants/competitionData';
+import { useTranslation } from '../../i18n/index.jsx';
 
 export function Schedule() {
+  const { t } = useTranslation();
+
   return (
     <section id="schedule" className="py-24 bg-crown-dark">
       <div className="max-w-4xl mx-auto px-6">
@@ -13,9 +15,9 @@ export function Schedule() {
           className="text-center mb-16"
         >
           <SectionTitle
-            label="Déroulé de la journée"
-            title={<>Le <span className="text-gold-gradient">programme</span></>}
-            subtitle={`${EVENT.dateDisplay} — horaires indicatifs, susceptibles d'évoluer.`}
+            label={t.schedule.label}
+            title={<>{t.schedule.title.split(' ').slice(0, -1).join(' ')} <span className="text-gold-gradient">{t.schedule.title.split(' ').slice(-1)[0]}</span></>}
+            subtitle={`${t.hero.dateDisplay} ${t.schedule.subtitleSuffix}`}
             center
           />
         </motion.div>
@@ -25,7 +27,7 @@ export function Schedule() {
           <div className="absolute left-16 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gold/60 via-gold/20 to-transparent" />
 
           <div className="space-y-0">
-            {SCHEDULE.map((item, index) => (
+            {t.schedule.items.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

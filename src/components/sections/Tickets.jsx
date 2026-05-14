@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
 import { EVENT } from '../../constants/competitionData';
+import { useTranslation } from '../../i18n/index.jsx';
 
 export function Tickets() {
+  const { t } = useTranslation();
   const hasSlug = Boolean(EVENT.helloassoSlug);
   const widgetUrl = hasSlug
     ? `https://www.helloasso.com${EVENT.helloassoSlug}/widget`
@@ -18,9 +20,9 @@ export function Tickets() {
           className="text-center mb-12"
         >
           <SectionTitle
-            label="Billetterie"
-            title={<>Réservez vos <span className="text-gold-gradient">places</span></>}
-            subtitle="Paiement sécurisé via HelloAsso."
+            label={t.tickets.label}
+            title={<>{t.tickets.title1} <span className="text-gold-gradient">{t.tickets.title2}</span></>}
+            subtitle={t.tickets.subtitle}
             center
           />
         </motion.div>
@@ -46,7 +48,7 @@ export function Tickets() {
                     d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
                 </svg>
               </div>
-              <h3 className="text-white font-display font-bold text-xl mb-3">La billetterie sera ouverte au 10 septembre 2026</h3>
+              <h3 className="text-white font-display font-bold text-xl mb-3">{t.tickets.soon}</h3>
             </div>
           )}
         </motion.div>

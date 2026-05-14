@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
 import { SPONSORS } from '../../constants/competitionData';
+import { useTranslation } from '../../i18n/index.jsx';
 
 const TIER_STYLES = {
-  gold:   { border: 'border-gold/50',         text: 'text-gold',       label: 'Or' },
-  silver: { border: 'border-gray-400/30',      text: 'text-gray-400',   label: 'Argent' },
-  bronze: { border: 'border-amber-700/30',     text: 'text-amber-700',  label: 'Bronze' },
+  gold: { border: 'border-gold/50', text: 'text-gold' },
+  silver: { border: 'border-gray-400/30', text: 'text-gray-400' },
+  bronze: { border: 'border-amber-700/30', text: 'text-amber-700' },
 };
 
 function SponsorCard({ name, tier, logo }) {
@@ -21,7 +22,8 @@ function SponsorCard({ name, tier, logo }) {
 }
 
 export function Sponsors() {
-  const gold   = SPONSORS.filter(s => s.tier === 'gold');
+  const { t } = useTranslation();
+  const gold = SPONSORS.filter(s => s.tier === 'gold');
   const silver = SPONSORS.filter(s => s.tier === 'silver');
   const bronze = SPONSORS.filter(s => s.tier === 'bronze');
 
@@ -35,14 +37,14 @@ export function Sponsors() {
           className="text-center mb-16"
         >
           <SectionTitle
-            label="Partenaires"
-            title={<>Nos <span className="text-gold-gradient">partenaires</span></>}
-            subtitle="Ils nous font confiance et rendent cet événement possible."
+            label={t.sponsors.label}
+            title={<>{t.sponsors.title1} <span className="text-gold-gradient">{t.sponsors.title2}</span></>}
+            subtitle={t.sponsors.subtitle}
             center
           />
         </motion.div>
 
-        {/* Or */}
+        {/* Or / Gold */}
         {gold.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,14 +52,14 @@ export function Sponsors() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <p className="text-gold text-xs font-display font-bold tracking-widest uppercase text-center mb-5">Or</p>
+            <p className="text-gold text-xs font-display font-bold tracking-widest uppercase text-center mb-5">{t.sponsors.tiers.gold}</p>
             <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
               {gold.map(s => <SponsorCard key={s.name} {...s} />)}
             </div>
           </motion.div>
         )}
 
-        {/* Argent */}
+        {/* Argent / Silver */}
         {silver.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -65,7 +67,7 @@ export function Sponsors() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <p className="text-gray-400 text-xs font-display font-bold tracking-widest uppercase text-center mb-5">Argent</p>
+            <p className="text-gray-400 text-xs font-display font-bold tracking-widest uppercase text-center mb-5">{t.sponsors.tiers.silver}</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
               {silver.map(s => <SponsorCard key={s.name} {...s} />)}
             </div>
@@ -80,7 +82,7 @@ export function Sponsors() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <p className="text-amber-700 text-xs font-display font-bold tracking-widest uppercase text-center mb-5">Bronze</p>
+            <p className="text-amber-700 text-xs font-display font-bold tracking-widest uppercase text-center mb-5">{t.sponsors.tiers.bronze}</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               {bronze.map(s => <SponsorCard key={s.name} {...s} />)}
             </div>
@@ -97,7 +99,7 @@ export function Sponsors() {
             href="#contact"
             className="text-gold/70 hover:text-gold text-sm font-display font-semibold transition-colors border-b border-gold/30 hover:border-gold pb-1"
           >
-            Devenir partenaire
+            {t.sponsors.become}
           </a>
         </motion.div>
       </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
-import { FAQ as FAQ_DATA } from '../../constants/competitionData';
+import { useTranslation } from '../../i18n/index.jsx';
 
 function FAQItem({ item, index }) {
   const [open, setOpen] = useState(false);
@@ -58,6 +58,7 @@ function FAQItem({ item, index }) {
 
 export function FAQ() {
   const [activeTab, setActiveTab] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <section id="faq" className="py-24 bg-crown-dark">
@@ -69,23 +70,22 @@ export function FAQ() {
           className="text-center mb-12"
         >
           <SectionTitle
-            label="FAQ"
-            title={<>Questions <span className="text-gold-gradient">fréquentes</span></>}
+            label={t.faq.label}
+            title={<>{t.faq.title1} <span className="text-gold-gradient">{t.faq.title2}</span></>}
             center
           />
         </motion.div>
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-2 justify-center mb-8">
-          {FAQ_DATA.map((group, i) => (
+          {t.faq.data.map((group, i) => (
             <button
               key={group.category}
               onClick={() => setActiveTab(i)}
-              className={`px-4 py-2 rounded-full text-xs font-display font-bold uppercase tracking-wider transition-all duration-200 ${
-                activeTab === i
+              className={`px-4 py-2 rounded-full text-xs font-display font-bold uppercase tracking-wider transition-all duration-200 ${activeTab === i
                   ? 'gold-gradient text-black'
                   : 'border border-gold/30 text-gray-400 hover:border-gold/60 hover:text-white'
-              }`}
+                }`}
             >
               {group.category}
             </button>
@@ -102,7 +102,7 @@ export function FAQ() {
             transition={{ duration: 0.2 }}
             className="space-y-2"
           >
-            {FAQ_DATA[activeTab].items.map((item, index) => (
+            {t.faq.data[activeTab].items.map((item, index) => (
               <FAQItem key={item.q} item={item} index={index} />
             ))}
           </motion.div>

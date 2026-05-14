@@ -2,8 +2,11 @@ import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
 import { CountdownTimer } from '../ui/CountdownTimer';
 import { EVENT } from '../../constants/competitionData';
+import { useTranslation } from '../../i18n/index.jsx';
 
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="hero"
@@ -30,7 +33,7 @@ export function Hero() {
           transition={{ duration: 0.7 }}
         >
           <span className="inline-block text-gold font-display font-bold text-xs tracking-[0.4em] uppercase mb-6 border border-gold/40 px-4 py-2">
-            {EVENT.edition}
+            {t.hero.edition}
           </span>
         </motion.div>
 
@@ -58,7 +61,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="text-gold font-display font-semibold tracking-wider text-base md:text-lg mb-12"
         >
-          {EVENT.dateDisplay} &nbsp;|&nbsp; {EVENT.city || 'Lieu à confirmer'}
+          {t.hero.dateDisplay} &nbsp;|&nbsp; {t.hero.city || t.hero.locationFallback}
         </motion.p>
 
         <motion.div
@@ -67,7 +70,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="mb-12"
         >
-          <p className="text-gray-600 text-xs uppercase tracking-widest font-display mb-4">Compte à rebours</p>
+          <p className="text-gray-600 text-xs uppercase tracking-widest font-display mb-4">{t.hero.countdown}</p>
           <CountdownTimer targetDate={EVENT.date} />
         </motion.div>
 
@@ -78,10 +81,10 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button href="#tickets" variant="primary">
-            Acheter des billets
+            {t.hero.buyTickets}
           </Button>
           <Button href="#inscription" variant="outline">
-            Inscrire mon équipe
+            {t.hero.registerTeam}
           </Button>
         </motion.div>
       </div>

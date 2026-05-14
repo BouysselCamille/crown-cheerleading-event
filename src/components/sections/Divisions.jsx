@@ -1,33 +1,8 @@
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
-import { Button } from '../ui/Button';
+import { useTranslation } from '../../i18n/index.jsx';
 
-const PRICING = [
-  {
-    label: 'Early Bird',
-    deadline: 'jusqu\'au 11 Déc 2026',
-    badge: 'Meilleur tarif',
-    rows: [
-      { cat: 'Allstar / Universitaire / Prep', price: '50,00 EUR' },
-      { cat: 'Novice', price: '40,00 EUR' },
-      { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
-    ],
-    highlight: true,
-  },
-  {
-    label: 'Entrée Générale',
-    deadline: 'jusqu\'au 12 Fév 2027',
-    badge: null,
-    rows: [
-      { cat: 'Allstar / Universitaire / Prep', price: '55,00 EUR' },
-      { cat: 'Novice', price: '55,00 EUR' },
-      { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
-    ],
-    highlight: false,
-  },
-];
-
-function PricingCard({ plan, index }) {
+function PricingCard({ plan, perAthlete, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -50,7 +25,7 @@ function PricingCard({ plan, index }) {
           {plan.label}
         </h3>
         <p className="text-gray-500 text-sm font-display">{plan.deadline}</p>
-        <p className="text-gray-600 text-xs font-display mt-1">Tarif par athlète</p>
+        <p className="text-gray-600 text-xs font-display mt-1">{perAthlete}</p>
       </div>
 
       <div className="px-8 py-6 space-y-5">
@@ -68,6 +43,8 @@ function PricingCard({ plan, index }) {
 }
 
 export function Divisions() {
+  const { t } = useTranslation();
+
   return (
     <section id="tarifs" className="py-24 bg-crown-black">
       <div className="max-w-4xl mx-auto px-6">
@@ -78,16 +55,16 @@ export function Divisions() {
           className="text-center mb-16"
         >
           <SectionTitle
-            label="Divisions & Tarifs"
-            title={<>Nos <span className="text-gold-gradient">tarifs</span></>}
-            subtitle="Profitez du tarif Early Bird pour réserver vos places au meilleur prix."
+            label={t.divisions.label}
+            title={<>{t.divisions.title.split(' ').slice(0, -1).join(' ')} <span className="text-gold-gradient">{t.divisions.title.split(' ').slice(-1)[0]}</span></>}
+            subtitle={t.divisions.subtitle}
             center
           />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {PRICING.map((plan, index) => (
-            <PricingCard key={plan.label} plan={plan} index={index} />
+          {t.divisions.pricing.map((plan, index) => (
+            <PricingCard key={plan.label} plan={plan} perAthlete={t.divisions.perAthlete} index={index} />
           ))}
         </div>
 
@@ -104,9 +81,10 @@ export function Divisions() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </span>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              <span className="text-white font-semibold">Accompagnateurs :</span> Chaque équipe bénéficie de <span className="text-gold font-semibold">2 accompagnateurs inclus</span> dans les frais d'inscription.
-            </p>
+            <p
+              className="text-gray-400 text-sm leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t.divisions.noteAccompagnateurs }}
+            />
           </div>
 
           <div className="flex gap-3 bg-crown-gray border border-gold/15 rounded-xl px-5 py-4">
@@ -115,9 +93,10 @@ export function Divisions() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
               </svg>
             </span>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              <span className="text-white font-semibold">Équipe démo : </span> Les frais d'inscription correspondent à <span className="text-gold font-semibold">75 % des tarifs en vigueur</span>.
-            </p>
+            <p
+              className="text-gray-400 text-sm leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: t.divisions.noteDemo }}
+            />
           </div>
         </motion.div>
 
@@ -129,7 +108,7 @@ export function Divisions() {
           className="mt-16"
         >
           <a
-            href="/docs/categories.html"
+            href={t.divisions.docLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 border border-gold/30 bg-crown-gray hover:border-gold hover:bg-crown-black rounded-xl px-6 py-5 transition-all group"
@@ -141,8 +120,8 @@ export function Divisions() {
               </svg>
             </div>
             <div>
-              <p className="text-white font-display font-bold text-sm group-hover:text-gold transition-colors">Catégories de compétition</p>
-              <p className="text-gray-500 text-xs mt-0.5">Consulter le document</p>
+              <p className="text-white font-display font-bold text-sm group-hover:text-gold transition-colors">{t.divisions.docLabel}</p>
+              <p className="text-gray-500 text-xs mt-0.5">{t.divisions.docSub}</p>
             </div>
           </a>
         </motion.div>

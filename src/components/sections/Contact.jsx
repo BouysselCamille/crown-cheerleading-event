@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
 import { Button } from '../ui/Button';
+import { useTranslation } from '../../i18n/index.jsx';
 
 export function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useTranslation();
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -17,6 +19,8 @@ export function Contact() {
     setSubmitted(true);
   };
 
+  const f = t.contact.fields;
+
   return (
     <section id="contact" className="py-24 bg-crown-black">
       <div className="max-w-2xl mx-auto px-6">
@@ -27,9 +31,9 @@ export function Contact() {
           className="text-center mb-16"
         >
           <SectionTitle
-            label="Contact"
-            title={<>Prenons <span className="text-gold-gradient">contact</span></>}
-            subtitle="Une question sur la compétition, un partenariat, une inscription ? Écrivez-nous."
+            label={t.contact.label}
+            title={<>{t.contact.title1} <span className="text-gold-gradient">{t.contact.title2}</span></>}
+            subtitle={t.contact.subtitle}
             center
           />
         </motion.div>
@@ -47,20 +51,20 @@ export function Contact() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-white font-display font-bold text-xl mb-2">Message envoyé !</h3>
-              <p className="text-gray-500 text-sm">Nous vous répondrons dans les plus brefs délais.</p>
+              <h3 className="text-white font-display font-bold text-xl mb-2">{t.contact.success.title}</h3>
+              <p className="text-gray-500 text-sm">{t.contact.success.subtitle}</p>
               <button
                 onClick={() => setSubmitted(false)}
                 className="mt-6 text-gold text-sm hover:underline font-display"
               >
-                Envoyer un autre message
+                {t.contact.success.reset}
               </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">Nom</label>
+                  <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">{f.name}</label>
                   <input
                     type="text"
                     name="name"
@@ -68,11 +72,11 @@ export function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     className="w-full bg-crown-black border border-gold/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold/60 transition-colors placeholder-gray-700"
-                    placeholder="Votre nom"
+                    placeholder={f.namePlaceholder}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">Email</label>
+                  <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">{f.email}</label>
                   <input
                     type="email"
                     name="email"
@@ -80,13 +84,13 @@ export function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     className="w-full bg-crown-black border border-gold/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold/60 transition-colors placeholder-gray-700"
-                    placeholder="votre@email.com"
+                    placeholder={f.emailPlaceholder}
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">Sujet</label>
+                <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">{f.subject}</label>
                 <select
                   name="subject"
                   required
@@ -94,17 +98,15 @@ export function Contact() {
                   onChange={handleChange}
                   className="w-full bg-crown-black border border-gold/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold/60 transition-colors"
                 >
-                  <option value="" className="bg-crown-black">Sélectionner un sujet</option>
-                  <option value="inscription" className="bg-crown-black">Inscription équipe</option>
-                  <option value="billetterie" className="bg-crown-black">Billetterie</option>
-                  <option value="partenariat" className="bg-crown-black">Partenariat / Sponsoring</option>
-                  <option value="presse" className="bg-crown-black">Presse / Médias</option>
-                  <option value="autre" className="bg-crown-black">Autre</option>
+                  <option value="" className="bg-crown-black">{f.subjectDefault}</option>
+                  {f.subjects.map((s) => (
+                    <option key={s.value} value={s.value} className="bg-crown-black">{s.label}</option>
+                  ))}
                 </select>
               </div>
 
               <div>
-                <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">Message</label>
+                <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">{f.message}</label>
                 <textarea
                   name="message"
                   required
@@ -112,12 +114,12 @@ export function Contact() {
                   value={form.message}
                   onChange={handleChange}
                   className="w-full bg-crown-black border border-gold/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-gold/60 transition-colors placeholder-gray-700 resize-none"
-                  placeholder="Votre message..."
+                  placeholder={f.messagePlaceholder}
                 />
               </div>
 
               <Button type="submit" variant="primary" className="w-full">
-                Envoyer le message
+                {f.submit}
               </Button>
             </form>
           )}

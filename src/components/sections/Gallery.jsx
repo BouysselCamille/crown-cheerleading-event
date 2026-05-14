@@ -3,15 +3,17 @@ import { motion } from 'framer-motion';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import { SectionTitle } from '../ui/SectionTitle';
+import { useTranslation } from '../../i18n/index.jsx';
 
 const GALLERY_ITEMS = [
   { src: '/gallery/2406-4130-dojo-de-paris.png', alt: 'Dojo de Paris' },
-  { src: '/gallery/dojo-de-paris-1.jpg',         alt: 'Dojo de Paris — salle' },
+  { src: '/gallery/dojo-de-paris-1.jpg', alt: 'Dojo de Paris — salle' },
 ];
 
 export function Gallery() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+  const { t } = useTranslation();
 
   const openAt = (i) => { setIndex(i); setOpen(true); };
 
@@ -25,9 +27,9 @@ export function Gallery() {
           className="text-center mb-16"
         >
           <SectionTitle
-            label="Galerie"
-            title={<>L'ambiance <span className="text-gold-gradient">Crown</span></>}
-            subtitle="Découvrez le lieu de la compétition."
+            label={t.gallery.label}
+            title={<>{t.gallery.title1} <span className="text-gold-gradient">{t.gallery.title2}</span></>}
+            subtitle={t.gallery.subtitle}
             center
           />
         </motion.div>

@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
+import { useTranslation } from '../../i18n/index.jsx';
 
 export function Inscription() {
+  const { t } = useTranslation();
+
   return (
     <section id="inscription" className="py-24 bg-crown-dark">
       <div className="max-w-3xl mx-auto px-6">
@@ -12,9 +15,9 @@ export function Inscription() {
           className="text-center mb-12"
         >
           <SectionTitle
-            label="Inscription"
-            title={<>Inscrivez votre <span className="text-gold-gradient">équipe</span></>}
-            subtitle="Toutes les informations pour inscrire votre club à la compétition."
+            label={t.inscription.label}
+            title={<>{t.inscription.title1} <span className="text-gold-gradient">{t.inscription.title2}</span></>}
+            subtitle={t.inscription.subtitle}
             center
           />
         </motion.div>
@@ -36,21 +39,20 @@ export function Inscription() {
 
           {/* Message formulaire */}
           <h3 className="text-white font-display font-bold text-xl mb-3">
-            Formulaire d'inscription disponible le{' '}
-            <span className="text-gold">10 septembre</span>
+            {t.inscription.formTitle}{' '}
+            <span className="text-gold">{t.inscription.formDate}</span>
           </h3>
-          <p className="text-gray-400 text-sm leading-relaxed mb-10 max-w-lg mx-auto">
-            Le formulaire d'inscription en ligne ouvrira le <strong className="text-gray-200">10 septembre</strong>.
-            En attendant, les dirigeants peuvent dès maintenant télécharger le fichier Excel à compléter
-            et à fournir au moment de l'inscription. <strong className="text-gray-200">Un fichier Excel par équipe</strong> sera requis.
-          </p>
+          <p
+            className="text-gray-400 text-sm leading-relaxed mb-10 max-w-lg mx-auto [&_strong]:text-gray-200"
+            dangerouslySetInnerHTML={{ __html: t.inscription.formDesc }}
+          />
 
           {/* Séparateur */}
           <div className="border-t border-gold/10 mb-10" />
 
           {/* Téléchargement Excel */}
           <p className="text-gray-400 text-xs uppercase tracking-widest font-display font-semibold mb-5">
-            Préparez votre dossier
+            {t.inscription.prepareLabel}
           </p>
           <a
             href="/docs/inscription-equipe.xlsx"
@@ -61,10 +63,10 @@ export function Inscription() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            Télécharger le fichier Excel d'inscription
+            {t.inscription.downloadBtn}
           </a>
           <p className="text-gray-600 text-xs mt-4">
-            Fichier à remettre complété lors de votre inscription en ligne
+            {t.inscription.downloadNote}
           </p>
         </motion.div>
       </div>
