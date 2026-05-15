@@ -96,7 +96,7 @@ export function Sponsors() {
           className="text-center mt-4"
         >
           <a
-            href="#contact"
+            href="mailto:contact@crown-cheerleading-events.org?subject=Partenariat Crown Cheerleading Events"
             className="text-gold/70 hover:text-gold text-sm font-display font-semibold transition-colors border-b border-gold/30 hover:border-gold pb-1"
           >
             {t.sponsors.become}

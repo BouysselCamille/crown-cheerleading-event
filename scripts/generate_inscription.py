@@ -205,14 +205,14 @@ ws1.row_dimensions[20].height = 10
 ws1.row_dimensions[21].height = 36
 merge_style(ws1, "A21:G21",
     "Ce document ne fait pas office de facture. Les tarifs affichés sur le site "
-    "crown-cheerleading-events.fr font valeur de référence.",
+    "crown-cheerleading-events.org font valeur de référence.",
     GOLD_DARK, BLACK, size=9, wrap=True, bold=False)
 
 ws1.row_dimensions[22].height = 50
 merge_style(ws1, "A22:G22",
     "Un acompte de 30 % est requis à l'inscription. "
     "Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 %, "
-    "les 30 % d'acompte restant acquis. Envoyez ce fichier à : contact@crown-cheerleading-events.org",
+    "les 30 % d'acompte restant acquis. Le formulaire d'inscription pour l'envoi de ce fichier sera accessible à partir du 10 septembre 2026.",
     DARK, MID_GRAY, size=8, wrap=True)
 
 # ── Protection feuille Accueil ────────────────────────────────────────────────

@@ -141,7 +141,7 @@ const en = {
     title1: 'Book your',
     title2: 'seats',
     subtitle: 'Secure payment via HelloAsso.',
-    soon: 'Ticketing will open on September 10, 2026',
+    soon: 'Ticketing will open on December 11, 2026',
   },
 
   gallery: {
@@ -358,29 +358,8 @@ const en = {
     title1: 'Get in',
     title2: 'touch',
     subtitle: 'A question about the competition, a partnership, a registration? Write to us.',
-    fields: {
-      name: 'Name',
-      namePlaceholder: 'Your name',
-      email: 'Email',
-      emailPlaceholder: 'your@email.com',
-      subject: 'Subject',
-      subjectDefault: 'Select a subject',
-      subjects: [
-        { value: 'inscription', label: 'Team registration' },
-        { value: 'billetterie', label: 'Ticketing' },
-        { value: 'partenariat', label: 'Partnership / Sponsorship' },
-        { value: 'presse', label: 'Press / Media' },
-        { value: 'autre', label: 'Other' },
-      ],
-      message: 'Message',
-      messagePlaceholder: 'Your message...',
-      submit: 'Send message',
-    },
-    success: {
-      title: 'Message sent!',
-      subtitle: 'We will get back to you as soon as possible.',
-      reset: 'Send another message',
-    },
+    email: 'contact@crown-cheerleading-events.org',
+    cta: 'Send an email',
   },
 
   legalNotice: {
@@ -479,7 +458,7 @@ const en = {
     tagline: 'The competition that crowns champions.',
     navigation: 'Navigation',
     contact: 'Contact',
-    contactText: 'For any questions, use\nthe contact form.',
+    contactText: 'contact@crown-cheerleading-events.org',
     rights: 'All rights reserved.',
     legal: 'Legal notice',
     privacy: 'Privacy policy',

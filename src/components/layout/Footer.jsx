@@ -34,9 +34,12 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">{t.footer.contact}</h4>
-            <p className="text-gray-500 text-sm whitespace-pre-line">
+            <a
+              href={`mailto:${t.footer.contactText}`}
+              className="text-gray-500 hover:text-gold text-sm transition-colors break-all"
+            >
               {t.footer.contactText}
-            </p>
+            </a>
           </div>
         </div>
 
