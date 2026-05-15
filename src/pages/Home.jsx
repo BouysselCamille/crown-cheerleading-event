@@ -10,7 +10,6 @@ import { FAQ } from '../components/sections/FAQ';
 import { Recompenses } from '../components/sections/Recompenses';
 import { PlanAcces } from '../components/sections/PlanAcces';
 import { Contact } from '../components/sections/Contact';
-
 export function Home() {
   return (
     <>
