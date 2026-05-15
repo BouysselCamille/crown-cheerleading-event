@@ -268,8 +268,7 @@ const fr = {
           },
           {
             q: "Qu'est-ce qu'une équipe démo ?",
-            a: "Une équipe démo est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. Chaque athlète reçoit une médaille de participation. L'équipe ne reçoit ni bannière ni trophée.",
-          },
+            a: "Une équipe démo est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. L'équipe ne reçoit ni bannière ni trophée.\n\nChaque athlète reçoit une médaille de participation. Chaque équipe démo recevra des photos de sa prestation. La vidéo de la routine sera également publiée sur YouTube.",          },
           {
             q: 'Quelle est la durée des routines ?',
             a: "Novice : 1 min 30\nPrep et Non-tumbling : 2 min 00\nAllstar et Universitaire : 2 min 30\n\nLe chronométrage débute au premier mouvement chorégraphié ou à la première note de musique, et se termine au dernier mouvement ou à la dernière note.",
@@ -322,6 +321,10 @@ const fr = {
           {
             q: 'Quels objets sont interdits ?',
             a: "Il est interdit d'apporter des articles dangereux, des substances illégales ou tout objet jugé inapproprié. Les animaux ne sont pas admis, à l'exception des animaux d'assistance dûment identifiés.\n\nLes bouteilles de plus de 1,5 L et les sacs de dimensions supérieures au format A4 ne sont pas autorisés. Sont strictement interdits : armes, couteaux, bombes de défense, alcool, bouteilles en verre, fumigènes, cornes de brume, et tout objet sonore (tambours, mégaphones, trompettes) dans l'espace de compétition.",
+          },
+          {
+            q: 'Photos et vidéos',
+            a: "Les photos et vidéos personnelles sont permises, à condition de ne pas nuire à la visibilité des autres spectateurs ni au déroulement de la compétition.\n\nL'utilisation d'équipement professionnel (trépieds, téléobjectifs, éclairages, etc.) est strictement interdite sans accréditation préalable.\n\nDes photographes et vidéastes professionnels représentant Crown Cheerleading Events seront présents sur place pour filmer les prestations et capturer des photos officielles de l'événement.\n\nCes images pourront être utilisées à des fins promotionnelles, notamment sur les plateformes numériques et réseaux sociaux de Crown Cheerleading Events.",
           },
         ],
       },
@@ -377,6 +380,98 @@ const fr = {
       subtitle: 'Nous vous répondrons dans les plus brefs délais.',
       reset: 'Envoyer un autre message',
     },
+  },
+
+  legalNotice: {
+    back: "Retour à l'accueil",
+    title: 'Mentions légales',
+    updated: 'Dernière mise à jour',
+     updatedDate: '15 Mai 2026',
+    sections: [
+      {
+        title: '1. Éditeur du site',
+        content: 'Le site Crown Cheerleading Events est édité par :',
+        info: [
+          { label: 'Association loi 1901', value: 'Crown Cheerleading Events' },
+          { label: 'Siège social', value: '11 avenue Ledru Rollin 75012 Paris' },
+          { label: 'Email', value: 'contact@crown-cheerleading-events.org' },
+          { label: 'SIRET / RNA', value: '102538766 / W751283436' },
+        ],
+      },
+      {
+        title: '2. Directeur de la publication',
+        content: "Le directeur de la publication est le représentant légal de l'association Crown Cheerleading Events.",
+      },
+      {
+        title: '3. Hébergement',
+        info: [
+          { label: 'Hébergeur', value: 'Vercel Inc.' },
+          { label: 'Adresse', value: '340 S Lemon Ave #4133 Walnut, CA 91789, USA' },
+          { label: 'Site', value: 'vercel.com' },
+        ],
+      },
+      {
+        title: '4. Propriété intellectuelle',
+        content: "L'ensemble des contenus présents sur ce site (textes, images, logos, visuels) est la propriété exclusive de Crown Cheerleading Events ou de ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation préalable.",
+      },
+      {
+        title: '5. Limitation de responsabilité',
+        content: "Crown Cheerleading Events s'efforce de maintenir les informations de ce site à jour et exactes. Toutefois, l'organisation ne peut être tenue responsable des erreurs ou omissions, ni des dommages résultant de l'utilisation du site.",
+      },
+      {
+        title: '6. Droit applicable',
+        content: "Le présent site et ses mentions légales sont soumis au droit français. Tout litige relatif à son utilisation sera soumis à la compétence des tribunaux français.",
+      },
+    ],
+  },
+
+  privacyPolicy: {
+    back: "Retour à l'accueil",
+    title: 'Politique de confidentialité',
+    updated: 'Dernière mise à jour',
+    sections: [
+      {
+        title: '1. Responsable du traitement',
+        content: "Crown Cheerleading Events est responsable du traitement des données personnelles collectées sur ce site. Pour toute question, vous pouvez nous contacter via le formulaire de contact.",
+      },
+      {
+        title: '2. Données collectées',
+        content: "Dans le cadre de l'utilisation de ce site, nous pouvons être amenés à collecter les données suivantes :",
+        items: [
+          'Nom et prénom (via le formulaire de contact)',
+          'Adresse email (via le formulaire de contact)',
+          'Données de navigation (via les cookies techniques)',
+        ],
+      },
+      {
+        title: '3. Finalité du traitement',
+        content: "Les données collectées sont utilisées uniquement pour répondre à vos demandes de contact et assurer le bon fonctionnement du site. Elles ne sont jamais vendues ni cédées à des tiers.",
+      },
+      {
+        title: '4. Durée de conservation',
+        content: "Les données issues du formulaire de contact sont conservées pour la durée nécessaire au traitement de votre demande, et au maximum 3 ans à compter du dernier contact.",
+      },
+      {
+        title: '5. Vos droits',
+        content: "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :",
+        items: [
+          "Droit d'accès à vos données",
+          'Droit de rectification',
+          "Droit à l'effacement",
+          'Droit à la limitation du traitement',
+          "Droit d'opposition",
+        ],
+        footer: "Pour exercer ces droits, contactez-nous via le formulaire de contact du site.",
+      },
+      {
+        title: '6. Cookies',
+        content: "Ce site utilise uniquement des cookies techniques strictement nécessaires au fonctionnement du site. Aucun cookie publicitaire ou de traçage n'est utilisé.",
+      },
+      {
+        title: '7. Billetterie HelloAsso',
+        content: "L'achat de billets est géré par HelloAsso, soumis à sa propre politique de confidentialité. Nous vous invitons à la consulter sur le site HelloAsso.",
+      },
+    ],
   },
 
   footer: {

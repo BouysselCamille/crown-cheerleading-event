@@ -212,7 +212,7 @@ ws1.row_dimensions[22].height = 50
 merge_style(ws1, "A22:G22",
     "Un acompte de 30 % est requis à l'inscription. "
     "Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 %, "
-    "les 30 % d'acompte restant acquis. Envoyez ce fichier à : contact@crown-cheerleading-events.fr",
+    "les 30 % d'acompte restant acquis. Envoyez ce fichier à : contact@crown-cheerleading-events.org",
     DARK, MID_GRAY, size=8, wrap=True)
 
 # ── Protection feuille Accueil ────────────────────────────────────────────────

@@ -268,7 +268,7 @@ const en = {
           },
           {
             q: 'What is an exhibition team?',
-            a: "An exhibition team is a non-competitive team that wishes to experience performing in front of an audience. They are not judged and receive no feedback from the judges. Each athlete receives a participation medal. The team receives neither banner nor trophy.",
+            a: "An exhibition team is a non-competitive team that wishes to experience performing in front of an audience. They are not judged and receive no feedback from the judges. The team receives neither banner nor trophy.\n\nEach athlete receives a participation medal. Each exhibition team will receive photos of their performance. The routine video will also be posted on YouTube.",
           },
           {
             q: 'What is the routine duration?',
@@ -322,6 +322,10 @@ const en = {
           {
             q: 'Which items are prohibited?',
             a: "It is prohibited to bring dangerous items, illegal substances or any item deemed inappropriate. Animals are not permitted, except for properly identified assistance animals.\n\nBottles larger than 1.5 L and bags larger than A4 format are not allowed. Strictly prohibited: weapons, knives, defence sprays, alcohol, glass bottles, flares, air horns, and any noise-making objects (drums, megaphones, trumpets) in the competition area.",
+          },
+          {
+            q: 'Photos and videos',
+            a: "Personal photos and videos are permitted, provided they do not obstruct the view of other spectators or disrupt the competition.\n\nThe use of professional equipment (tripods, telephoto lenses, lighting, etc.) is strictly prohibited without prior accreditation.\n\nProfessional photographers and videographers representing Crown Cheerleading Events will be on site to film performances and capture official event photos.\n\nThese images may be used for promotional purposes, including on Crown Cheerleading Events' digital platforms and social media.",
           },
         ],
       },
@@ -377,6 +381,98 @@ const en = {
       subtitle: 'We will get back to you as soon as possible.',
       reset: 'Send another message',
     },
+  },
+
+  legalNotice: {
+    back: 'Back to home',
+    title: 'Legal notice',
+    updated: 'Last updated',
+    updatedDate: 'May 15th, 2026',
+    sections: [
+      {
+        title: '1. Publisher',
+        content: 'The Crown Cheerleading Events website is published by:',
+        info: [
+          { label: 'Association under the 1901 law', value: 'Crown Cheerleading Events' },
+          { label: 'Registered office', value: '11 avenue Ledru Rollin 75012 Paris' },
+          { label: 'Email', value: 'contact@crown-cheerleading-events.org' },
+          { label: 'SIRET / RNA', value: '102538766 / W751283436' },
+        ],
+      },
+      {
+        title: '2. Publication director',
+        content: 'The publication director is the legal representative of the Crown Cheerleading Events association.',
+      },
+      {
+        title: '3. Hosting',
+        info: [
+          { label: 'Host', value: 'Vercel Inc.' },
+          { label: 'Address', value: '340 S Lemon Ave #4133 Walnut, CA 91789, USA' },
+          { label: 'Website', value: 'vercel.com' },
+        ],
+      },
+      {
+        title: '4. Intellectual property',
+        content: 'All content on this website (texts, images, logos, visuals) is the exclusive property of Crown Cheerleading Events or its partners. Any reproduction, even partial, is prohibited without prior authorisation.',
+      },
+      {
+        title: '5. Limitation of liability',
+        content: 'Crown Cheerleading Events strives to keep the information on this site up to date and accurate. However, the organisation cannot be held responsible for errors or omissions, or for damages resulting from use of the site.',
+      },
+      {
+        title: '6. Applicable law',
+        content: 'This website and its legal notice are governed by French law. Any dispute relating to its use shall be subject to the jurisdiction of French courts.',
+      },
+    ],
+  },
+
+  privacyPolicy: {
+    back: 'Back to home',
+    title: 'Privacy policy',
+    updated: 'Last updated',
+    sections: [
+      {
+        title: '1. Data controller',
+        content: 'Crown Cheerleading Events is the controller of personal data collected on this site. For any questions, you may contact us via the contact form.',
+      },
+      {
+        title: '2. Data collected',
+        content: 'In the context of using this site, we may collect the following data:',
+        items: [
+          'First and last name (via the contact form)',
+          'Email address (via the contact form)',
+          'Browsing data (via technical cookies)',
+        ],
+      },
+      {
+        title: '3. Purpose of processing',
+        content: 'The data collected is used solely to respond to your contact requests and ensure the proper functioning of the site. It is never sold or transferred to third parties.',
+      },
+      {
+        title: '4. Retention period',
+        content: 'Data submitted via the contact form is retained for the period necessary to process your request, and for a maximum of 3 years from the last contact.',
+      },
+      {
+        title: '5. Your rights',
+        content: 'In accordance with the General Data Protection Regulation (GDPR), you have the following rights:',
+        items: [
+          'Right of access to your data',
+          'Right to rectification',
+          'Right to erasure',
+          'Right to restriction of processing',
+          'Right to object',
+        ],
+        footer: 'To exercise these rights, contact us via the contact form on the site.',
+      },
+      {
+        title: '6. Cookies',
+        content: 'This site uses only strictly necessary technical cookies for the operation of the site. No advertising or tracking cookies are used.',
+      },
+      {
+        title: '7. HelloAsso ticketing',
+        content: "Ticket purchases are managed by HelloAsso, subject to its own privacy policy. We invite you to consult it on the HelloAsso website.",
+      },
+    ],
   },
 
   footer: {
