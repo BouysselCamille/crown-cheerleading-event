@@ -1,22 +1,35 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { SectionTitle } from '../ui/SectionTitle';
 import { Button } from '../ui/Button';
 import { useTranslation } from '../../i18n/index.jsx';
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 export function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const formRef = useRef(null);
   const { t } = useTranslation();
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Pour une implémentation sans backend, utiliser EmailJS :
-    // https://www.emailjs.com/ — gratuit jusqu'à 200 emails/mois
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_PUBLIC_KEY')
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY)
+      .then(() => {
+        setSubmitted(true);
+        setForm({ name: '', email: '', subject: '', message: '' });
+      })
+      .catch(() => setError(t.contact.fields.errorMessage || 'Une erreur est survenue. Veuillez réessayer.'))
+      .finally(() => setLoading(false));
   };
 
   const f = t.contact.fields;
@@ -61,7 +74,7 @@ export function Contact() {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-xs font-display font-bold text-gray-400 uppercase tracking-widest mb-2">{f.name}</label>
@@ -118,8 +131,11 @@ export function Contact() {
                 />
               </div>
 
-              <Button type="submit" variant="primary" className="w-full">
-                {f.submit}
+              {error && (
+                <p className="text-red-400 text-sm text-center">{error}</p>
+              )}
+              <Button type="submit" variant="primary" className="w-full" disabled={loading}>
+                {loading ? '…' : f.submit}
               </Button>
             </form>
           )}
