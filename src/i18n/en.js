@@ -310,6 +310,10 @@ const en = {
             q: 'How does warm-up work?',
             a: "Each team has 10 minutes in the changing room before accessing the warm-up room. They then have 10 minutes on non-dynamic mats, followed by 5 minutes on the dynamic floor. A 2-minute 30-second run-through with music is then scheduled on a non-dynamic mat.",
           },
+          {
+            q: 'Can an athlete register with both an allstar club and a university team?',
+            a: "Yes. An athlete may register with both an allstar club and a university team.\n\nHowever, the crossover rule applies: each team may have a maximum of 2 crossovers. Therefore, no more than two athletes who cheer in an allstar club may be part of the same university team.",
+          },
         ],
       },
       {

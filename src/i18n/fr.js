@@ -309,6 +309,10 @@ const fr = {
             q: "Comment se passe l'échauffement ?",
             a: "Chaque équipe dispose de 10 minutes en vestiaire avant d'accéder à la salle d'échauffement. Elle bénéficie ensuite de 10 minutes sur les tapis non dynamiques, puis de 5 minutes sur le tapis dynamique. Un run-through avec musique de 2 minutes 30 est enfin prévu sur tapis non dynamique.",
           },
+          {
+            q: "Un athlète peut-il s'inscrire avec un club allstar et une équipe universitaire ?",
+            a: "Oui. Un athlète peut s'inscrire à la fois avec un club allstar et une équipe universitaire.\n\nCependant, la règle des crossovers s'applique : chaque équipe peut compter au maximum 2 crossovers. Il ne peut donc pas y avoir plus de deux athlètes pratiquant le cheer en club allstar au sein d'une même équipe universitaire.",
+          },
         ],
       },
       {
