@@ -109,6 +109,10 @@ const en = {
       { icon: '🏟️', text: 'Competition on a 7-panel spring floor' },
       { icon: '🎯', text: 'Routines judged by a qualified Varsity panel' },
     ],
+    cheerSpirit: {
+      title: 'CHEER SPIRIT',
+      desc: 'A specific "Cheer Spirit" award will recognise the team who stands out for their respect, encouragement and sportsmanship — a 500 EUR discount on registration for the next edition.',
+    },
     grandChamps: [
       {
         title: '1ST ALLSTAR GRAND CHAMPION',
@@ -318,6 +322,10 @@ const en = {
           {
             q: 'Can an athlete register with both an allstar club and a university team?',
             a: "Yes. An athlete may register with both an allstar club and a university team.\n\nHowever, the crossover rule applies: each team may have a maximum of 2 crossovers. Therefore, no more than two athletes who cheer in an allstar club may be part of the same university team.",
+          },
+          {
+            q: 'How is the Cheer Spirit title determined?',
+            a: "The Cheer Spirit title is awarded based on two combined criteria:\n\n• Observation by our volunteers throughout the entire competition, who assess attitude, respect, encouragement towards other teams, and overall sportsmanship.\n\n• Stories posted on social media tagging Crown Cheerleading Events during the day showcasing that Cheer Spirit.\n\nThe title goes to the team that stands out on both counts.",
           },
         ],
       },

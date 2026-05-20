@@ -44,7 +44,7 @@ export function Recompenses() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4"
         >
           {t.recompenses.grandChamps.map((g) => (
             <div
@@ -74,10 +74,27 @@ export function Recompenses() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-gray-600 text-xs text-center leading-relaxed max-w-2xl mx-auto"
+          className="text-gray-600 text-xs text-center leading-relaxed max-w-2xl mx-auto mb-12"
         >
           {t.recompenses.note}
         </motion.p>
+
+        {/* Level Grand Champion */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative border border-gold/40 bg-crown-gray rounded-2xl overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gold/3 pointer-events-none" />
+          <div className="relative px-5 py-5 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div className="text-3xl flex-shrink-0">🌟</div>
+            <div className="flex-1">
+              <p className="text-gold font-display font-black text-xs tracking-widest uppercase mb-2">{t.recompenses.cheerSpirit.title}</p>
+              <p className="text-gray-300 text-sm leading-relaxed">{t.recompenses.cheerSpirit.desc}</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

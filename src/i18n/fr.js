@@ -109,6 +109,10 @@ const fr = {
       { icon: '🏟️', text: 'Compétition sur praticable dynamique de 7 panels' },
       { icon: '🎯', text: 'Routine jugées par un panel Varsity qualifié' },
     ],
+    cheerSpirit: {
+      title: 'CHEER SPIRIT',
+      desc: "Un prix spécifique de « Cheer Spirit » viendra récompenser l'équipe exemplaire en matière de respect, d'encouragement et d'esprit sportif — soit 500 EUR de remise sur l'inscription à la prochaine édition.",
+    },
     grandChamps: [
       {
         title: '1ER ALLSTAR GRAND CHAMPION',
@@ -317,6 +321,10 @@ const fr = {
           {
             q: "Un athlète peut-il s'inscrire avec un club allstar et une équipe universitaire ?",
             a: "Oui. Un athlète peut s'inscrire à la fois avec un club allstar et une équipe universitaire.\n\nCependant, la règle des crossovers s'applique : chaque équipe peut compter au maximum 2 crossovers. Il ne peut donc pas y avoir plus de deux athlètes pratiquant le cheer en club allstar au sein d'une même équipe universitaire.",
+          },
+          {
+            q: "Comment est déterminé le titre de Cheer Spirit ?",
+            a: "Le titre de Cheer Spirit est attribué sur la base de deux critères combinés :\n\n• L'observation de nos bénévoles tout au long de la compétition, qui évaluent l'attitude, le respect, l'encouragement envers les autres équipes et l'esprit sportif général.\n\n• Les stories publiées sur les réseaux sociaux tagguant Crown Cheerleading Events pendant la journée, mettant en valeur cet esprit Cheer Spirit.\n\nLe titre est décerné à l'équipe qui aura brillé par son exemplarité sur ces deux tableaux.",
           },
         ],
       },
