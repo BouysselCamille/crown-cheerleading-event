@@ -38,7 +38,7 @@ const fr = {
     stats: [
       { value: '500+', label: 'Athlètes attendus' },
       { value: '30+', label: 'Équipes participantes' },
-      { value: '2',   label: 'Crown Grand Champs' },
+      { value: '3',   label: 'Crown Grand Champs' },
       { value: '1',   label: 'Journée inoubliable' },
     ],
   },
@@ -100,7 +100,7 @@ const fr = {
     title2: 'attend',
     subtitle: "Parce que chaque athlète mérite d'être récompensé pour son effort.",
     prizeLabel: 'Prix',
-    note: "* Les équipes avec des exceptions d'âge ne seront pas considérées. Les deux prix seront attribués à des clubs différents. Les juges seront consultés si les scores sont égaux ou désignent deux fois le même club.",
+    note: "* Les équipes avec des exceptions d'âge ne seront pas considérées. Les trois prix seront attribués à des clubs différents. Les juges seront consultés si les scores sont égaux ou désignent deux fois le même club.",
     rewards: [
       { icon: '🥇', text: 'Chaque participant reçoit une médaille' },
       { icon: '🏳️', text: 'Les champions et les équipes novices reçoivent une bannière' },
@@ -111,14 +111,19 @@ const fr = {
     ],
     grandChamps: [
       {
-        title: 'ALLSTAR GRAND CHAMPION',
+        title: '1ER ALLSTAR GRAND CHAMPION',
         desc: "L'équipe au plus haut score dans la catégorie Allstar",
-        prize: '2 000 EUR',
+        prize: '1 500 EUR',
+      },
+      {
+        title: '2ÈME ALLSTAR GRAND CHAMPION',
+        desc: "La deuxième équipe au plus haut score dans la catégorie Allstar",
+        prize: '1 000 EUR',
       },
       {
         title: 'NEXT GEN GRAND CHAMPION',
         desc: "L'équipe au plus haut score parmi les catégories Universitaire et Prep",
-        prize: '1 000 EUR',
+        prize: '500 EUR',
       },
     ],
   },
