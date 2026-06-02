@@ -50,9 +50,9 @@ const fr = {
     items: [
       { time: '10h00', label: 'Ouverture des portes & accréditations' },
       { time: '10h30', label: 'Ouverture au public' },
-      { time: '11h00', label: 'Block 1 - Novice, Prep et Universitaire' },
-      { time: '13h30', label: 'Remise des prix Block 1' },
-      { time: '14h30', label: 'Block 2 — AllStar' },
+      { time: '10h45', label: 'Bloc 1 - Novice, Prep et Universitaire' },
+      { time: '13h00', label: 'Remise des prix Block 1' },
+      { time: '13h40', label: 'Block 2 — AllStar' },
       { time: '17h00', label: 'Remise des prix Block 2' },
       { time: '18h00', label: "Fin de l'événement" },
     ],
@@ -64,7 +64,6 @@ const fr = {
     subtitle: 'Profitez du tarif Early Bird pour réserver vos places au meilleur prix.',
     perAthlete: 'Tarif par athlète',
     noteAccompagnateurs: '<span class="text-white font-semibold">Accompagnateurs :</span> Chaque équipe bénéficie de <span class="text-gold font-semibold">2 accompagnateurs inclus</span> dans les frais d\'inscription.',
-    noteDemo: '<span class="text-white font-semibold">Équipe démo :</span> Les frais d\'inscription correspondent à <span class="text-gold font-semibold">75 % des tarifs en vigueur</span>.',
     docLabel: 'Catégories de compétition',
     docLink: '/docs/categories.html',
     docSub: 'Consulter le document',
@@ -74,9 +73,10 @@ const fr = {
         deadline: "jusqu'au 11 Déc 2026",
         badge: 'Meilleur tarif',
         rows: [
-          { cat: 'Allstar / Universitaire / Prep', price: '50,00 EUR' },
-          { cat: 'Novice', price: '40,00 EUR' },
-          { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
+          { cat: 'Allstar ', price: '60,00 EUR' },
+          { cat: 'Universitaire / Prep', price: '50,00 EUR' },
+          { cat: 'Novice / Démo', price: '45,00 EUR' },
+          { cat: 'Accompagnateur supplémentaire', price: '45,00 EUR' },
         ],
         highlight: true,
       },
@@ -85,9 +85,8 @@ const fr = {
         deadline: "jusqu'au 12 Fév 2027",
         badge: null,
         rows: [
-          { cat: 'Allstar / Universitaire / Prep', price: '55,00 EUR' },
-          { cat: 'Novice', price: '55,00 EUR' },
-          { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
+          { cat: 'Athlète', price: '65,00 EUR' },
+          { cat: 'Accompagnateur supplémentaire', price: '45,00 EUR' },
         ],
         highlight: false,
       },
@@ -270,6 +269,10 @@ const fr = {
           {
             q: "Quelles sont les règles concernant les âges des athlètes ?",
             a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite de 15 % de l'effectif de l'équipe. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
+          },
+          {
+            q: "Y a-t-il une division Masters ?",
+            a: "Non. Cependant, les équipes Masters sont les bienvenues pour s'inscrire dans la catégorie Open Prep. Cette catégorie convient aux équipes ayant un large éventail d'âges, et ne demande pas de compétences d'élite en tumbling ou en stunt. Elle permet aux équipes Masters de vivre l'atmosphère de la compétition et de recevoir des retours des juges, tout en compétant dans une catégorie qui valorise la performance plutôt que la difficulté technique.",
           },
           {
             q: 'Quel scoring est appliqué ?',
