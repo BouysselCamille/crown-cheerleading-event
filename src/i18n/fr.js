@@ -19,7 +19,7 @@ const fr = {
 
   hero: {
     edition: '1ère Édition',
-    city: 'Paris',
+    city: 'Ile-de-France',
     dateDisplay: '4 avril 2027',
     countdown: 'Compte à rebours',
     buyTickets: 'Acheter des billets',
@@ -48,13 +48,14 @@ const fr = {
     title: 'Le programme',
     subtitleSuffix: "— horaires indicatifs, susceptibles d'évoluer.",
     items: [
-      { time: '10h00', label: 'Ouverture des portes & accréditations' },
-      { time: '10h30', label: 'Ouverture au public' },
-      { time: '10h45', label: 'Bloc 1 - Novice, Prep et Universitaire' },
-      { time: '13h00', label: 'Remise des prix Block 1' },
-      { time: '13h40', label: 'Block 2 — AllStar' },
-      { time: '17h00', label: 'Remise des prix Block 2' },
-      { time: '18h00', label: "Fin de l'événement" },
+      { time: '8h30', label: 'Ouverture des portes pour les athlètes & accréditations' },
+      { time: '9h00', label: 'Ouverture au public' },
+      { time: '9h15', label: 'Bloc 1 - Novice, Prep et Universitaire' },
+      { time: '12h00', label: 'Remise des prix Block 1' },
+      { time: '12h45', label: 'Pause' },
+      { time: '13h45', label: 'Bloc 2 - AllStar' },
+      { time: '16h00', label: 'Remise des prix Block 2' },
+      { time: '17h00', label: 'Fin de l\'événement' },
     ],
   },
 
@@ -73,10 +74,10 @@ const fr = {
         deadline: "jusqu'au 11 Déc 2026",
         badge: 'Meilleur tarif',
         rows: [
-          { cat: 'Allstar ', price: '60,00 EUR' },
-          { cat: 'Universitaire / Prep', price: '50,00 EUR' },
-          { cat: 'Novice / Démo', price: '45,00 EUR' },
-          { cat: 'Accompagnateur supplémentaire', price: '45,00 EUR' },
+          { cat: 'Allstar ', price: '45,00 EUR' },
+          { cat: 'Universitaire / Prep', price: '40,00 EUR' },
+          { cat: 'Novice / Démo', price: '35,00 EUR' },
+          { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
         ],
         highlight: true,
       },
@@ -85,8 +86,8 @@ const fr = {
         deadline: "jusqu'au 12 Fév 2027",
         badge: null,
         rows: [
-          { cat: 'Athlète', price: '65,00 EUR' },
-          { cat: 'Accompagnateur supplémentaire', price: '45,00 EUR' },
+          { cat: 'Athlète', price: '50,00 EUR' },
+          { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
         ],
         highlight: false,
       },
@@ -163,38 +164,31 @@ const fr = {
     label: 'Lieu',
     title1: "Plan d'",
     title2: 'accès',
-    subtitle: 'La compétition se déroule au Dojo de Paris.',
+    subtitle: 'La compétition se déroule au Centre omnisports universitaire Carole Vergne.',
     addressLabel: 'Adresse',
-    venueName: 'Dojo de Paris',
-    venueAddress: '21/25 avenue de la Porte de Chatillon',
-    venueCity: '75014 Paris',
-    venueLink: 'Site officiel du Dojo de Paris →',
+    venueName: 'Centre omnisports universitaire Carole Vergne',
+    venueAddress: '1 rue Francis Perrin',
+    venueCity: '91190 Gif-sur-Yvette',
+    venueLink: 'Site officiel du Centre omnisports universitaire Carole Vergne →',
     howToGet: 'Comment venir',
     transport: [
       {
         label: 'Métro',
         lines: [
-          { name: 'Ligne 4', detail: "Porte d'Orléans ou Mairie de Montrouge" },
-          { name: 'Ligne 13', detail: 'Porte de Vanves' },
-        ],
-      },
-      {
-        label: 'Tram',
-        lines: [
-          { name: 'Ligne T3a', detail: "Porte de Vanves, Didot, Jean Moulin ou Porte d'Orléans" },
+          { name: 'Ligne 18', detail: "Orsay-Gif" },
         ],
       },
       {
         label: 'Bus',
         lines: [
-          { name: 'Ligne 58', detail: 'Porte de Chatillon' },
-          { name: 'Lignes 194 & 388', detail: 'Jean Moulin' },
+          { name: 'Ligne 4609', detail: 'Joliot Curie' },
+          { name: 'Ligne 4606', detail: 'Joliot Curie' },
         ],
       },
       {
         label: 'En voiture',
         lines: [
-          { name: 'Parking Q-Park', detail: '21 avenue de la Porte de Chatillon, 75014 Paris' },
+          { name: 'Centre omnisports Carole Vergne', detail: '1 rue Francis Perrin, 91190 Gif-sur-Yvette' },
         ],
       },
     ],
@@ -256,42 +250,24 @@ const fr = {
         ],
       },
       {
-        category: 'Règlement & Compétition',
+        category: 'Règlement',
         items: [
-          {
-            q: "Faut-il être affilié à une fédération ou avoir une licence ?",
-            a: "Non. Pour participer, vous n'avez pas besoin d'être affilié à une fédération ni de disposer de licences pour vos athlètes. Crown Cheerleading Events ne demande pas de certificat médical pour les participants.\n\nToutefois, il est de la responsabilité des clubs de s'assurer de la santé de leurs athlètes ainsi que de leur couverture en cas de blessure ou blessure d'autrui.",
-          },
           {
             q: 'Quel règlement est appliqué ?',
             a: "La compétition suit les règlements officiels de l'IASF.\n\nhttps://www.iasfworlds.net/cheer/",
           },
-          {
-            q: "Quelles sont les règles concernant les âges des athlètes ?",
-            a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite de 15 % de l'effectif de l'équipe. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
-          },
-          {
-            q: "Y a-t-il une division Masters ?",
-            a: "Non. Cependant, les équipes Masters sont les bienvenues pour s'inscrire dans la catégorie Open Prep. Cette catégorie convient aux équipes ayant un large éventail d'âges, et ne demande pas de compétences d'élite en tumbling ou en stunt. Elle permet aux équipes Masters de vivre l'atmosphère de la compétition et de recevoir des retours des juges, tout en compétant dans une catégorie qui valorise la performance plutôt que la difficulté technique.",
-          },
-          {
+
+           {
             q: 'Quel scoring est appliqué ?',
-            a: "La compétition suit les feuilles de score de United Scoring System.\n\nhttps://www.unitedscoringpartners.com/",
+            a: "La compétition suit les feuilles de score de United Scoring System > United Kingdom.\n\nhttps://www.unitedscoringpartners.com/",
           },
-          {
-            q: "Qu'est-ce qu'une équipe démo ?",
-            a: "Une équipe démo est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. L'équipe ne reçoit ni bannière ni trophée.\n\nChaque athlète reçoit une médaille de participation. Chaque équipe démo recevra des photos de sa prestation. La vidéo de la routine sera également publiée sur YouTube.",          },
-          {
+           {
             q: 'Quelle est la durée des routines ?',
             a: "Novice : 1 min 30\nPrep et Non-tumbling : 2 min 00\nAllstar et Universitaire : 2 min 30\n\nLe chronométrage débute au premier mouvement chorégraphié ou à la première note de musique, et se termine au dernier mouvement ou à la dernière note.",
           },
           {
             q: 'Quelles sont les règles concernant la musique ?',
             a: "Toutes les équipes doivent soumettre leur musique à l'adresse mail indiquée, avant la date limite communiquée pour la compétition. La musique doit être conforme aux règlements établis par l'IASF.",
-          },
-          {
-            q: 'Quelles sont les dimensions du tapis de compétition ?',
-            a: 'Le tapis de compétition est un tapis dynamique de 14 m × 14 m.',
           },
           {
             q: "À quelle heure les équipes doivent-elles arriver ?",
@@ -306,10 +282,6 @@ const fr = {
             a: "Les égalités ne sont pas départagées, sauf pour déterminer les grands champions, selon l'ordre suivant :\n1. L'équipe avec le moins de déductions l'emporte\n2. Le score overall le plus élevé\n3. Le total des scores techniques le plus élevé",
           },
           {
-            q: 'La compétition fournit-elle des spotteurs ?',
-            a: "La compétition ne fournit pas de spotteurs. Il est de la responsabilité des entraîneurs de présenter les éléments en sécurité avec les athlètes nécessitant un spotteur.\n\nException : les équipes Novice et Prep peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",
-          },
-          {
             q: 'Que se passe-t-il en cas de blessure ?',
             a: "Un pôle médical sera installé à proximité de l'aire de compétition et d'échauffement. Chaque équipe doit disposer de sa propre pharmacie (strapping, bandages, poches de froid, etc.).\n\nSeuls les officiels de la compétition, l'entraîneur de l'équipe ou le participant blessé peuvent interrompre une routine. Si une nouvelle performance est autorisée, la routine doit être exécutée en totalité. Un athlète blessé ne peut revenir sur le sol qu'avec l'autorisation du personnel médical, du responsable légal et de l'entraîneur principal.",
           },
@@ -317,14 +289,53 @@ const fr = {
             q: 'Que se passe-t-il si une routine est interrompue ?',
             a: "Si l'interruption est indépendante de l'équipe (problème d'équipement, défaillance technique, problème lié à l'organisation), l'équipe pourra recommencer la routine à partir du point d'interruption.\n\nSi l'interruption est causée par l'équipe, elle devra continuer ou se retirer. Les officiels décideront si une nouvelle performance est possible.",
           },
+            {
+            q: "Quelles sont les règles concernant les âges des athlètes ?",
+            a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite de 15 % de l'effectif de l'équipe. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
+          }
+        ]
+      },
+      {
+        category: 'Compétition',
+        items: [
+          {
+            q: "Faut-il être affilié à une fédération ou avoir une licence ?",
+            a: "Non. Pour participer, vous n'avez pas besoin d'être affilié à une fédération ni de disposer de licences pour vos athlètes. Crown Cheerleading Events ne demande pas de certificat médical pour les participants.\n\nToutefois, il est de la responsabilité des clubs de s'assurer de la santé de leurs athlètes ainsi que de leur couverture en cas de blessure ou blessure d'autrui.",
+          },
+          
+        
+          {
+            q: "Y a-t-il une division Masters ?",
+            a: "Non. Cependant, les équipes Masters sont les bienvenues pour s'inscrire dans la catégorie Open Prep. Cette catégorie convient aux équipes ayant un large éventail d'âges, et ne demande pas de compétences d'élite en tumbling ou en stunt. Elle permet aux équipes Masters de vivre l'atmosphère de la compétition et de recevoir des retours des juges, tout en compétant dans une catégorie qui valorise la performance plutôt que la difficulté technique.",
+          },
+         
+          {
+            q: "Qu'est-ce qu'une équipe démo ?",
+            a: "Une équipe démo est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. L'équipe ne reçoit ni bannière ni trophée.\n\nChaque athlète reçoit une médaille de participation. Chaque équipe démo recevra des photos de sa prestation. La vidéo de la routine sera également publiée sur YouTube.",          },
+         
+          
+          {
+            q: 'Quelles sont les dimensions du tapis de compétition ?',
+            a: 'Le tapis de compétition est un tapis dynamique de 14 m × 14 m.',
+          },
+          
+          
+          {
+            q: 'La compétition fournit-elle des spotteurs ?',
+            a: "La compétition ne fournit pas de spotteurs. Il est de la responsabilité des entraîneurs de présenter les éléments en sécurité avec les athlètes nécessitant un spotteur.\n\nException : les équipes Novice et Prep peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",
+          },
+          
           {
             q: "Comment se passe l'échauffement ?",
             a: "Chaque équipe dispose de 10 minutes en vestiaire avant d'accéder à la salle d'échauffement. Elle bénéficie ensuite de 10 minutes sur les tapis non dynamiques, puis de 5 minutes sur le tapis dynamique. Un run-through avec musique de 2 minutes 30 est enfin prévu sur tapis non dynamique.",
           },
           {
             q: "Un athlète peut-il s'inscrire avec un club allstar et une équipe universitaire ?",
-            a: "Oui. Un athlète peut s'inscrire à la fois avec un club allstar et une équipe universitaire.\n\nCependant, la règle des crossovers s'applique : chaque équipe peut compter au maximum 2 crossovers. Il ne peut donc pas y avoir plus de deux athlètes pratiquant le cheer en club allstar au sein d'une même équipe universitaire.",
-          },
+            a: "Oui. Un athlète peut s'inscrire à la fois avec un club allstar et une équipe universitaire. Les règles du nombre maximum de crossover ne s'appliquent pas."       },
+            {
+              q: "Est-ce qu'une équipe universitaire peut s'inscrire dans la catégorie Allstar ?",
+              a: "Oui, cependant elle ne peut pas s'inscrire en Allstar et en Universitaire. L'équipe suivra alors la réglementation Allstar, les prix d'inscription Allstar et ne sera pas éligible au prix de Next Gen Grand Champion.",
+            },
           {
             q: "Comment est déterminé le titre de Cheer Spirit ?",
             a: "Le titre de Cheer Spirit est attribué sur la base de deux critères combinés :\n\n• L'observation de nos bénévoles tout au long de la compétition, qui évaluent l'attitude, le respect, l'encouragement envers les autres équipes et l'esprit sportif général.\n\n• Les stories publiées sur les réseaux sociaux tagguant Crown Cheerleading Events pendant la journée, mettant en valeur cet esprit Cheer Spirit.\n\nLe titre est décerné à l'équipe qui aura brillé par son exemplarité sur ces deux tableaux.",

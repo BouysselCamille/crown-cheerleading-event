@@ -12,13 +12,13 @@ const TRANSPORT_ICONS = [
     className="w-5 h-5 object-contain"
     style={ICON_FILTER}
   />,
-  // 1: Tram
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Paris_transit_icons_white_-_Tram.svg/40px-Paris_transit_icons_white_-_Tram.svg.png"
-    alt="Tram"
-    className="w-5 h-5 object-contain"
-    style={ICON_FILTER}
-  />,
+  // // 1: Tram
+  // <img
+  //   src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Paris_transit_icons_white_-_Tram.svg/40px-Paris_transit_icons_white_-_Tram.svg.png"
+  //   alt="Tram"
+  //   className="w-5 h-5 object-contain"
+  //   style={ICON_FILTER}
+  // />,
   // 2: Bus
   <img
     src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Paris_transit_icons_white_-_Bus.svg"
@@ -76,7 +76,7 @@ export function PlanAcces() {
                 <p className="text-white font-display font-semibold text-lg leading-tight">{t.acces.venueName}</p>
                 <p className="text-gray-400 text-sm mt-1">{t.acces.venueAddress}<br />{t.acces.venueCity}</p>
                 <a
-                  href="https://www.dojodeparis.com/"
+                  href="https://www.universite-paris-saclay.fr/luniversite/les-campus/grands-projets-immobiliers/centre-omnisports-universitaire-du-moulon"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 text-gold text-xs font-display hover:underline"

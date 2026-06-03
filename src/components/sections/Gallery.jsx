@@ -6,8 +6,8 @@ import { SectionTitle } from '../ui/SectionTitle';
 import { useTranslation } from '../../i18n/index.jsx';
 
 const GALLERY_ITEMS = [
-  { src: '/gallery/2406-4130-dojo-de-paris.png', alt: 'Dojo de Paris' },
-  { src: '/gallery/dojo-de-paris-1.jpg', alt: 'Dojo de Paris — salle' },
+  { src: '/gallery/coum-1.png', alt: 'Centre omnisports universitaire Carole Vergne' },
+  { src: '/gallery/coum-2.png', alt: 'Centre omnisports universitaire Carole Vergne' },
 ];
 
 export function Gallery() {

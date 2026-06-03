@@ -30,7 +30,10 @@
     text-align: left;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: 'Montserrat Variable', sans-serif;
   }
 }
@@ -54,6 +57,10 @@
 
   .bg-crown-gray {
     background-color: #1E1E1E;
+  }
+
+  .bg-crown-white {
+    background-color: #FFFFFF;
   }
 
   .border-gold {

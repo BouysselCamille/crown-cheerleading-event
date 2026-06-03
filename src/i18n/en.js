@@ -19,7 +19,7 @@ const en = {
 
   hero: {
     edition: '1st Edition',
-    city: 'Paris',
+    city: 'Ile-de-France',
     dateDisplay: 'April 4th, 2027',
     countdown: 'Countdown',
     buyTickets: 'Buy tickets',
@@ -48,13 +48,14 @@ const en = {
     title: 'The schedule',
     subtitleSuffix: '— indicative times, subject to change.',
     items: [
-      { time: '10h00', label: 'Doors open & accreditations' },
-      { time: '10h30', label: 'Public opening' },
-      { time: '10h45', label: 'Bloc 1 - Novice, Prep & University' },
-      { time: '13h00', label: 'Bloc 1 Awards Ceremony' },
-      { time: '13h40', label: 'Bloc 2 — AllStar' },
-      { time: '17h00', label: 'Bloc 2 Awards Ceremony' },
-      { time: '18h00', label: 'End of event' },
+      { time: '8h30', label: 'Doors open for athletes & accreditations' },
+      { time: '9h00', label: 'Public opening' },
+      { time: '9h15', label: 'Bloc 1 - Novice, Prep & University' },
+      { time: '12h00', label: 'Bloc 1 Awards Ceremony' },
+      { time: '12h45', label: 'Break' },
+      { time: '13h45', label: 'Bloc 2 - AllStar' },
+      { time: '16h00', label: 'Bloc 2 Awards Ceremony' },
+      { time: '17h00', label: 'End of event' },
     ],
   },
 
@@ -73,10 +74,10 @@ const en = {
         deadline: 'until Dec 11, 2026',
         badge: 'Best rate',
         rows: [
-          { cat: 'Allstar', price: '60.00 EUR' },
-          { cat: 'University / Prep', price: '50.00 EUR' },
-          { cat: 'Novice / Demo', price: '45.00 EUR' },
-          { cat: 'Additional accompanying person', price: '45.00 EUR' },
+          { cat: 'Allstar', price: '45.00 EUR' },
+          { cat: 'University / Prep', price: '40.00 EUR' },
+          { cat: 'Novice / Demo', price: '35.00 EUR' },
+          { cat: 'Additional accompanying person', price: '40.00 EUR' },
         ],
         highlight: true,
       },
@@ -85,8 +86,8 @@ const en = {
         deadline: 'until Feb 12, 2027',
         badge: null,
         rows: [
-          { cat: 'Athlete', price: '65.00 EUR' },
-          { cat: 'Additional accompanying person', price: '45.00 EUR' },
+          { cat: 'Athlete', price: '50.00 EUR' },
+          { cat: 'Additional accompanying person', price: '40.00 EUR' },
         ],
         highlight: false,
       },
@@ -163,38 +164,31 @@ const en = {
     label: 'Venue',
     title1: 'Getting',
     title2: ' here',
-    subtitle: 'The competition takes place at the Dojo de Paris.',
+    subtitle: 'The competition takes place at the Centre omnisports universitaire Carole Vergne.',
     addressLabel: 'Address',
-    venueName: 'Dojo de Paris',
-    venueAddress: '21/25 avenue de la Porte de Chatillon',
-    venueCity: '75014 Paris',
-    venueLink: 'Official Dojo de Paris website →',
+    venueName: 'Centre omnisports universitaire Carole Vergne',
+    venueAddress: '1 rue Francis Perrin',
+    venueCity: '91190 Gif-sur-Yvette',
+    venueLink: 'Official Centre omnisports universitaire Carole Vergne website →',
     howToGet: 'How to get here',
     transport: [
       {
         label: 'Metro',
         lines: [
-          { name: 'Line 4', detail: "Porte d'Orléans or Mairie de Montrouge" },
-          { name: 'Line 13', detail: 'Porte de Vanves' },
-        ],
-      },
-      {
-        label: 'Tram',
-        lines: [
-          { name: 'Line T3a', detail: "Porte de Vanves, Didot, Jean Moulin or Porte d'Orléans" },
+          { name: 'Line 18', detail: "Orsay-Gif" },
         ],
       },
       {
         label: 'Bus',
         lines: [
-          { name: 'Line 58', detail: 'Porte de Chatillon' },
-          { name: 'Lines 194 & 388', detail: 'Jean Moulin' },
+          { name: 'Line 4609', detail: 'Joliot Curie' },
+          { name: 'Line 4606', detail: 'Joliot Curie' },
         ],
       },
       {
         label: 'By car',
         lines: [
-          { name: 'Q-Park car park', detail: '21 avenue de la Porte de Chatillon, 75014 Paris' },
+          { name: 'Centre omnisports Carole Vergne', detail: '1 rue Francis Perrin, 91190 Gif-sur-Yvette' },
         ],
       },
     ],
@@ -256,13 +250,8 @@ const en = {
         ],
       },
       {
-        category: 'Rules & Competition',
-        items: [
-          {
-            q: 'Do we need to be affiliated with a federation or have a licence?',
-            a: "No. To participate, you do not need to be affiliated with a federation or have licences for your athletes. Crown Cheerleading Events does not require a medical certificate for participants.\n\nHowever, it is the clubs' responsibility to ensure the health of their athletes and their coverage in case of injury to themselves or others.",
-          },
-          {
+        category: 'Rules',
+        items: [ {
             q: 'Which ruleset is applied?',
             a: "The competition follows the official IASF rules.\n\nhttps://www.iasfworlds.net/cheer/",
           },
@@ -270,31 +259,17 @@ const en = {
             q: 'What are the rules regarding athlete ages?',
             a: "Proof of age may be requested at any time by competition officials.\n\nTo allow clubs to include all their athletes, the organisation tolerates a few age exceptions within the limit of 15% of the team roster. Any request must be made by email and approved prior to the competition.\n\nAny team with age exceptions will not be eligible for Grand Champion awards.",
           },
-          {
-            q: 'Is there a Masters division?',
-            a: "No. However, Masters teams are welcome to register in the Open Prep category. This category is suitable for teams with a wide age range, and does not demand elite skills in tumbling or building. It allows Masters teams to experience the competition atmosphere and receive feedback from judges, while competing in a category that values spirit and performance over technical difficulty.",
-          },
-          {
+        {
             q: 'Which scoring system is used?',
-            a: "The competition follows the United Scoring System scoresheets.\n\nhttps://www.unitedscoringpartners.com/",
-          },
-          {
-            q: 'What is an exhibition team?',
-            a: "An exhibition team is a non-competitive team that wishes to experience performing in front of an audience. They are not judged and receive no feedback from the judges. The team receives neither banner nor trophy.\n\nEach athlete receives a participation medal. Each exhibition team will receive photos of their performance. The routine video will also be posted on YouTube.",
-          },
-          {
+            a: "The competition follows the United Scoring System > United Kingdom scoresheets.\n\nhttps://www.unitedscoringpartners.com/",
+          }, {
             q: 'What is the routine duration?',
             a: "Novice: 1 min 30\nPrep and Non-tumbling: 2 min 00\nAllstar and University: 2 min 30\n\nTiming begins at the first choreographed movement or first note of music, and ends at the last movement or last note.",
           },
           {
             q: 'What are the music rules?',
             a: "All teams must submit their music to the indicated email address, before the deadline communicated for the competition. The music must comply with the regulations established by the IASF.",
-          },
-          {
-            q: 'What are the dimensions of the competition floor?',
-            a: 'The competition floor is a 14 m × 14 m dynamic floor.',
-          },
-          {
+          },{
             q: 'What time must teams arrive?',
             a: "Teams must arrive at least one hour before their warm-up room slot. Coaches are responsible for collecting wristbands upon arrival. Athletes then go through security with spectators — allow sufficient time.\n\nDesignated areas will be available for personal belongings. Crown Cheerleading Events is not responsible for items lost, stolen or damaged during the event.",
           },
@@ -305,26 +280,53 @@ const en = {
           {
             q: 'How are ties handled?',
             a: "Ties are not broken, except to determine grand champions, in the following order:\n1. The team with the fewest deductions wins\n2. Highest overall score\n3. Highest total technical scores",
-          },
-          {
-            q: 'Does the competition provide spotters?',
-            a: "The competition does not provide spotters. It is the coaches' responsibility to safely present elements requiring a spotter.\n\nException: Novice and Prep teams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",
-          },
-          {
+          }, {
             q: 'What happens in case of injury?',
             a: "A medical station will be set up near the competition and warm-up area. Each team must have its own first aid kit (strapping, bandages, ice packs, etc.).\n\nOnly competition officials, the team coach or the injured participant may stop a routine. If a new performance is authorised, the routine must be performed in full. An injured athlete may only return to the floor with authorisation from medical staff, the legal guardian and the head coach.",
           },
           {
             q: 'What happens if a routine is stopped?',
             a: "If the interruption is beyond the team's control (equipment issue, technical failure, organisational problem), the team may restart the routine from the point of interruption.\n\nIf the interruption is caused by the team, they must continue or withdraw. Officials will decide whether a new performance is possible.",
+          },]
+      },
+      {
+        category: 'Competition',
+        items: [
+          {
+            q: 'Do we need to be affiliated with a federation or have a licence?',
+            a: "No. To participate, you do not need to be affiliated with a federation or have licences for your athletes. Crown Cheerleading Events does not require a medical certificate for participants.\n\nHowever, it is the clubs' responsibility to ensure the health of their athletes and their coverage in case of injury to themselves or others.",
           },
+          {
+            q: 'Is there a Masters division?',
+            a: "No. However, Masters teams are welcome to register in the Open Prep category. This category is suitable for teams with a wide age range, and does not demand elite skills in tumbling or building. It allows Masters teams to experience the competition atmosphere and receive feedback from judges, while competing in a category that values spirit and performance over technical difficulty.",
+          },
+          
+          {
+            q: 'What is an exhibition team?',
+            a: "An exhibition team is a non-competitive team that wishes to experience performing in front of an audience. They are not judged and receive no feedback from the judges. The team receives neither banner nor trophy.\n\nEach athlete receives a participation medal. Each exhibition team will receive photos of their performance. The routine video will also be posted on YouTube.",
+          },
+         
+          {
+            q: 'What are the dimensions of the competition floor?',
+            a: 'The competition floor is a 14 m × 14 m dynamic floor.',
+          },
+          
+          {
+            q: 'Does the competition provide spotters?',
+            a: "The competition does not provide spotters. It is the coaches' responsibility to safely present elements requiring a spotter.\n\nException: Novice and Prep teams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",
+          },
+         
           {
             q: 'How does warm-up work?',
             a: "Each team has 10 minutes in the changing room before accessing the warm-up room. They then have 10 minutes on non-dynamic mats, followed by 5 minutes on the dynamic floor. A 2-minute 30-second run-through with music is then scheduled on a non-dynamic mat.",
           },
           {
             q: 'Can an athlete register with both an allstar club and a university team?',
-            a: "Yes. An athlete may register with both an allstar club and a university team.\n\nHowever, the crossover rule applies: each team may have a maximum of 2 crossovers. Therefore, no more than two athletes who cheer in an allstar club may be part of the same university team.",
+            a: "Yes. An athlete may register with both an allstar club and a university team. The max number of crossover rule does not apply."
+          },
+          {
+            q: 'Can a university team register in an allstar category?',
+            a: 'Yes, however they cannot register in university and allstar categories simultaneously. They will be subject to the same rules and judging criteria as allstar teams, will pay the allstar entry fee and will not be eligible for university awards.',
           },
           {
             q: 'How is the Cheer Spirit title determined?',

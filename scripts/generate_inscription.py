@@ -112,7 +112,7 @@ c.protection = Protection(locked=True)
 ws1.row_dimensions[2].height = 22
 ws1.merge_cells("A2:G2")
 c = ws1["A2"]
-c.value = "4 avril 2027  ·  Dojo de Paris  ·  Un fichier par équipe"
+c.value = "4 avril 2027  ·  Centre omnisports universitaire Carole Vergne  ·  Un fichier par équipe"
 c.fill = fill(DARK)
 c.font = font(color=MID_GRAY, size=9, italic=True)
 c.alignment = align(h="center")
@@ -141,7 +141,7 @@ cd = input_cell(ws1, 8, 3)
 cd.alignment = align(h="left")
 ws1.merge_cells("C8:G8")
 dv_div = DataValidation(type="list",
-    formula1="Listes!$A$1:$A$45",
+    formula1="Listes!$A$1:$A$55",
     showDropDown=False, showErrorMessage=True,
     error="Choisissez une division dans la liste", errorTitle="Valeur invalide")
 ws1.add_data_validation(dv_div)
@@ -155,9 +155,9 @@ merge_style(ws1, "A10:G10", "  RÉSUMÉ & CALCUL DES FRAIS", GOLD_DARK, BLACK, s
 
 summary_rows = [
     (11, "Nombre total d'athlètes",             '=COUNTA(Athlètes!B5:B39)'),
-    (12, "Dont athlètes masculins",              '=COUNTIF(Athlètes!E5:E200,"Masculin")'),
+    (12, "Dont athlètes masculins",              '=COUNTIF(Athlètes!E5:E39,"M")'),
     (13, "Accompagnateurs inclus (2/équipe)",    2),
-    (14, "Accompagnateurs supplémentaires",      '=MAX(0,COUNTA(Accompagnateurs!B5:B24)-2)'),
+    (14, "Accompagnateurs supplémentaires",      '=MAX(0,COUNTA(Accompagnateurs!B5:B11)-2)'),
     (15, "Coût accompagnateurs suppl. (€)",      '=C14*40'),
 ]
 for row, label, value in summary_rows:
@@ -171,7 +171,7 @@ ws1.row_dimensions[16].height = 10
 ws1.row_dimensions[17].height = 26
 merge_style(ws1, "A17:B17", "  Prix par athlète (€)", GRAY, MID_GRAY, size=9)
 cprix = ws1["C17"]
-cprix.value = '=IF(C8="Démo",37.5,IF(ISNUMBER(SEARCH("Novice",C8)),40,IF(OR(ISNUMBER(SEARCH("Allstar",C8)),ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),50,IF(C8<>"","50",""))))'
+cprix.value = '=IF(C8="Démo",35,IF(ISNUMBER(SEARCH("Novice",C8)),35,IF(ISNUMBER(SEARCH("Allstar",C8)),45,IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),40,IF(C8<>"","?","")))))'
 cprix.fill = fill(GRAY2)
 cprix.font = font(color=GOLD_DARK, size=11, bold=True)
 cprix.alignment = align(h="center")
@@ -179,7 +179,7 @@ cprix.border = Border(bottom=Side(style="thin", color=GOLD_DARK))
 cprix.protection = Protection(locked=True)
 
 cnote17 = ws1.cell(row=17, column=4,
-    value='=IF(C8="Démo","Démo : 37,50 €",IF(ISNUMBER(SEARCH("Novice",C8)),"Novice : 40 €",IF(OR(ISNUMBER(SEARCH("Allstar",C8)),ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),"AllStar / Prep / Univ. : 50 €",IF(C8<>"","50 €","← sélectionnez une division"))))')
+    value='=IF(C8="Démo","Démo : 35 €",IF(ISNUMBER(SEARCH("Novice",C8)),"Novice : 35 €",IF(ISNUMBER(SEARCH("Allstar",C8)),"Allstar : 45 €",IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),"Universitaire / Prep : 40 €",IF(C8<>"","? €","← sélectionnez une division")))))')
 cnote17.fill = fill(GRAY2)
 cnote17.font = font(color=MID_GRAY, size=8, italic=True)
 cnote17.alignment = align(h="left")
@@ -252,7 +252,7 @@ ws2.row_dimensions[4].height = 28
 for col, label in [(1,"#"),(2,"Nom"),(3,"Prénom"),(4,"Date de naissance\n(JJ/MM/AAAA)"),(5,"Sexe"),(6,"Remarque")]:
     header_cell(ws2, 4, col, label, bg=GRAY2, fg=GOLD, size=9)
 
-dv_sex = DataValidation(type="list", formula1='"Féminin,Masculin"', showDropDown=False)
+dv_sex = DataValidation(type="list", formula1='"F,M,Autre"', showDropDown=False)
 ws2.add_data_validation(dv_sex)
 
 for row in range(5, 40):
@@ -321,7 +321,7 @@ ws3["A2"].protection = Protection(locked=True)
 ws3.row_dimensions[3].height = 30
 merge_style(ws3, "A3:E3",
     "2 accompagnateurs par équipe sont inclus dans les frais d'inscription (lignes 1 et 2). "
-    "Les suivants sont facturés 40 € chacun et comptabilisés automatiquement dans l'onglet Accueil.",
+    "Les suivants sont facturés 40 € chacun et comptabilisés automatiquement dans l'onglet Accueil. Maximum 7 accompagnateurs.",
     GRAY, MID_GRAY, size=8, wrap=True)
 
 ws3.row_dimensions[4].height = 28
@@ -335,7 +335,7 @@ dv_role = DataValidation(
 )
 ws3.add_data_validation(dv_role)
 
-for row in range(5, 25):
+for row in range(5, 12):
     ws3.row_dimensions[row].height = 22
     bg = DARK if row % 2 == 0 else GRAY
     idx = row - 4
@@ -359,9 +359,9 @@ for row in range(5, 25):
     cr.protection = Protection(locked=False)
     dv_role.add(cr)
 
-ws3.row_dimensions[25].height = 10
-ws3.row_dimensions[26].height = 50
-merge_style(ws3, "A26:E26",
+ws3.row_dimensions[12].height = 10
+ws3.row_dimensions[13].height = 50
+merge_style(ws3, "A13:E13",
     "RAPPEL RÈGLEMENT : Seuls les accompagnateurs et athlètes déclarés sont autorisés en salle "
     "d'échauffement et dans les vestiaires. Les accompagnateurs doivent arriver en même temps que leur équipe "
     "et se présenter à l'accueil pour récupérer leur bracelet.",
@@ -381,14 +381,18 @@ DIVISIONS = [
     "Démo",
     "U6 Novice L1",
     "U8 Novice L1",
-    "U12 Prep L1",
+    "U12 Prep L1.1",
     "U12 Prep L2.1",
-    "U16 Prep L1",
+    "U12 Prep L2.2",
+    "U16 Prep L1.1",
     "U16 Prep L2.1",
-    "U18 Prep L1",
+    "U16 Prep L2.2",
+    "U18 Prep L1.1",
     "U18 Prep L2.1",
-    "Open Prep L1",
+    "U18 Prep L2.2",
+    "Open Prep L1.1",
     "Open Prep L2.1",
+    "Open Prep L2.2",
     "U12 Allstar L1",
     "U12 Allstar L2",
     "U16 Allstar L1",
@@ -398,25 +402,31 @@ DIVISIONS = [
     "U18 Allstar L2",
     "U18 Allstar L3",
     "U18 Allstar L4",
+    "U18 Allstar L4.2",
     "Open Allstar L1",
     "Open Allstar L2",
-    "Open AG Allstar L3",
+    "Open Allstar L3",
     "Open AG Allstar L4",
+    "Open AG Allstar L4.2",
     "Open AG Allstar L5",
     "Open AG Allstar L6",
     "Open AG Allstar L7",
-    "Open Coed Allstar L3",
     "Open Coed Allstar L4",
+    "Open Coed Allstar L4.2",
     "Open Coed Allstar L5",
     "Open Coed Allstar L6",
     "Open Coed Allstar L7",
+    "U16 NT Allstar L2",
+    "U16 NT Allstar L3",
+    "U18 NT Allstar L2",
+    "U18 NT Allstar L3",
+    "U18 NT Allstar L4",
     "Open NT Allstar L2",
-    "Open AG NT Allstar L3",
+    "Open NT Allstar L3",
     "Open AG NT Allstar L4",
     "Open AG NT Allstar L5",
     "Open AG NT Allstar L6",
     "Open AG NT Allstar L7",
-    "Open Coed NT Allstar L3",
     "Open Coed NT Allstar L4",
     "Open Coed NT Allstar L5",
     "Open Coed NT Allstar L6",
