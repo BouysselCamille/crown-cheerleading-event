@@ -50,7 +50,7 @@ const fr = {
     items: [
       { time: '8h30', label: 'Ouverture des portes pour les athlètes & accréditations' },
       { time: '9h00', label: 'Ouverture au public' },
-      { time: '9h15', label: 'Bloc 1 - Novice, Prep et Universitaire' },
+      { time: '9h15', label: 'Bloc 1 - Prep et Universitaire' },
       { time: '12h00', label: 'Remise des prix Block 1' },
       { time: '12h45', label: 'Pause' },
       { time: '13h45', label: 'Bloc 2 - AllStar' },
@@ -74,9 +74,9 @@ const fr = {
         deadline: "jusqu'au 11 Déc 2026",
         badge: 'Meilleur tarif',
         rows: [
-          { cat: 'Allstar ', price: '45,00 EUR' },
-          { cat: 'Universitaire / Prep', price: '40,00 EUR' },
-          { cat: 'Novice / Démo', price: '35,00 EUR' },
+          { cat: 'Allstar ', price: '40,00 EUR' },
+          { cat: 'Universitaire / Prep', price: '37,50 EUR' },
+          { cat: 'Demo', price: '35,00 EUR' },
           { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
         ],
         highlight: true,
@@ -86,7 +86,7 @@ const fr = {
         deadline: "jusqu'au 12 Fév 2027",
         badge: null,
         rows: [
-          { cat: 'Athlète', price: '50,00 EUR' },
+          { cat: 'Athlète', price: '45,00 EUR' },
           { cat: 'Accompagnateur supplémentaire', price: '40,00 EUR' },
         ],
         highlight: false,
@@ -103,7 +103,7 @@ const fr = {
     note: "* Les équipes avec des exceptions d'âge ne seront pas considérées. Les trois prix seront attribués à des clubs différents. Les juges seront consultés si les scores sont égaux ou désignent deux fois le même club.",
     rewards: [
       { icon: '🥇', text: 'Chaque participant reçoit une médaille' },
-      { icon: '🏳️', text: 'Les champions et les équipes novices reçoivent une bannière' },
+      { icon: '🏳️', text: 'Les champions reçoivent une bannière' },
       { icon: '📸', text: 'Photos de la routine gratuites' },
       { icon: '🎥', text: 'Vidéo de la routine disponible sur YouTube post-compétition' },
       { icon: '🏟️', text: 'Compétition sur praticable dynamique de 7 panels' },
@@ -111,7 +111,7 @@ const fr = {
     ],
     cheerSpirit: {
       title: 'CHEER SPIRIT',
-      desc: "Un prix spécifique de « Cheer Spirit » viendra récompenser l'équipe exemplaire en matière de respect, d'encouragement et d'esprit sportif — soit 500 EUR de remise sur l'inscription à la prochaine édition.",
+      desc: "Un prix spécifique de « Cheer Spirit » viendra récompenser le club exemplaire en matière de respect, d'encouragement et d'esprit sportif — soit 500 EUR de remise sur l'inscription à la prochaine édition.",
     },
     grandChamps: [
       {
@@ -263,7 +263,7 @@ const fr = {
           },
            {
             q: 'Quelle est la durée des routines ?',
-            a: "Novice : 1 min 30\nPrep et Non-tumbling : 2 min 00\nAllstar et Universitaire : 2 min 30\n\nLe chronométrage débute au premier mouvement chorégraphié ou à la première note de musique, et se termine au dernier mouvement ou à la dernière note.",
+            a: "Prep et Non-tumbling : 2 min 00\nAllstar et Universitaire : 2 min 30\n\nLe chronométrage débute au premier mouvement chorégraphié ou à la première note de musique, et se termine au dernier mouvement ou à la dernière note.",
           },
           {
             q: 'Quelles sont les règles concernant la musique ?',
@@ -291,7 +291,7 @@ const fr = {
           },
             {
             q: "Quelles sont les règles concernant les âges des athlètes ?",
-            a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite de 15 % de l'effectif de l'équipe. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
+            a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite du raisonnable. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
           }
         ]
       },
@@ -302,16 +302,9 @@ const fr = {
             q: "Faut-il être affilié à une fédération ou avoir une licence ?",
             a: "Non. Pour participer, vous n'avez pas besoin d'être affilié à une fédération ni de disposer de licences pour vos athlètes. Crown Cheerleading Events ne demande pas de certificat médical pour les participants.\n\nToutefois, il est de la responsabilité des clubs de s'assurer de la santé de leurs athlètes ainsi que de leur couverture en cas de blessure ou blessure d'autrui.",
           },
-          
-        
-          {
-            q: "Y a-t-il une division Masters ?",
-            a: "Non. Cependant, les équipes Masters sont les bienvenues pour s'inscrire dans la catégorie Open Prep. Cette catégorie convient aux équipes ayant un large éventail d'âges, et ne demande pas de compétences d'élite en tumbling ou en stunt. Elle permet aux équipes Masters de vivre l'atmosphère de la compétition et de recevoir des retours des juges, tout en compétant dans une catégorie qui valorise la performance plutôt que la difficulté technique.",
-          },
-         
           {
             q: "Qu'est-ce qu'une équipe démo ?",
-            a: "Une équipe démo est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. L'équipe ne reçoit ni bannière ni trophée.\n\nChaque athlète reçoit une médaille de participation. Chaque équipe démo recevra des photos de sa prestation. La vidéo de la routine sera également publiée sur YouTube.",          },
+            a: "Une équipe démo est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. L'équipe reçoit une bannière.\n\nChaque athlète reçoit une médaille de participation. Chaque équipe démo recevra des photos de sa prestation. La vidéo de la routine sera également publiée sur YouTube.",          },
          
           
           {
@@ -322,7 +315,7 @@ const fr = {
           
           {
             q: 'La compétition fournit-elle des spotteurs ?',
-            a: "La compétition ne fournit pas de spotteurs. Il est de la responsabilité des entraîneurs de présenter les éléments en sécurité avec les athlètes nécessitant un spotteur.\n\nException : les équipes Novice et Prep peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",
+            a: "La compétition ne fournit pas de spotteurs. Il est de la responsabilité des entraîneurs de présenter les éléments en sécurité avec les athlètes nécessitant un spotteur.\n\nLes équipes peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",
           },
           
           {
@@ -338,7 +331,7 @@ const fr = {
             },
           {
             q: "Comment est déterminé le titre de Cheer Spirit ?",
-            a: "Le titre de Cheer Spirit est attribué sur la base de deux critères combinés :\n\n• L'observation de nos bénévoles tout au long de la compétition, qui évaluent l'attitude, le respect, l'encouragement envers les autres équipes et l'esprit sportif général.\n\n• Les stories publiées sur les réseaux sociaux tagguant Crown Cheerleading Events pendant la journée, mettant en valeur cet esprit Cheer Spirit.\n\nLe titre est décerné à l'équipe qui aura brillé par son exemplarité sur ces deux tableaux.",
+            a: "Le titre de Cheer Spirit est attribué sur la base de deux critères combinés :\n\n• L'observation de nos bénévoles tout au long de la compétition, qui évaluent l'attitude, le respect, l'encouragement envers les autres équipes et l'esprit sportif général.\n\n• Les stories publiées sur les réseaux sociaux tagguant Crown Cheerleading Events pendant la journée, mettant en valeur cet esprit Cheer Spirit.\n\nLe titre est décerné au club qui aura brillé par son exemplarité sur ces deux tableaux.",
           },
         ],
       },

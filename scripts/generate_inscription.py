@@ -171,7 +171,7 @@ ws1.row_dimensions[16].height = 10
 ws1.row_dimensions[17].height = 26
 merge_style(ws1, "A17:B17", "  Prix par athlète (€)", GRAY, MID_GRAY, size=9)
 cprix = ws1["C17"]
-cprix.value = '=IF(C8="Démo",35,IF(ISNUMBER(SEARCH("Novice",C8)),35,IF(ISNUMBER(SEARCH("Allstar",C8)),45,IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),40,IF(C8<>"","?","")))))'
+cprix.value = '=IF(C8="Démo",35,IF(ISNUMBER(SEARCH("Allstar",C8)),40,IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),37.5,IF(C8<>"","?",""))))'
 cprix.fill = fill(GRAY2)
 cprix.font = font(color=GOLD_DARK, size=11, bold=True)
 cprix.alignment = align(h="center")
@@ -179,7 +179,7 @@ cprix.border = Border(bottom=Side(style="thin", color=GOLD_DARK))
 cprix.protection = Protection(locked=True)
 
 cnote17 = ws1.cell(row=17, column=4,
-    value='=IF(C8="Démo","Démo : 35 €",IF(ISNUMBER(SEARCH("Novice",C8)),"Novice : 35 €",IF(ISNUMBER(SEARCH("Allstar",C8)),"Allstar : 45 €",IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),"Universitaire / Prep : 40 €",IF(C8<>"","? €","← sélectionnez une division")))))')
+    value='=IF(C8="Démo","Démo : 35 €",IF(ISNUMBER(SEARCH("Allstar",C8)),"Allstar : 40 €",IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),"Universitaire / Prep : 37,50 €",IF(C8<>"","? €","← sélectionnez une division"))))')
 cnote17.fill = fill(GRAY2)
 cnote17.font = font(color=MID_GRAY, size=8, italic=True)
 cnote17.alignment = align(h="left")
@@ -379,8 +379,7 @@ ws_lists.sheet_state = "hidden"
 
 DIVISIONS = [
     "Démo",
-    "U6 Novice L1",
-    "U8 Novice L1",
+    "U8 Prep L1.1",
     "U12 Prep L1.1",
     "U12 Prep L2.1",
     "U12 Prep L2.2",
@@ -390,9 +389,10 @@ DIVISIONS = [
     "U18 Prep L1.1",
     "U18 Prep L2.1",
     "U18 Prep L2.2",
-    "Open Prep L1.1",
-    "Open Prep L2.1",
-    "Open Prep L2.2",
+    "Masters Prep L1.1",
+    "Masters Prep L2.1",
+    "Masters Prep L2.2",
+    "U8 Allstar L1",
     "U12 Allstar L1",
     "U12 Allstar L2",
     "U16 Allstar L1",

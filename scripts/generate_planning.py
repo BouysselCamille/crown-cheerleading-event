@@ -62,7 +62,7 @@ BLOCK1 = {
     'ceremony': {
         'label': 'AWARDS CEREMONY - BLOC 1',
         'time':  '13:00 – 13:30',
-        'note':  'Remise des prix Bloc 1 — Novice, Prep & Universitaire',
+        'note':  'Remise des prix Bloc 1 — Prep & Universitaire',
     },
 }
 

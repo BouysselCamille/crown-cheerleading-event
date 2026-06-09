@@ -50,7 +50,7 @@ const en = {
     items: [
       { time: '8h30', label: 'Doors open for athletes & accreditations' },
       { time: '9h00', label: 'Public opening' },
-      { time: '9h15', label: 'Bloc 1 - Novice, Prep & University' },
+      { time: '9h15', label: 'Bloc 1 - Prep & University' },
       { time: '12h00', label: 'Bloc 1 Awards Ceremony' },
       { time: '12h45', label: 'Break' },
       { time: '13h45', label: 'Bloc 2 - AllStar' },
@@ -74,9 +74,9 @@ const en = {
         deadline: 'until Dec 11, 2026',
         badge: 'Best rate',
         rows: [
-          { cat: 'Allstar', price: '45.00 EUR' },
-          { cat: 'University / Prep', price: '40.00 EUR' },
-          { cat: 'Novice / Demo', price: '35.00 EUR' },
+          { cat: 'Allstar', price: '40.00 EUR' },
+          { cat: 'University / Prep', price: '37.50 EUR' },
+          { cat: 'Demo', price: '35.00 EUR' },
           { cat: 'Additional accompanying person', price: '40.00 EUR' },
         ],
         highlight: true,
@@ -86,7 +86,7 @@ const en = {
         deadline: 'until Feb 12, 2027',
         badge: null,
         rows: [
-          { cat: 'Athlete', price: '50.00 EUR' },
+          { cat: 'Athlete', price: '45.00 EUR' },
           { cat: 'Additional accompanying person', price: '40.00 EUR' },
         ],
         highlight: false,
@@ -103,7 +103,7 @@ const en = {
     note: '* Teams with age exceptions will not be eligible. The three prizes will be awarded to different clubs. Judges will be consulted if scores are tied or point to the same club twice.',
     rewards: [
       { icon: '🥇', text: 'Every participant receives a medal' },
-      { icon: '🏳️', text: 'Champions and novice teams receive a banner' },
+      { icon: '🏳️', text: 'Champions teams receive a banner' },
       { icon: '📸', text: 'Free routine photos' },
       { icon: '🎥', text: 'Routine video available on YouTube post-competition' },
       { icon: '🏟️', text: 'Competition on a 7-panel spring floor' },
@@ -111,7 +111,7 @@ const en = {
     ],
     cheerSpirit: {
       title: 'CHEER SPIRIT',
-      desc: 'A specific "Cheer Spirit" award will recognise the team who stands out for their respect, encouragement and sportsmanship — a 500 EUR discount on registration for the next edition.',
+      desc: 'A specific "Cheer Spirit" award will recognise the program who stands out for their respect, encouragement and sportsmanship — a 500 EUR discount on registration for the next edition.',
     },
     grandChamps: [
       {
@@ -257,14 +257,14 @@ const en = {
           },
           {
             q: 'What are the rules regarding athlete ages?',
-            a: "Proof of age may be requested at any time by competition officials.\n\nTo allow clubs to include all their athletes, the organisation tolerates a few age exceptions within the limit of 15% of the team roster. Any request must be made by email and approved prior to the competition.\n\nAny team with age exceptions will not be eligible for Grand Champion awards.",
+            a: "Proof of age may be requested at any time by competition officials.\n\nTo allow clubs to include all their athletes, the organisation tolerates a few age exceptions within reasonable limits. Any request must be made by email and approved prior to the competition.\n\nAny team with age exceptions will not be eligible for Grand Champion awards.",
           },
         {
             q: 'Which scoring system is used?',
             a: "The competition follows the United Scoring System > United Kingdom scoresheets.\n\nhttps://www.unitedscoringpartners.com/",
           }, {
             q: 'What is the routine duration?',
-            a: "Novice: 1 min 30\nPrep and Non-tumbling: 2 min 00\nAllstar and University: 2 min 30\n\nTiming begins at the first choreographed movement or first note of music, and ends at the last movement or last note.",
+            a: "Prep and Non-tumbling: 2 min 00\nAllstar and University: 2 min 30\n\nTiming begins at the first choreographed movement or first note of music, and ends at the last movement or last note.",
           },
           {
             q: 'What are the music rules?',
@@ -297,13 +297,8 @@ const en = {
             a: "No. To participate, you do not need to be affiliated with a federation or have licences for your athletes. Crown Cheerleading Events does not require a medical certificate for participants.\n\nHowever, it is the clubs' responsibility to ensure the health of their athletes and their coverage in case of injury to themselves or others.",
           },
           {
-            q: 'Is there a Masters division?',
-            a: "No. However, Masters teams are welcome to register in the Open Prep category. This category is suitable for teams with a wide age range, and does not demand elite skills in tumbling or building. It allows Masters teams to experience the competition atmosphere and receive feedback from judges, while competing in a category that values spirit and performance over technical difficulty.",
-          },
-          
-          {
             q: 'What is an exhibition team?',
-            a: "An exhibition team is a non-competitive team that wishes to experience performing in front of an audience. They are not judged and receive no feedback from the judges. The team receives neither banner nor trophy.\n\nEach athlete receives a participation medal. Each exhibition team will receive photos of their performance. The routine video will also be posted on YouTube.",
+            a: "An exhibition team is a non-competitive team that wishes to experience performing in front of an audience. They are not judged and receive no feedback from the judges. The team receives a banner.\n\nEach athlete receives a participation medal. Each exhibition team will receive photos of their performance. The routine video will also be posted on YouTube.",
           },
          
           {
@@ -313,7 +308,7 @@ const en = {
           
           {
             q: 'Does the competition provide spotters?',
-            a: "The competition does not provide spotters. It is the coaches' responsibility to safely present elements requiring a spotter.\n\nException: Novice and Prep teams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",
+            a: "The competition does not provide spotters. It is the coaches' responsibility to safely present elements requiring a spotter.\n\nTeams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",
           },
          
           {
@@ -330,7 +325,7 @@ const en = {
           },
           {
             q: 'How is the Cheer Spirit title determined?',
-            a: "The Cheer Spirit title is awarded based on two combined criteria:\n\n• Observation by our volunteers throughout the entire competition, who assess attitude, respect, encouragement towards other teams, and overall sportsmanship.\n\n• Stories posted on social media tagging Crown Cheerleading Events during the day showcasing that Cheer Spirit.\n\nThe title goes to the team that stands out on both counts.",
+            a: "The Cheer Spirit title is awarded based on two combined criteria:\n\n• Observation by our volunteers throughout the entire competition, who assess attitude, respect, encouragement towards other teams, and overall sportsmanship.\n\n• Stories posted on social media tagging Crown Cheerleading Events during the day showcasing that Cheer Spirit.\n\nThe title goes to the program that stands out on both counts.",
           },
         ],
       },
