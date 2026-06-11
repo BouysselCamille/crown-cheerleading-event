@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crown-cheerleading-events.org/sitemap.xml
+Sitemap: https://crown-cheerleading-events.fr/sitemap.xml

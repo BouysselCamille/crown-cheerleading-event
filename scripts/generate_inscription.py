@@ -205,7 +205,7 @@ ws1.row_dimensions[20].height = 10
 ws1.row_dimensions[21].height = 36
 merge_style(ws1, "A21:G21",
     "Ce document ne fait pas office de facture. Les tarifs affichés sur le site "
-    "crown-cheerleading-events.org font valeur de référence.",
+    "crown-cheerleading-events.fr font valeur de référence.",
     GOLD_DARK, BLACK, size=9, wrap=True, bold=False)
 
 ws1.row_dimensions[22].height = 50

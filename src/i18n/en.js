@@ -375,7 +375,7 @@ const en = {
     title1: 'Get in',
     title2: 'touch',
     subtitle: 'A question about the competition, a partnership, a registration? Write to us.',
-    email: 'contact@crown-cheerleading-events.org',
+    email: 'contact@crown-cheerleading-events.fr',
     cta: 'Send an email',
   },
 
@@ -391,7 +391,7 @@ const en = {
         info: [
           { label: 'Association under the 1901 law', value: 'Crown Cheerleading Events' },
           { label: 'Registered office', value: '11 avenue Ledru Rollin 75012 Paris' },
-          { label: 'Email', value: 'contact@crown-cheerleading-events.org' },
+          { label: 'Email', value: 'contact@crown-cheerleading-events.fr' },
           { label: 'SIRET / RNA', value: '102538766 / W751283436' },
         ],
       },
@@ -475,7 +475,7 @@ const en = {
     tagline: 'The competition that crowns champions.',
     navigation: 'Navigation',
     contact: 'Contact',
-    contactText: 'contact@crown-cheerleading-events.org',
+    contactText: 'contact@crown-cheerleading-events.fr',
     rights: 'All rights reserved.',
     legal: 'Legal notice',
     privacy: 'Privacy policy',
