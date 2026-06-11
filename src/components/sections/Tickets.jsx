@@ -1,14 +1,21 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { SectionTitle } from '../ui/SectionTitle';
 import { EVENT } from '../../constants/competitionData';
+import { SectionTitle } from '../ui/SectionTitle';
 import { useTranslation } from '../../i18n/index.jsx';
 
 export function Tickets() {
   const { t } = useTranslation();
-  const hasSlug = Boolean(EVENT.helloassoSlug);
-  const widgetUrl = hasSlug
-    ? `https://www.helloasso.com${EVENT.helloassoSlug}/widget`
-    : null;
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://crown-cheerleading-events.assoconnect.com/public/build/js/iframe.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <section id="tickets" className="py-24 bg-crown-black">
@@ -25,23 +32,22 @@ export function Tickets() {
             subtitle={t.tickets.subtitle}
             center
           />
+          {EVENT.assoconnectCollectId ? <a
+            href={EVENT.assoconnectCollectId}
+            target="_blank"
+            className="inline-flex items-center gap-3 bg-gold/10 border border-gold/40 hover:bg-gold/20 hover:border-gold/70 text-gold font-display font-semibold text-sm px-8 py-4 rounded-xl transition-all duration-200"
+          >
+            {t.tickets.label}
+          </a> : null}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="bg-crown-gray border border-gold/20 rounded-2xl overflow-hidden"
-        >
-          {hasSlug ? (
-            <iframe
-              src={widgetUrl}
-              allowTransparency="true"
-              style={{ border: 'none', width: '100%', height: '750px', display: 'block' }}
-              title="Billetterie HelloAsso — Crown Cheerleading Events"
-            />
-          ) : (
-            <div className="flex flex-col items-center justify-center py-20 px-8 text-center">
+        {EVENT.assoconnectCollectId ? null : (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-crown-gray border border-gold/20 rounded-2xl overflow-hidden"
+          ><div className="flex flex-col items-center justify-center py-20 px-8 text-center">
               <div className="w-16 h-16 rounded-full border-2 border-gold/40 flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -49,9 +55,8 @@ export function Tickets() {
                 </svg>
               </div>
               <h3 className="text-white font-display font-bold text-xl mb-3">{t.tickets.soon}</h3>
-            </div>
-          )}
-        </motion.div>
+            </div></motion.div>)}
+
       </div>
     </section>
   );

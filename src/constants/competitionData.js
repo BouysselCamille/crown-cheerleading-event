@@ -1,6 +1,6 @@
 export const EVENT = {
   date: '2027-04-04T09:00:00',
-  helloassoSlug: '', // À remplir : /associations/[votre-asso]/evenements/[votre-event]
+  assoconnectCollectId: '', // À remplir
 };
 
 export const SPONSORS = [

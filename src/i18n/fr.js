@@ -149,7 +149,7 @@ const fr = {
     label: 'Billetterie',
     title1: 'Réservez vos',
     title2: 'places',
-    subtitle: 'Paiement sécurisé via HelloAsso.',
+    subtitle: 'Paiement sécurisé via Assoconnect.',
     soon: 'La billetterie sera ouverte au 11 décembre 2026',
   },
 
@@ -471,8 +471,8 @@ const fr = {
         content: "Ce site utilise uniquement des cookies techniques strictement nécessaires au fonctionnement du site. Aucun cookie publicitaire ou de traçage n'est utilisé.",
       },
       {
-        title: '7. Billetterie HelloAsso',
-        content: "L'achat de billets est géré par HelloAsso, soumis à sa propre politique de confidentialité. Nous vous invitons à la consulter sur le site HelloAsso.",
+        title: '7. Billetterie Assoconnect',
+        content: "L'achat de billets est géré par Assoconnect, soumis à sa propre politique de confidentialité. Nous vous invitons à la consulter sur le site Assoconnect.",
       },
     ],
   },

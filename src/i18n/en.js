@@ -149,7 +149,7 @@ const en = {
     label: 'Tickets',
     title1: 'Book your',
     title2: 'seats',
-    subtitle: 'Secure payment via HelloAsso.',
+    subtitle: 'Secure payment via Assoconnect.',
     soon: 'Ticketing will open on December 11, 2026',
   },
 
@@ -465,8 +465,8 @@ const en = {
         content: 'This site uses only strictly necessary technical cookies for the operation of the site. No advertising or tracking cookies are used.',
       },
       {
-        title: '7. HelloAsso ticketing',
-        content: "Ticket purchases are managed by HelloAsso, subject to its own privacy policy. We invite you to consult it on the HelloAsso website.",
+        title: '7. Assoconnect ticketing',
+        content: "Ticket purchases are managed by Assoconnect, subject to its own privacy policy. We invite you to consult it on the Assoconnect website.",
       },
     ],
   },
