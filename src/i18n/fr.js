@@ -477,6 +477,12 @@ const fr = {
     ],
   },
 
+  notFound: {
+    title: '404',
+    message: 'Oups, la page que vous recherchez n’existe pas.',
+    cta: "Retour à l'accueil",
+  },
+
   footer: {
     tagline: 'La compétition qui couronne les champions.',
     navigation: 'Navigation',

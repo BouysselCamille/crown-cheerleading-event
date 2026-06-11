@@ -471,6 +471,12 @@ const en = {
     ],
   },
 
+  notFound: {
+    title: '404',
+    message: 'Oops, the page you are looking for does not exist.',
+    cta: 'Back to home',
+  },
+
   footer: {
     tagline: 'The competition that crowns champions.',
     navigation: 'Navigation',
