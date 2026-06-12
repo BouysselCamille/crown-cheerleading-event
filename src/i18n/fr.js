@@ -432,6 +432,7 @@ const fr = {
     back: "Retour à l'accueil",
     title: 'Politique de confidentialité',
     updated: 'Dernière mise à jour',
+    updatedDate: '15 Mai 2026',
     sections: [
       {
         title: '1. Responsable du traitement',

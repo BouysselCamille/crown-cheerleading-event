@@ -19,7 +19,7 @@ export function PolitiqueConfidentialite() {
 
         <h1 className="text-4xl font-display font-black text-white mb-2">{txt.title}</h1>
         <p className="text-gray-500 text-sm mb-12">
-          {txt.updated} : {new Date().toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+          {txt.updated} : {txt.updatedDate}
         </p>
 
         <div className="prose prose-invert max-w-none space-y-10 text-gray-400 leading-relaxed">

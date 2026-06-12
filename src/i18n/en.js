@@ -426,6 +426,7 @@ const en = {
     back: 'Back to home',
     title: 'Privacy policy',
     updated: 'Last updated',
+    updatedDate: 'May 15th, 2026',
     sections: [
       {
         title: '1. Data controller',
