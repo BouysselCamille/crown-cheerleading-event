@@ -32,9 +32,9 @@ const en = {
     title1: 'The competition',
     title2: 'that crowns',
     title3: 'champions',
-    p1: "Crown Cheerleading Events is a competition created by passionate people, for passionate people. Our ambition: to offer French cheerleading teams a stage worthy of their talent, in an electric and supportive atmosphere.",
-    p2: "Whether you are a beginner or experienced team, Crown Cheerleading Events welcomes all divisions in a format designed to showcase every athlete and every performance.",
-    badge: 'Judged under IASF / United Scoring System standards',
+   p1: "Paris Spring Open Championship is a competition created by passionate people, for passionate people. Our goal: to give French cheerleading teams a stage that matches their talent, in an electric and welcoming atmosphere.",
+  p2: "Whether you're a beginner or an experienced team, Paris Spring Open Championship welcomes all divisions in a format designed to highlight every athlete and every performance.",
+badge: 'Judged under IASF / United Scoring System standards',
     stats: [
       { value: '500+', label: 'Expected athletes' },
       { value: '30+', label: 'Competing teams' },
@@ -111,7 +111,7 @@ const en = {
     ],
     cheerSpirit: {
       title: 'CHEER SPIRIT',
-      desc: 'A specific "Cheer Spirit" award will recognise the program who stands out for their respect, encouragement and sportsmanship — a 500 EUR discount on registration for the next edition.',
+      desc: 'A specific "Cheer Spirit" award will recognise the program who stands out for their respect, encouragement and sportsmanship.',
     },
     grandChamps: [
       {
@@ -305,7 +305,10 @@ const en = {
             q: 'What are the dimensions of the competition floor?',
             a: 'The competition floor is a 14 m × 14 m dynamic floor.',
           },
-          
+          {
+  q: "What is the Prep category?",
+  a: "The Prep category is designed for teams looking for their first competitive experience. The routine lasts 2 minutes, with reduced tumbling and stunting requirements. For more details, please refer to the scoring rubrics under: United Scoring System > United Kingdom > Prep."
+},
           {
             q: 'Does the competition provide spotters?',
             a: "The competition does not provide spotters. It is the coaches' responsibility to safely present elements requiring a spotter.\n\nTeams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
 import { useTranslation } from '../../i18n/index.jsx';
 
-const ICON_FILTER = { filter: 'brightness(0) saturate(100%) invert(73%) sepia(50%) saturate(600%) hue-rotate(5deg) brightness(95%)' };
+const ICON_FILTER = { filter: 'brightness(0) saturate(100%) invert(73%) sepia(20%) saturate(600%) hue-rotate(5deg) brightness(95%)' };
 
 const TRANSPORT_ICONS = [
   // 0: Métro

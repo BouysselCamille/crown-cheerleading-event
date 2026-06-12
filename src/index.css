@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gold: #D4AF37;
-  --color-gold-light: #F0D060;
-  --color-gold-dark: #A0820A;
+  --color-gold: #f5cb79;
+  --color-gold-light: #f5cb79;
+  --color-gold-dark: #DCC699;
   --color-crown-black: #0A0A0A;
   --color-crown-dark: #111111;
   --color-crown-gray: #1E1E1E;
@@ -40,11 +40,15 @@
 
 @layer utilities {
   .text-gold {
-    color: #D4AF37;
+    color: #f5cb79;
   }
 
   .text-gold-light {
-    color: #F0D060;
+    color: #f5cb79;
+  }
+
+  .text-turquoise {
+    color: #35676e
   }
 
   .bg-crown-black {
@@ -64,15 +68,19 @@
   }
 
   .border-gold {
-    border-color: #D4AF37;
+    border-color: #f5cb79;
+  }
+
+  .border-turquoise {
+    border-color: #35676e;
   }
 
   .gold-gradient {
-    background: linear-gradient(135deg, #A0820A, #D4AF37, #F0D060);
+    background: linear-gradient(135deg, #f5cb79, #DEBC6D, #DEBC6D);
   }
 
   .text-gold-gradient {
-    background: linear-gradient(135deg, #A0820A, #D4AF37, #F0D060);
+    background: linear-gradient(135deg, #DCC699, #f5cb79, #f5cb79);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

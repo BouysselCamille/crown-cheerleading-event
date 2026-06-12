@@ -32,9 +32,9 @@ const fr = {
     title1: 'La compétition',
     title2: 'qui couronne',
     title3: 'les champions',
-    p1: "Crown Cheerleading Events est une compétition créée par des passionnés, pour des passionnés. Notre ambition : offrir aux équipes de cheerleading françaises une scène à la hauteur de leur talent, dans une ambiance électrique et bienveillante.",
-    p2: "Que vous soyez équipe débutante ou confirmée, Crown Cheerleading Events accueille toutes les divisions dans un format pensé pour valoriser chaque athlète et chaque prestation.",
-    badge: 'Jugé selon les standards IASF / United Scoring System',
+    p1: "Paris Spring Open Championship est une compétition créée par des passionnés, pour des passionnés. Notre ambition : offrir aux équipes de cheerleading françaises une scène à la hauteur de leur talent, dans une ambiance électrique et bienveillante.",
+  p2: "Que vous soyez équipe débutante ou confirmée, Paris Spring Open Championship accueille toutes les divisions dans un format pensé pour valoriser chaque athlète et chaque prestation.",
+ badge: 'Jugé selon les standards IASF / United Scoring System',
     stats: [
       { value: '500+', label: 'Athlètes attendus' },
       { value: '30+', label: 'Équipes participantes' },
@@ -111,7 +111,7 @@ const fr = {
     ],
     cheerSpirit: {
       title: 'CHEER SPIRIT',
-      desc: "Un prix spécifique de « Cheer Spirit » viendra récompenser le club exemplaire en matière de respect, d'encouragement et d'esprit sportif — soit 500 EUR de remise sur l'inscription à la prochaine édition.",
+      desc: "Un prix spécifique de « Cheer Spirit » viendra récompenser le club exemplaire en matière de respect, d'encouragement et d'esprit sportif.",
     },
     grandChamps: [
       {
@@ -312,7 +312,10 @@ const fr = {
             a: 'Le tapis de compétition est un tapis dynamique de 14 m × 14 m.',
           },
           
-          
+          {
+  q: "Qu'est-ce que la catégorie Prep ?",
+  a: "La catégorie Prep est conçue pour les équipes souhaitant vivre une première expérience compétitive. La routine dure 2 minutes, avec des exigences réduites en tumbling et en stunting. Pour plus de détails, consultez les scoring rubrics dans : United Scoring System > United Kingdom > Prep."
+},
           {
             q: 'La compétition fournit-elle des spotteurs ?',
             a: "La compétition ne fournit pas de spotteurs. Il est de la responsabilité des entraîneurs de présenter les éléments en sécurité avec les athlètes nécessitant un spotteur.\n\nLes équipes peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",

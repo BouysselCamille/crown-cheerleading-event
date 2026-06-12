@@ -21,12 +21,7 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3">
-          <span className="text-2xl font-display font-black text-gold-gradient tracking-tight">
-            CROWN
-          </span>
-          <span className="hidden sm:block text-xs font-display font-semibold text-gray-400 tracking-widest uppercase leading-tight">
-            Cheerleading<br />Events
-          </span>
+          <img src="/logo.jpg" className="w-30 h-20"/>
         </a>
 
         {/* Desktop nav */}

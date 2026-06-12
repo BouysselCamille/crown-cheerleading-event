@@ -27,33 +27,19 @@ export function Hero() {
 
       {/* Main content — flex-1 so it fills available space */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-16 max-w-5xl mx-auto w-full">
-        <motion.div
+       
+
+        <img src="/logo.jpg" className='h-80 md:h-100' alt="Croen Cheerleading Events" />
+
+ <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-block text-gold font-display font-bold text-xs tracking-[0.4em] uppercase mb-6 border border-gold/40 px-4 py-2">
-            {t.hero.edition}
+          <span className="inline-block text-turquoise font-display font-bold text-xs tracking-[0.4em] uppercase my-6 border border-turquoise/40 px-4 py-2">
+            {t.hero.edition} - Paris Spring Open Championship
           </span>
         </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-black leading-none tracking-tighter mb-4"
-        >
-          <span className="text-gold-gradient">CROWN</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-gray-400 text-lg md:text-xl font-display tracking-widest uppercase mb-3"
-        >
-          Cheerleading Events
-        </motion.p>
 
         <motion.p
           initial={{ opacity: 0 }}
