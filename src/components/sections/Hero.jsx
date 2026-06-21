@@ -29,7 +29,7 @@ export function Hero() {
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-16 max-w-5xl mx-auto w-full">
        
 
-        <img src="/logo.png" className='h-80 md:h-100' alt="Croen Cheerleading Events" />
+        <img src="/logo.png" className='h-80 md:h-100' alt="Crown Cheerleading Events" />
 
  <motion.div
           initial={{ opacity: 0, y: 30 }}
