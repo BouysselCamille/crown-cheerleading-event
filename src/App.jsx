@@ -10,7 +10,7 @@ import { NotFound } from './pages/NotFound';
 const MAINTENANCE = import.meta.env.VITE_MAINTENANCE === 'true';
 
 function App() {
-  if (MAINTENANCE) return <Maintenance />;
+  if (true) return <Maintenance />;
 
   return (
     <BrowserRouter>

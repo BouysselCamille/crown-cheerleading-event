@@ -21,7 +21,7 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3">
-          <img src="/logo.jpg" className="w-30 h-20"/>
+          <img src="/logo.png" className="w-30 h-20"/>
         </a>
 
         {/* Desktop nav */}

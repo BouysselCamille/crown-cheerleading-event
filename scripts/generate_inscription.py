@@ -141,7 +141,7 @@ cd = input_cell(ws1, 8, 3)
 cd.alignment = align(h="left")
 ws1.merge_cells("C8:G8")
 dv_div = DataValidation(type="list",
-    formula1="Listes!$A$1:$A$55",
+    formula1="Listes!$A$1:$A$58",
     showDropDown=False, showErrorMessage=True,
     error="Choisissez une division dans la liste", errorTitle="Valeur invalide")
 ws1.add_data_validation(dv_div)
@@ -389,6 +389,9 @@ DIVISIONS = [
     "U18 Prep L1.1",
     "U18 Prep L2.1",
     "U18 Prep L2.2",
+    "Open Prep L1.1",
+    "Open Prep L2.1",
+    "Open Prep L2.2",
     "Masters Prep L1.1",
     "Masters Prep L2.1",
     "Masters Prep L2.2",
@@ -406,13 +409,12 @@ DIVISIONS = [
     "Open Allstar L1",
     "Open Allstar L2",
     "Open Allstar L3",
+    "Open Allstar L4.2",
     "Open AG Allstar L4",
-    "Open AG Allstar L4.2",
     "Open AG Allstar L5",
     "Open AG Allstar L6",
     "Open AG Allstar L7",
     "Open Coed Allstar L4",
-    "Open Coed Allstar L4.2",
     "Open Coed Allstar L5",
     "Open Coed Allstar L6",
     "Open Coed Allstar L7",
@@ -433,12 +435,13 @@ DIVISIONS = [
     "Open Coed NT Allstar L7",
     "Universitaire L2",
     "Universitaire L3",
+    "Universitaire L4",
 ]
 
 for i, div in enumerate(DIVISIONS, start=1):
     ws_lists.cell(row=i, column=1, value=div)
 
 # ── Sauvegarde ────────────────────────────────────────────────────────────────
-output = "/Users/camille.bouyssel/Cheer/crown-cheerleading-event/public/docs/inscription-equipe.xlsx"
+output = "/Users/camillebouyssel/Documents/Cheer/crown-cheerleading-event/public/docs/inscription-equipe.xlsx"
 wb.save(output)
 print(f"Fichier cree : {output}")

@@ -35,7 +35,7 @@ export function Sponsors() {
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-4 max-w-xl mx-auto">
+        <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
           {SPONSORS.map(s => <SponsorCard key={s.name} {...s} />)}
         </div>
 
