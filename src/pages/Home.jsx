@@ -15,16 +15,16 @@ export function Home() {
     <>
       <Hero />
       <About />
-      <Gallery />
+      {/* <Gallery /> */}
       <Recompenses />
       <Schedule />
       <Divisions />
       <Inscription />
       <Tickets />
       <FAQ />
-      <PlanAcces />
+      {/* <PlanAcces /> */}
       <Contact />
-      <Sponsors />
+      {/* <Sponsors /> */}
     </>
   );
 }

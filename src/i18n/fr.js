@@ -2,7 +2,7 @@ const fr = {
   nav: {
     links: [
       { label: 'La compétition', href: '#about' },
-      { label: 'Galerie', href: '#gallery' },
+      // { label: 'Galerie', href: '#gallery' },
       { label: 'Programme', href: '#schedule' },
       { label: 'Tarifs', href: '#tarifs' },
       { label: 'Inscription', href: '#inscription' },
@@ -10,8 +10,8 @@ const fr = {
     ],
     extraLinks: [
       { label: 'Récompenses', href: '#awards' },
-      { label: "Plan d'accès", href: '#acces' },
-      { label: 'Partenaires', href: '#sponsors' },
+      // { label: "Plan d'accès", href: '#acces' },
+      // { label: 'Partenaires', href: '#sponsors' },
       { label: 'FAQ', href: '#faq' },
     ],
     tickets: 'Billetterie',
