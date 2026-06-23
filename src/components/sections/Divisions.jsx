@@ -94,7 +94,7 @@ export function Divisions() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 gap-6"
+          className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           <a
             href={t.divisions.ruleDocLink}
