@@ -67,6 +67,8 @@ badge: 'Judged under IASF / United Scoring System standards',
     noteAccompagnateurs: '<span class="text-white font-semibold">Coaches & team staff:</span> Each team receives <span class="text-gold font-semibold">2 included passes</span> with their registration.',
     docLabel: 'Competition categories',
     docLink: '/docs/categories_en.html',
+    ruleDocLabel: 'Competition general rules',
+    ruleDocLink: '/docs/REGLES_ET_REGLEMENTATIONS.pdf',
     docSub: 'View document',
     pricing: [
       {
@@ -221,7 +223,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'Can athletes be added or removed after registration?',
-            a: "Adding an athlete: the applicable rate is the one in effect at the date of addition, not the original registration rate — it may therefore be higher. After the registration deadline, an administrative fee of €50 per request applies. A simple name change on the scoresheet is not charged.\n\nRemoving an athlete: no refund will be granted for a reduction in roster after initial registration.",
+            a: "Adding an athlete: the applicable rate is the one in effect at the date of addition, not the original registration rate — it may therefore be higher. After the registration deadline, an administrative fee of €50 per request applies. A simple name change on the registration is not charged.\n\nRemoving an athlete: no refund will be granted for a reduction in roster after initial registration.",
           },
           {
             q: 'What is a Crossover athlete?',
@@ -233,7 +235,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'What payment methods are accepted?',
-            a: "Payment methods are:\n• By cheque payable to Crown Cheerleading Events\n• By bank transfer\n\nNo registration will be validated without a 30% deposit. Any cancellation before registration closes entitles you to a 70% refund of the total amount. The remaining 30% (deposit) is retained as a cancellation fee.",
+            a: "Payment methods are:\n• By cheque payable to Crown Cheerleading Events\n• By bank transfer\n• By card (link will be send upon registration)\n\n\nNo registration will be validated without a 30% deposit. Any cancellation before registration closes entitles you to a 70% refund of the total amount. The remaining 30% (deposit) is retained as a cancellation fee.",
           },
           {
             q: 'When is my registration confirmed?',
@@ -257,7 +259,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'What are the rules regarding athlete ages?',
-            a: "Proof of age may be requested at any time by competition officials.\n\nTo allow clubs to include all their athletes, the organisation tolerates a few age exceptions within reasonable limits. Any request must be made by email and approved prior to the competition.\n\nAny team with age exceptions will not be eligible for Grand Champion awards.",
+            a: "Proof of age may be requested at any time by competition officials. Photocopies of documents are allowed.\n\nTo allow clubs to include all their athletes, the organisation tolerates a few age exceptions within reasonable limits. Any request must be made by email and approved prior to the competition.\n\nAny team with age exceptions will not be eligible for Grand Champion awards.",
           },
         {
             q: 'Which scoring system is used?',
@@ -271,11 +273,11 @@ badge: 'Judged under IASF / United Scoring System standards',
             a: "All teams must submit their music to the indicated email address, before the deadline communicated for the competition. The music must comply with the regulations established by the IASF.",
           },{
             q: 'What time must teams arrive?',
-            a: "Teams must arrive at least one hour before their warm-up room slot. Coaches are responsible for collecting wristbands upon arrival. Athletes then go through security with spectators — allow sufficient time.\n\nDesignated areas will be available for personal belongings. Crown Cheerleading Events is not responsible for items lost, stolen or damaged during the event.",
+            a: "Teams must arrive at least one hour before their competition time. Coaches are responsible for collecting wristbands upon arrival. Athletes then go through security with spectators — allow sufficient time.\n\nDesignated areas will be available for personal belongings. Crown Cheerleading Events is not responsible for items lost, stolen or damaged during the event.",
           },
           {
             q: 'How are scores and results communicated?',
-            a: "All scoresheets are sent by email. The deduction sheet is sent approximately 5 to 10 minutes after the performance. Other scoresheets are sent after the awards ceremony.",
+            a: "All scoresheets are sent by email.",
           },
           {
             q: 'How are ties handled?',
@@ -286,7 +288,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'What happens if a routine is stopped?',
-            a: "If the interruption is beyond the team's control (equipment issue, technical failure, organisational problem), the team may restart the routine from the point of interruption.\n\nIf the interruption is caused by the team, they must continue or withdraw. Officials will decide whether a new performance is possible.",
+            a: "If the interruption is beyond the team's control (equipment issue, technical failure, organisational problem), the team perform again the routine fullout and will be judged from the point of interruption.\n\nIf the interruption is caused by the team, they must continue or withdraw. Officials will decide whether a new performance is possible.",
           },]
       },
       {
@@ -312,11 +314,6 @@ badge: 'Judged under IASF / United Scoring System standards',
           {
             q: 'Does the competition provide spotters?',
             a: "The competition does not provide spotters. It is the coaches' responsibility to safely present elements requiring a spotter.\n\nTeams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",
-          },
-         
-          {
-            q: 'How does warm-up work?',
-            a: "Each team has 10 minutes in the changing room before accessing the warm-up room. They then have 10 minutes on non-dynamic mats, followed by 5 minutes on the dynamic floor. A 2-minute 30-second run-through with music is then scheduled on a non-dynamic mat.",
           },
           {
             q: 'Can an athlete register with both an allstar club and a university team?',

@@ -67,6 +67,8 @@ const fr = {
     noteAccompagnateurs: '<span class="text-white font-semibold">Accompagnateurs :</span> Chaque équipe bénéficie de <span class="text-gold font-semibold">2 accompagnateurs inclus</span> dans les frais d\'inscription.',
     docLabel: 'Catégories de compétition',
     docLink: '/docs/categories.html',
+    ruleDocLabel: 'Règlement général',
+    ruleDocLink: '/docs/REGLES_ET_REGLEMENTATIONS.pdf',
     docSub: 'Consulter le document',
     pricing: [
       {
@@ -213,7 +215,7 @@ const fr = {
         items: [
           {
             q: "Combien d'accompagnateurs sont inclus dans l'inscription ?",
-            a: "Les équipes ont droit à un maximum de deux accompagnateurs (entraîneurs, gérants, bénévoles, etc.). Les accompagnateurs reçoivent un bracelet et doivent arriver en même temps que l'équipe. Les équipes avec plus de 2 accompagnateurs devront payer pour les accompagnateurs supplémentaires — voir le tableau des frais d'inscription. Les accompagnateurs supplémentaires sont facturés au tarif en vigueur. Seuls les accompagnateurs et athlètes sont autorisés en salle d'échauffement et dans les vestiaires.\n\nLes équipes avec des besoins spéciaux reçoivent également des bracelets pour 2 accompagnateurs avec leur inscription. Des accommodements sont disponibles sur demande.",
+            a: "Les frais de deux accompagneurs sont compris dans l'inscription d'une équipe (entraîneurs, gérants, bénévoles, etc.). Les accompagnateurs reçoivent un bracelet et doivent arriver en même temps que l'équipe. Les équipes avec plus de 2 accompagnateurs devront payer pour les accompagnateurs supplémentaires — voir le tableau des frais d'inscription. Les accompagnateurs supplémentaires sont facturés au tarif en vigueur. Seuls les accompagnateurs et athlètes sont autorisés en salle d'échauffement et dans les vestiaires.\n\nLes équipes avec des besoins spéciaux reçoivent également des bracelets pour 2 accompagnateurs avec leur inscription. Des accommodements sont disponibles sur demande.",
           },
           {
             q: 'Quel est le tarif pour les athlètes remplaçants ?',
@@ -233,7 +235,7 @@ const fr = {
           },
           {
             q: 'Quels sont les modes de paiement acceptés ?',
-            a: "Les modes de paiement sont :\n• Par chèque à l'ordre de Crown Cheerleading Events\n• Par virement bancaire\n\nAucune inscription ne sera validée sans acompte de 30 %. Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 % du montant total. Les 30 % restants (acompte) sont retenus à titre de frais d'annulation.",
+            a: "Les modes de paiement sont :\n• Par chèque à l'ordre de Crown Cheerleading Events\n• Par virement bancaire\n• Par carte (un lien de paiement sera envoyé à l'inscripion)\n\nAucune inscription ne sera validée sans acompte de 30 %. Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 % du montant total. Les 30 % restants (acompte) sont retenus à titre de frais d'annulation.",
           },
           {
             q: "Quand est-ce que mon inscription est confirmée ?",
@@ -271,11 +273,11 @@ const fr = {
           },
           {
             q: "À quelle heure les équipes doivent-elles arriver ?",
-            a: "Les équipes doivent arriver au moins une heure avant leur passage en salle d'échauffement. Les entraîneurs sont responsables de récupérer les bracelets à leur arrivée. Les athlètes passent ensuite la sécurité avec les spectateurs — prévoyez une marge de temps suffisante.\n\nDes zones désignées seront mises à disposition pour déposer les effets personnels. Crown Cheerleading Events n'est pas responsable des objets perdus, volés ou endommagés pendant l'événement.",
+            a: "Les équipes doivent arriver au moins une heure avant leur passage de compétition. Les entraîneurs sont responsables de récupérer les bracelets à leur arrivée. Les athlètes passent ensuite la sécurité avec les spectateurs — prévoyez une marge de temps suffisante.\n\nDes zones désignées seront mises à disposition pour déposer les effets personnels. Crown Cheerleading Events n'est pas responsable des objets perdus, volés ou endommagés pendant l'événement.",
           },
           {
             q: 'Comment sont communiqués les scores et résultats ?',
-            a: "Toutes les feuilles de scores sont envoyées par mail. La feuille de déduction est transmise environ 5 à 10 minutes après la performance. Les autres feuilles de score sont envoyées après la remise des prix.",
+            a: "Toutes les feuilles de scores sont envoyées par mail à l'entraineur principal renseigné lors de l'inscription de l'équipe.",
           },
           {
             q: 'Comment sont gérées les égalités ?',
@@ -291,7 +293,7 @@ const fr = {
           },
             {
             q: "Quelles sont les règles concernant les âges des athlètes ?",
-            a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite du raisonnable. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
+            a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition. Les photocopies sont autorisées.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite du raisonnable. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
           }
         ]
       },
@@ -303,8 +305,8 @@ const fr = {
             a: "Non. Pour participer, vous n'avez pas besoin d'être affilié à une fédération ni de disposer de licences pour vos athlètes. Crown Cheerleading Events ne demande pas de certificat médical pour les participants.\n\nToutefois, il est de la responsabilité des clubs de s'assurer de la santé de leurs athlètes ainsi que de leur couverture en cas de blessure ou blessure d'autrui.",
           },
           {
-            q: "Qu'est-ce qu'une équipe démo ?",
-            a: "Une équipe démo est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. L'équipe reçoit une bannière.\n\nChaque athlète reçoit une médaille de participation. Chaque équipe démo recevra des photos de sa prestation. La vidéo de la routine sera également publiée sur YouTube.",          },
+            q: "Qu'est-ce qu'une équipe démonstration ?",
+            a: "Une équipe démonstration est une équipe non compétitive qui souhaite vivre l'expérience de performer devant public. Elle n'est pas jugée et ne reçoit aucun commentaire des juges. L'équipe reçoit une bannière.\n\nChaque athlète reçoit une médaille de participation. Chaque équipe démo recevra des photos de sa prestation. La vidéo de la routine sera également publiée sur YouTube.",          },
          
           
           {
@@ -319,11 +321,6 @@ const fr = {
           {
             q: 'La compétition fournit-elle des spotteurs ?',
             a: "La compétition ne fournit pas de spotteurs. Il est de la responsabilité des entraîneurs de présenter les éléments en sécurité avec les athlètes nécessitant un spotteur.\n\nLes équipes peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",
-          },
-          
-          {
-            q: "Comment se passe l'échauffement ?",
-            a: "Chaque équipe dispose de 10 minutes en vestiaire avant d'accéder à la salle d'échauffement. Elle bénéficie ensuite de 10 minutes sur les tapis non dynamiques, puis de 5 minutes sur le tapis dynamique. Un run-through avec musique de 2 minutes 30 est enfin prévu sur tapis non dynamique.",
           },
           {
             q: "Un athlète peut-il s'inscrire avec un club allstar et une équipe universitaire ?",

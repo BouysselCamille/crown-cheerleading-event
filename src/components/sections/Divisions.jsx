@@ -94,8 +94,25 @@ export function Divisions() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16"
+          className="mt-16 grid grid-cols-2 gap-6"
         >
+          <a
+            href={t.divisions.ruleDocLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 border border-gold/30 bg-crown-gray hover:border-gold hover:bg-crown-black rounded-xl px-6 py-5 transition-all group"
+          >
+            <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
+              <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-white font-display font-bold text-sm group-hover:text-gold transition-colors">{t.divisions.ruleDocLabel}</p>
+              <p className="text-gray-500 text-xs mt-0.5">{t.divisions.docSub}</p>
+            </div>
+          </a>
           <a
             href={t.divisions.docLink}
             target="_blank"
