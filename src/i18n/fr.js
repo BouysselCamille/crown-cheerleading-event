@@ -12,7 +12,7 @@ const fr = {
       { label: 'Récompenses', href: '#awards' },
       // { label: "Plan d'accès", href: '#acces' },
       // { label: 'Partenaires', href: '#sponsors' },
-      { label: 'FAQ', href: '#faq' },
+      // { label: 'FAQ', href: '#faq' },
     ],
     tickets: 'Billetterie',
   },

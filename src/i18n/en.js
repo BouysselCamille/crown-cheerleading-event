@@ -12,7 +12,7 @@ const en = {
       { label: 'Awards', href: '#awards' },
       // { label: 'Getting here', href: '#acces' },
       // { label: 'Partners', href: '#sponsors' },
-      { label: 'FAQ', href: '#faq' },
+      // { label: 'FAQ', href: '#faq' },
     ],
     tickets: 'Tickets',
   },
