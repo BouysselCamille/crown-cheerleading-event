@@ -227,7 +227,7 @@ const fr = {
           },
           {
             q: "Qu'est-ce qu'un athlète Crossover ?",
-            a: "Un athlète crossover est un athlète faisant partie de deux équipes différentes. Il sera facturé en totalité pour chacune des équipes auxquelles il est inscrit.\n\nAucun tarif réduit, crédit, transfert ou ajustement ne sera accordé en lien avec la participation d'un athlète crossover, peu importe le contexte.\n\nUn athlète peut participer à maximum deux routines. Les crossovers entre les équipes Prep et Allstar ne sont pas autorisés. Chaque équipe peut compter au maximum 2 crossovers. Tous les crossovers doivent respecter les règles d'âge de la division concernée. L'inscription est autorisée à la discrétion des entraîneurs, car des conflits d'horaire sont susceptibles de se produire.",
+            a: "Un athlète crossover est un athlète faisant partie de deux équipes différentes. Il sera facturé en totalité pour chacune des équipes auxquelles il est inscrit.\n\nAucun tarif réduit, crédit, transfert ou ajustement ne sera accordé en lien avec la participation d'un athlète crossover, peu importe le contexte.\n\nUn athlète peut participer à maximum deux routines. Les crossovers entre les équipes Prep et Allstar ne sont pas autorisés. Tous les crossovers doivent respecter les règles d'âge de la division concernée. L'inscription est autorisée à la discrétion des entraîneurs, car des conflits d'horaire sont susceptibles de se produire.",
           },
           {
             q: "Peut-on changer de catégorie après l'inscription ?",
@@ -289,7 +289,7 @@ const fr = {
           },
           {
             q: 'Que se passe-t-il si une routine est interrompue ?',
-            a: "Si l'interruption est indépendante de l'équipe (problème d'équipement, défaillance technique, problème lié à l'organisation), l'équipe pourra recommencer la routine à partir du point d'interruption.\n\nSi l'interruption est causée par l'équipe, elle devra continuer ou se retirer. Les officiels décideront si une nouvelle performance est possible.",
+            a: "Si l'interruption est indépendante de l'équipe (problème d'équipement, défaillance technique, problème lié à l'organisation), l'équipe pourra recommencer la routine à partir du point d'interruption.\n\nSi l'interruption est causée par l'équipe (hors blessure), elle devra continuer ou se retirer. Les officiels décideront si une nouvelle performance est possible.",
           },
             {
             q: "Quelles sont les règles concernant les âges des athlètes ?",
