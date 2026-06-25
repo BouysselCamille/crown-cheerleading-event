@@ -243,7 +243,7 @@ const fr = {
           },
           {
             q: 'Que se passe-t-il en cas de défaut de paiement ?',
-            a: "L'équipe doit régler le solde restant (70 % du montant total) avant la fin de la période tarifaire en cours. Sans règlement dans ce délai, l'inscription basculera automatiquement au tarif suivant.\n\nTout retard de paiement après la date limite entraîne une majoration de 20 % ou l'annulation de la participation de l'équipe, sans remboursement possible.",
+            a: "L'équipe doit régler le solde restant (70 % du montant total) avant la fin de la période tarifaire en cours. Sans règlement dans ce délai, l'inscription basculera automatiquement au tarif suivant.",
           },
           {
             q: "Que se passe-t-il si l'événement est annulé ?",

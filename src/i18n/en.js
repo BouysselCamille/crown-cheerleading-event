@@ -243,7 +243,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'What happens in case of non-payment?',
-            a: "The team must pay the remaining balance (70% of the total amount) before the end of the current pricing period. Without payment within this deadline, the registration will automatically switch to the next rate.\n\nAny late payment after the deadline results in a 20% surcharge or cancellation of the team's participation, with no possible refund.",
+            a: "The team must pay the remaining balance (70% of the total amount) before the end of the current pricing period. Without payment within this deadline, the registration will automatically switch to the next rate.",
           },
           {
             q: 'What happens if the event is cancelled?',
