@@ -235,6 +235,126 @@
       color: #4b5563;
     }
 
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .header {
+        padding: 16px 20px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header-right {
+        text-align: left;
+      }
+
+      .logo {
+        font-size: 22pt;
+      }
+
+      .main {
+        padding: 24px 16px 36px;
+      }
+
+      .footer {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+      }
+
+      .division-name {
+        font-size: 13pt;
+      }
+
+      .division {
+        overflow-x: visible;
+      }
+
+      /* ── Tables → stacked cards ── */
+      table {
+        font-size: 10pt;
+      }
+
+      thead {
+        display: none;
+      }
+
+      table,
+      tbody {
+        display: block;
+        width: 100%;
+      }
+
+      tbody tr {
+        display: block;
+        background: var(--gray);
+        border: 1px solid rgba(212, 175, 55, 0.22);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+      }
+
+      tbody tr:nth-child(even) {
+        background: var(--gray);
+      }
+
+      tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 14px;
+        padding: 5px 0;
+        font-size: 9.5pt;
+        text-align: right;
+      }
+
+      /* First column = card title */
+      tbody tr td:first-child {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 11pt;
+        color: #ffffff;
+        text-align: left;
+        padding: 0 0 8px;
+        margin-bottom: 4px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      }
+
+      /* Label generated from data-label, except on the title */
+      tbody td:not(:first-child)::before {
+        content: attr(data-label);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 7.5pt;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--gold-dark);
+        text-align: left;
+        flex-shrink: 0;
+      }
+
+      /* Section rows (Tumbling / Non Tumbling): not a data card */
+      tbody tr.section-row {
+        display: block;
+        background: transparent;
+        border: none;
+        padding: 6px 0 0;
+        margin-bottom: 4px;
+      }
+
+      tbody tr.section-row td {
+        display: block;
+        padding: 8px 12px 4px;
+      }
+
+      .notes p,
+      .notes li {
+        font-size: 8.5pt;
+      }
+    }
+
     /* ── Print ── */
     @media print {
       body {
@@ -328,39 +448,39 @@
         <tbody>
           <tr>
             <td>U8</td>
-            <td>2018 – 2022</td>
-            <td>5 – 30</td>
-            <td>1.1</td>
+            <td data-label="Birth Year">2018 – 2022</td>
+            <td data-label="Number of Athletes">5 – 30</td>
+            <td data-label="Level">1.1</td>
           </tr>
           <tr>
             <td>U12</td>
-            <td>2014 – 2019</td>
-            <td>5 – 30</td>
-            <td>1.1, 2.1, 2.2</td>
+            <td data-label="Birth Year">2014 – 2019</td>
+            <td data-label="Number of Athletes">5 – 30</td>
+            <td data-label="Level">1.1, 2.1, 2.2</td>
           </tr>
           <tr>
             <td>U16</td>
-            <td>2010 – 2015</td>
-            <td>5 – 30</td>
-            <td>1.1, 2.1, 2.2</td>
+            <td data-label="Birth Year">2010 – 2015</td>
+            <td data-label="Number of Athletes">5 – 30</td>
+            <td data-label="Level">1.1, 2.1, 2.2</td>
           </tr>
           <tr>
             <td>U18</td>
-            <td>2008 – 2013</td>
-            <td>5 – 30</td>
-            <td>1.1, 2.1, 2.2</td>
+            <td data-label="Birth Year">2008 – 2013</td>
+            <td data-label="Number of Athletes">5 – 30</td>
+            <td data-label="Level">1.1, 2.1, 2.2</td>
           </tr>
           <tr>
             <td>Open</td>
-            <td>2011 or earlier</td>
-            <td>5 – 30</td>
-            <td>1.1, 2.1, 2.2</td>
+            <td data-label="Birth Year">2011 or earlier</td>
+            <td data-label="Number of Athletes">5 – 30</td>
+            <td data-label="Level">1.1, 2.1, 2.2</td>
           </tr>
           <tr>
             <td>Masters</td>
-            <td>2008 or earlier</td>
-            <td>5 – 30</td>
-            <td>1.1, 2.1, 2.2</td>
+            <td data-label="Birth Year">2008 or earlier</td>
+            <td data-label="Number of Athletes">5 – 30</td>
+            <td data-label="Level">1.1, 2.1, 2.2</td>
           </tr>
         </tbody>
       </table>
@@ -398,7 +518,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="section-row">
             <td colspan="5"
               style="color:var(--gold);font-family:'Montserrat',sans-serif;font-size:8pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px 4px">
               <div style="display:flex;align-items:center;justify-content:space-between">Tumbling <span
@@ -407,68 +527,68 @@
           </tr>
           <tr>
             <td>U8</td>
-            <td>2018 – 2022</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>1</td>
+            <td data-label="Birth Year">2018 – 2022</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">1</td>
           </tr>
           <tr>
             <td>U12</td>
-            <td>2014 – 2019</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>1, 2</td>
+            <td data-label="Birth Year">2014 – 2019</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">1, 2</td>
           </tr>
           <tr>
             <td>U16</td>
-            <td>2010 – 2015</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>1, 2, 3</td>
+            <td data-label="Birth Year">2010 – 2015</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">1, 2, 3</td>
           </tr>
           <tr>
             <td>U18</td>
-            <td>2008 – 2013</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>1, 2, 3, 4, 4.2</td>
+            <td data-label="Birth Year">2008 – 2013</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">1, 2, 3, 4, 4.2</td>
           </tr>
           <tr>
             <td>Open</td>
-            <td>2011 or earlier</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>1, 2, 3, 4.2</td>
+            <td data-label="Birth Year">2011 or earlier</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">1, 2, 3, 4.2</td>
           </tr>
           <tr>
             <td>Open All Girl</td>
-            <td>2011 or earlier</td>
-            <td>None</td>
-            <td>10 – 30</td>
-            <td>4, 5, 6</td>
+            <td data-label="Birth Year">2011 or earlier</td>
+            <td data-label="Min. male athletes">None</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">4, 5, 6</td>
           </tr>
           <tr>
             <td>Open Coed</td>
-            <td>2011 or earlier</td>
-            <td>1+</td>
-            <td>10 – 30</td>
-            <td>4, 5, 6</td>
+            <td data-label="Birth Year">2011 or earlier</td>
+            <td data-label="Min. male athletes">1+</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">4, 5, 6</td>
           </tr>
           <tr>
             <td>Open All Girl</td>
-            <td>2010 or earlier</td>
-            <td>None</td>
-            <td>10 – 30</td>
-            <td>7</td>
+            <td data-label="Birth Year">2010 or earlier</td>
+            <td data-label="Min. male athletes">None</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">7</td>
           </tr>
           <tr>
             <td>Open Coed</td>
-            <td>2010 or earlier</td>
-            <td>1+</td>
-            <td>10 – 30</td>
-            <td>7</td>
+            <td data-label="Birth Year">2010 or earlier</td>
+            <td data-label="Min. male athletes">1+</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">7</td>
           </tr>
-          <tr>
+          <tr class="section-row">
             <td colspan="5"
               style="color:var(--gold);font-family:'Montserrat',sans-serif;font-size:8pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px 4px">
               <div style="display:flex;align-items:center;justify-content:space-between">Non Tumbling <span
@@ -477,52 +597,52 @@
           </tr>
           <tr>
             <td>U16 NT</td>
-            <td>2010 – 2015</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>2, 3</td>
+            <td data-label="Birth Year">2010 – 2015</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">2, 3</td>
           </tr>
           <tr>
             <td>U18 NT</td>
-            <td>2008 – 2013</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>2, 3, 4</td>
+            <td data-label="Birth Year">2008 – 2013</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">2, 3, 4</td>
           </tr>
           <tr>
             <td>Open NT</td>
-            <td>2011 or earlier</td>
-            <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>2, 3</td>
+            <td data-label="Birth Year">2011 or earlier</td>
+            <td data-label="Min. male athletes">Female/Male</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">2, 3</td>
           </tr>
           <tr>
             <td>Open All Girl NT</td>
-            <td>2011 or earlier</td>
-            <td>None</td>
-            <td>10 – 30</td>
-            <td>4, 5, 6</td>
+            <td data-label="Birth Year">2011 or earlier</td>
+            <td data-label="Min. male athletes">None</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">4, 5, 6</td>
           </tr>
           <tr>
             <td>Open Coed NT</td>
-            <td>2011 or earlier</td>
-            <td>1+</td>
-            <td>10 – 30</td>
-            <td>4, 5, 6</td>
+            <td data-label="Birth Year">2011 or earlier</td>
+            <td data-label="Min. male athletes">1+</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">4, 5, 6</td>
           </tr>
           <tr>
             <td>Open All Girl NT</td>
-            <td>2010 or earlier</td>
-            <td>None</td>
-            <td>10 – 30</td>
-            <td>7</td>
+            <td data-label="Birth Year">2010 or earlier</td>
+            <td data-label="Min. male athletes">None</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">7</td>
           </tr>
           <tr>
             <td>Open Coed NT</td>
-            <td>2010 or earlier</td>
-            <td>1+</td>
-            <td>10 – 30</td>
-            <td>7</td>
+            <td data-label="Birth Year">2010 or earlier</td>
+            <td data-label="Min. male athletes">1+</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">7</td>
           </tr>
         </tbody>
       </table>
@@ -563,8 +683,8 @@
         <tbody>
           <tr>
             <td>Female/Male</td>
-            <td>10 – 30</td>
-            <td>2, 3, 4</td>
+            <td data-label="Number of Athletes">10 – 30</td>
+            <td data-label="Level">2, 3, 4</td>
           </tr>
         </tbody>
       </table>
@@ -605,7 +725,7 @@
 
   <!-- Footer -->
   <div class="footer">
-    <p>&copy; Crown Cheerleading Events · Season 2026–2027</p>
+    <p>Crown Cheerleading Events · Season 2026–2027</p>
     <p>Non-contractual document · Subject to change</p>
   </div>
 

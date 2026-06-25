@@ -227,7 +227,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'What is a Crossover athlete?',
-            a: "A crossover athlete is an athlete who is part of two different teams. They will be charged in full for each team they are registered with.\n\nNo reduced rate, credit, transfer or adjustment will be granted in connection with the participation of a crossover athlete, regardless of context.\n\nAn athlete may participate in a maximum of two routines. Crossovers between Prep and Allstar teams are not permitted. Each team may have a maximum of 2 crossovers. All crossovers must comply with the age rules of the relevant division. Registration is at the coaches' discretion, as scheduling conflicts may occur.",
+            a: "A crossover athlete is an athlete who is part of two different teams. They will be charged in full for each team they are registered with.\n\nNo reduced rate, credit, transfer or adjustment will be granted in connection with the participation of a crossover athlete, regardless of context.\n\nAn athlete may participate in a maximum of two routines. Crossovers between Prep and Allstar teams are not permitted. All crossovers must comply with the age rules of the relevant division. Registration is at the coaches' discretion, as scheduling conflicts may occur.",
           },
           {
             q: 'Can we change category after registration?',
