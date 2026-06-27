@@ -50,12 +50,12 @@ const fr = {
     items: [
       { time: '8h30', label: 'Ouverture des portes pour les athlètes & accréditations' },
       { time: '9h00', label: 'Ouverture au public' },
-      { time: '9h15', label: 'Bloc 1 - Prep et Universitaire' },
+      { time: '9h35', label: 'Bloc 1 - Prep et Universitaire' },
       { time: '12h00', label: 'Remise des prix Block 1' },
       { time: '12h45', label: 'Pause' },
       { time: '13h45', label: 'Bloc 2 - AllStar' },
       { time: '16h00', label: 'Remise des prix Block 2' },
-      { time: '17h00', label: 'Fin de l\'événement' },
+      { time: '16h30', label: 'Fin de l\'événement' },
     ],
   },
 
