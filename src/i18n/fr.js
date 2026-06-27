@@ -235,7 +235,7 @@ const fr = {
           },
           {
             q: 'Quels sont les modes de paiement acceptés ?',
-            a: "Les modes de paiement sont :\n• Par chèque à l'ordre de Crown Cheerleading Events\n• Par virement bancaire\n• Par carte (un lien de paiement sera envoyé à l'inscripion)\n\nAucune inscription ne sera validée sans acompte de 30 %. Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 % du montant total. Les 30 % restants (acompte) sont retenus à titre de frais d'annulation.",
+            a: "Les modes de paiement sont :\n• Par virement bancaire\n• Par carte (un lien de paiement sera envoyé à l'inscripion)\n\nAucune inscription ne sera validée sans acompte de 30 %. Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 % du montant total. Les 30 % restants (acompte) sont retenus à titre de frais d'annulation.",
           },
           {
             q: "Quand est-ce que mon inscription est confirmée ?",

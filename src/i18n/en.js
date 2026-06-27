@@ -235,7 +235,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'What payment methods are accepted?',
-            a: "Payment methods are:\n• By cheque payable to Crown Cheerleading Events\n• By bank transfer\n• By card (link will be send upon registration)\n\n\nNo registration will be validated without a 30% deposit. Any cancellation before registration closes entitles you to a 70% refund of the total amount. The remaining 30% (deposit) is retained as a cancellation fee.",
+            a: "Payment methods are:\n• By bank transfer\n• By card (link will be send upon registration)\n\n\nNo registration will be validated without a 30% deposit. Any cancellation before registration closes entitles you to a 70% refund of the total amount. The remaining 30% (deposit) is retained as a cancellation fee.",
           },
           {
             q: 'When is my registration confirmed?',
