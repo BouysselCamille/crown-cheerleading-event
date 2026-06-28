@@ -68,7 +68,7 @@ badge: 'Judged under IASF / United Scoring System standards',
     docLabel: 'Competition categories',
     docLink: '/docs/categories_en.html',
     ruleDocLabel: 'Competition general rules',
-    ruleDocLink: '/docs/REGLES_ET_REGLEMENTATIONS.pdf',
+    ruleDocLink: '/docs/RULES.pdf',
     docSub: 'View document',
     pricing: [
       {
