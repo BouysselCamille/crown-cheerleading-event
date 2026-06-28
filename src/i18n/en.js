@@ -108,7 +108,7 @@ badge: 'Judged under IASF / United Scoring System standards',
       { icon: '🏳️', text: 'Champions teams receive a banner' },
       { icon: '📸', text: 'Free routine photos' },
       { icon: '🎥', text: 'Routine video available on YouTube post-competition' },
-      { icon: '🏟️', text: 'Competition on a 7-panel spring floor' },
+      { icon: '🏟️', text: 'Competition on a 7-panel dynamic floor' },
       { icon: '🎯', text: 'Routines judged by a qualified Varsity panel' },
     ],
     cheerSpirit: {
