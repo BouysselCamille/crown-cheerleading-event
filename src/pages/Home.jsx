@@ -21,7 +21,7 @@ export function Home() {
       <Divisions />
       <Inscription />
       <Tickets />
-      {/* <FAQ /> */}
+      <FAQ />
       {/* <PlanAcces /> */}
       <Contact />
       {/* <Sponsors /> */}

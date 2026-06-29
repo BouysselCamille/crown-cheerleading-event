@@ -12,7 +12,7 @@ const en = {
       { label: 'Awards', href: '#awards' },
       // { label: 'Getting here', href: '#acces' },
       // { label: 'Partners', href: '#sponsors' },
-      // { label: 'FAQ', href: '#faq' },
+      { label: 'FAQ', href: '#faq' },
     ],
     tickets: 'Tickets',
   },
@@ -289,7 +289,13 @@ badge: 'Judged under IASF / United Scoring System standards',
           {
             q: 'What happens if a routine is stopped?',
             a: "If the interruption is beyond the team's control (equipment issue, technical failure, organisational problem), the team perform again the routine fullout and will be judged from the point of interruption.\n\nIf the interruption is caused by the team, they must continue or withdraw. Officials will decide whether a new performance is possible.",
-          },]
+          },
+          {
+    q: "What are the rules regarding athletes' uniforms and accessories?",
+    a: "Please refer to the IASF rulebook for all image policy rules (uniforms, jewelry, accessories, etc.). Exception: athletes are not required to have their midriff covered."
+}
+        
+        ]
       },
       {
         category: 'Competition',
@@ -313,20 +319,20 @@ badge: 'Judged under IASF / United Scoring System standards',
 },
           {
             q: 'Does the competition provide spotters?',
-            a: "The competition does not provide spotters. It is the coaches' responsibility to safely present elements requiring a spotter.\n\nTeams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",
+            a: "The competition does not provide spotters.\n\nTeams may be accompanied by up to 3 spotters on the floor, in appropriate attire distinct from the athletes'. These spotters must hold an athlete or accompanying person accreditation.",
           },
           {
             q: 'Can an athlete register with both an allstar club and a university team?',
-            a: "Yes. An athlete may register with both an allstar club and a university team. The max number of crossover rule does not apply."
+            a: "Yes. An athlete may register with both an allstar club and a university team."
           },
           {
             q: 'Can a university team register in an allstar category?',
             a: 'Yes, however they cannot register in university and allstar categories simultaneously. They will be subject to the same rules and judging criteria as allstar teams, will pay the allstar entry fee and will not be eligible for university awards.',
           },
-          {
-            q: 'How is the Cheer Spirit title determined?',
-            a: "The Cheer Spirit title is awarded based on two combined criteria:\n\n• Observation by our volunteers throughout the entire competition, who assess attitude, respect, encouragement towards other teams, and overall sportsmanship.\n\n• Stories posted on social media tagging Crown Cheerleading Events during the day showcasing that Cheer Spirit.\n\nThe title goes to the program that stands out on both counts.",
-          },
+          // {
+          //   q: 'How is the Cheer Spirit title determined?',
+          //   a: "The Cheer Spirit title is awarded based on two combined criteria:\n\n• Observation by our volunteers throughout the entire competition, who assess attitude, respect, encouragement towards other teams, and overall sportsmanship.\n\n• Stories posted on social media tagging Crown Cheerleading Events during the day showcasing that Cheer Spirit.\n\nThe title goes to the program that stands out on both counts.",
+          // },
         ],
       },
       {
@@ -338,7 +344,7 @@ badge: 'Judged under IASF / United Scoring System standards',
           },
           {
             q: 'Which items are prohibited?',
-            a: "It is prohibited to bring dangerous items, illegal substances or any item deemed inappropriate. Animals are not permitted, except for properly identified assistance animals.\n\nBottles larger than 1.5 L and bags larger than A4 format are not allowed. Strictly prohibited: weapons, knives, defence sprays, alcohol, glass bottles, flares, air horns, and any noise-making objects (drums, megaphones, trumpets) in the competition area.",
+            a: "It is prohibited to bring dangerous items, illegal substances or any item deemed inappropriate. Animals are not permitted, except for properly identified assistance animals.\n\nBottles larger than 1 L and bags larger than A4 format are not allowed. Strictly prohibited: weapons, knives, defence sprays, alcohol, glass bottles, flares, air horns, and any noise-making objects (drums, megaphones, trumpets) in the competition area.",
           },
           {
             q: 'Photos and videos',

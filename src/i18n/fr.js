@@ -12,7 +12,7 @@ const fr = {
       { label: 'Récompenses', href: '#awards' },
       // { label: "Plan d'accès", href: '#acces' },
       // { label: 'Partenaires', href: '#sponsors' },
-      // { label: 'FAQ', href: '#faq' },
+      { label: 'FAQ', href: '#faq' },
     ],
     tickets: 'Billetterie',
   },
@@ -292,9 +292,13 @@ const fr = {
             a: "Si l'interruption est indépendante de l'équipe (problème d'équipement, défaillance technique, problème lié à l'organisation), l'équipe pourra recommencer la routine à partir du point d'interruption.\n\nSi l'interruption est causée par l'équipe (hors blessure), elle devra continuer ou se retirer. Les officiels décideront si une nouvelle performance est possible.",
           },
             {
-            q: "Quelles sont les règles concernant les âges des athlètes ?",
+            q: "Est-ce que les surclassements sont autorisés ?",
             a: "Une preuve d'âge peut être demandée à tout moment par les officiels de la compétition. Les photocopies sont autorisées.\n\nAfin de permettre aux clubs de faire participer l'ensemble de leurs athlètes, l'organisation tolère quelques exceptions d'âge dans la limite du raisonnable. Toute demande doit être faite par mail et approuvée en amont de la compétition.\n\nToute équipe avec des exceptions d'âge ne sera pas éligible aux prix de Grand Champion.",
-          }
+          },
+          {
+    q: "Quelles sont les règles concernant les tenues et accessoires des athlètes ?",
+    a: "Veuillez vous référer au règlement IASF pour toutes les règles de politique d'image (uniformes, bijoux, accessoires, etc.). Exception : il n'est pas nécessaire que le ventre des athlètes soit couvert."
+}
         ]
       },
       {
@@ -320,19 +324,19 @@ const fr = {
 },
           {
             q: 'La compétition fournit-elle des spotteurs ?',
-            a: "La compétition ne fournit pas de spotteurs. Il est de la responsabilité des entraîneurs de présenter les éléments en sécurité avec les athlètes nécessitant un spotteur.\n\nLes équipes peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",
+            a: "La compétition ne fournit pas de spotteurs.\n\nLes équipes peuvent être accompagnées de jusqu'à 3 spotteurs sur le tapis, en tenue adaptée et distincte de celle des athlètes. Ces spotteurs doivent être munis d'une accréditation athlète ou accompagnant.",
           },
           {
             q: "Un athlète peut-il s'inscrire avec un club allstar et une équipe universitaire ?",
-            a: "Oui. Un athlète peut s'inscrire à la fois avec un club allstar et une équipe universitaire. Les règles du nombre maximum de crossover ne s'appliquent pas."       },
+            a: "Oui. Un athlète peut s'inscrire à la fois avec un club allstar et une équipe universitaire."       },
             {
               q: "Est-ce qu'une équipe universitaire peut s'inscrire dans la catégorie Allstar ?",
               a: "Oui, cependant elle ne peut pas s'inscrire en Allstar et en Universitaire. L'équipe suivra alors la réglementation Allstar, les prix d'inscription Allstar et ne sera pas éligible au prix de Next Gen Grand Champion.",
             },
-          {
-            q: "Comment est déterminé le titre de Cheer Spirit ?",
-            a: "Le titre de Cheer Spirit est attribué sur la base de deux critères combinés :\n\n• L'observation de nos bénévoles tout au long de la compétition, qui évaluent l'attitude, le respect, l'encouragement envers les autres équipes et l'esprit sportif général.\n\n• Les stories publiées sur les réseaux sociaux tagguant Crown Cheerleading Events pendant la journée, mettant en valeur cet esprit Cheer Spirit.\n\nLe titre est décerné au club qui aura brillé par son exemplarité sur ces deux tableaux.",
-          },
+          // {
+          //   q: "Comment est déterminé le titre de Cheer Spirit ?",
+          //   a: "Le titre de Cheer Spirit est attribué sur la base de deux critères combinés :\n\n• L'observation de nos bénévoles tout au long de la compétition, qui évaluent l'attitude, le respect, l'encouragement envers les autres équipes et l'esprit sportif général.\n\n• Les stories publiées sur les réseaux sociaux tagguant Crown Cheerleading Events pendant la journée, mettant en valeur cet esprit Cheer Spirit.\n\nLe titre est décerné au club qui aura brillé par son exemplarité sur ces deux tableaux.",
+          // },
         ],
       },
       {
@@ -344,7 +348,7 @@ const fr = {
           },
           {
             q: 'Quels objets sont interdits ?',
-            a: "Il est interdit d'apporter des articles dangereux, des substances illégales ou tout objet jugé inapproprié. Les animaux ne sont pas admis, à l'exception des animaux d'assistance dûment identifiés.\n\nLes bouteilles de plus de 1,5 L et les sacs de dimensions supérieures au format A4 ne sont pas autorisés. Sont strictement interdits : armes, couteaux, bombes de défense, alcool, bouteilles en verre, fumigènes, cornes de brume, et tout objet sonore (tambours, mégaphones, trompettes) dans l'espace de compétition.",
+            a: "Il est interdit d'apporter des articles dangereux, des substances illégales ou tout objet jugé inapproprié. Les animaux ne sont pas admis, à l'exception des animaux d'assistance dûment identifiés.\n\nLes bouteilles de plus de 1 L et les sacs de dimensions supérieures au format A4 ne sont pas autorisés. Sont strictement interdits : armes, couteaux, bombes de défense, alcool, bouteilles en verre, fumigènes, cornes de brume, et tout objet sonore (tambours, mégaphones, trompettes) dans l'espace de compétition.",
           },
           {
             q: 'Photos et vidéos',
