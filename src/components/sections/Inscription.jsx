@@ -8,8 +8,16 @@ export function Inscription() {
   const { t } = useTranslation();
 
   return (
-    <section id="inscription" className="py-24 bg-crown-dark">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="inscription" className="relative py-24 bg-crown-dark overflow-hidden">
+      {/* Cheerleader silhouette — right side, behind content */}
+      <img
+        src="/gallery/silhouette-2.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute bottom-0 h-[80%] w-auto max-w-none block left-1/2 -translate-x-1/2 opacity-30 -scale-x-100 lg:left-auto lg:right-0 lg:translate-x-1/4"
+      />
+
+      <div className="relative max-w-3xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

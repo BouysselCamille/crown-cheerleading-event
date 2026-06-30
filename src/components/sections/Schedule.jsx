@@ -6,8 +6,16 @@ export function Schedule() {
   const { t } = useTranslation();
 
   return (
-    <section id="schedule" className="py-24 bg-crown-dark">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id="schedule" className="relative py-24 bg-crown-dark overflow-hidden">
+      {/* Cheerleader silhouette — left side, behind content */}
+      <img
+        src="/gallery/silhouette.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute bottom-0 h-[80%] w-auto max-w-none block left-1/4 -translate-x-1/2 opacity-20 lg:left-0 lg:-translate-x-1/4"
+      />
+
+      <div className="relative max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
