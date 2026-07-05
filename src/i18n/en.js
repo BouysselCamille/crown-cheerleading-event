@@ -10,7 +10,7 @@ const en = {
     ],
     extraLinks: [
       { label: 'Awards', href: '#awards' },
-      // { label: 'Getting here', href: '#acces' },
+      { label: 'Getting here', href: '#acces' },
       // { label: 'Partners', href: '#sponsors' },
       { label: 'FAQ', href: '#faq' },
     ],
@@ -166,18 +166,18 @@ badge: 'Judged under IASF / United Scoring System standards',
     label: 'Venue',
     title1: 'Getting',
     title2: ' here',
-    subtitle: 'The competition takes place at the Centre omnisports universitaire Carole Vergne.',
+    subtitle: 'Find your way to the venue.',
     addressLabel: 'Address',
-    venueName: 'Centre omnisports universitaire Carole Vergne',
+    venueName: 'Centre Omnisports Universitaire Carole Vergne',
     venueAddress: '1 rue Francis Perrin',
     venueCity: '91190 Gif-sur-Yvette',
-    venueLink: 'Official Centre omnisports universitaire Carole Vergne website →',
+    venueLink: 'Official Centre Omnisports Universitaire Carole Vergne website →',
     howToGet: 'How to get here',
     transport: [
       {
         label: 'Metro',
         lines: [
-          { name: 'Line 18', detail: "Orsay-Gif" },
+          { name: 'Line 18', detail: "Orsay-Gif (coming soon)" },
         ],
       },
       {
@@ -190,7 +190,7 @@ badge: 'Judged under IASF / United Scoring System standards',
       {
         label: 'By car',
         lines: [
-          { name: 'Centre omnisports Carole Vergne', detail: '1 rue Francis Perrin, 91190 Gif-sur-Yvette' },
+          { name: 'Centre Omnisports Universitaire Carole Vergne', detail: '1 rue Francis Perrin, 91190 Gif-sur-Yvette' },
         ],
       },
     ],

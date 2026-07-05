@@ -21,7 +21,7 @@ import os
 EVENT = {
     'name':         'Crown Cheerleading Events',
     'date_display': 'Dimanche 4 avril 2027',
-    'venue':        'Centre omnisports universitaire Carole Vergne, Gif-sur-Yvette',
+    'venue':        'Centre Omnisports Universitaire Carole Vergne, Gif-sur-Yvette',
 }
 
 # Chaque équipe :

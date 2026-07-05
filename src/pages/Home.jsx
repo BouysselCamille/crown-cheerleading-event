@@ -22,7 +22,7 @@ export function Home() {
       <Inscription />
       <Tickets />
       <FAQ />
-      {/* <PlanAcces /> */}
+      <PlanAcces />
       <Contact />
       {/* <Sponsors /> */}
     </>

@@ -41,7 +41,7 @@ export function Recompenses() {
           ))}
         </div>
 
-        {MONEY_INFO ? (<>
+        {true ? (<>
           {/* Prix Grand Champion */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

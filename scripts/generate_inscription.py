@@ -112,7 +112,7 @@ c.protection = Protection(locked=True)
 ws1.row_dimensions[2].height = 22
 ws1.merge_cells("A2:G2")
 c = ws1["A2"]
-c.value = "4 avril 2027  ·  Centre omnisports universitaire Carole Vergne  ·  Un fichier par équipe"
+c.value = "4 avril 2027  ·  Centre Omnisports Universitaire Carole Vergne  ·  Un fichier par équipe"
 c.fill = fill(DARK)
 c.font = font(color=MID_GRAY, size=9, italic=True)
 c.alignment = align(h="center")

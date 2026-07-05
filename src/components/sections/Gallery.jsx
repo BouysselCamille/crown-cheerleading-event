@@ -6,8 +6,8 @@ import { SectionTitle } from '../ui/SectionTitle';
 import { useTranslation } from '../../i18n/index.jsx';
 
 const GALLERY_ITEMS = [
-  { src: '/gallery/coum-1.png', alt: 'Centre omnisports universitaire Carole Vergne' },
-  { src: '/gallery/coum-2.png', alt: 'Centre omnisports universitaire Carole Vergne' },
+  { src: '/gallery/coum-1.png', alt: 'Centre Omnisports Universitaire Carole Vergne' },
+  { src: '/gallery/coum-2.png', alt: 'Centre Omnisports Universitaire Carole Vergne' },
 ];
 
 export function Gallery() {
