@@ -6,11 +6,11 @@ const fr = {
       { label: 'Programme', href: '#schedule' },
       { label: 'Tarifs', href: '#tarifs' },
       { label: 'Inscription', href: '#inscription' },
+      { label: "Plan d'accès", href: '#acces' },
       { label: 'Contact', href: '#contact' },
     ],
     extraLinks: [
       { label: 'Récompenses', href: '#awards' },
-      { label: "Plan d'accès", href: '#acces' },
       // { label: 'Partenaires', href: '#sponsors' },
       { label: 'FAQ', href: '#faq' },
     ],
@@ -24,7 +24,7 @@ const fr = {
     countdown: 'Compte à rebours',
     buyTickets: 'Acheter des billets',
     registerTeam: 'Inscrire mon équipe',
-    locationFallback: 'Lieu à confirmer',
+    location: 'Centre Omnisports Universitaire Carole Vergne, Gif-sur-Yvette',
   },
 
   about: {

@@ -45,9 +45,18 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.45 }}
-          className="text-gold font-display font-semibold tracking-wider text-base md:text-lg mb-12"
+          className="text-gold font-display font-semibold tracking-wider text-base md:text-lg mb-4"
         >
-          {t.hero.dateDisplay} &nbsp;|&nbsp; {t.hero.city || t.hero.locationFallback}
+          {t.hero.dateDisplay} &nbsp;|&nbsp; {t.hero.city}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
+          className="text-white text-xs uppercase tracking-widest font-display  mb-12"
+        >
+          {t.hero.location}
         </motion.p>
 
         <motion.div
