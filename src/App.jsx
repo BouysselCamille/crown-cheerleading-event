@@ -6,6 +6,7 @@ import { PolitiqueConfidentialite } from './pages/PolitiqueConfidentialite';
 import { MentionsLegales } from './pages/MentionsLegales';
 import { Maintenance } from './pages/Maintenance';
 import { NotFound } from './pages/NotFound';
+import { VerificationInscriptions } from './pages/VerificationInscriptions';
 
 const MAINTENANCE = import.meta.env.VITE_MAINTENANCE === 'true';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/verification-inscriptions" element={<VerificationInscriptions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
