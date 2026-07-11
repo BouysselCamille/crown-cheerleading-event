@@ -49,6 +49,19 @@ export function Contact() {
             </a>
           </p>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-12"
+        >
+          <img
+            src="/CROWN-Cheer_COURONNE.PNG"
+            alt="Crown Cheer"
+            className="w-32 h-auto opacity-90"
+          />
+        </motion.div>
       </div>
     </section>
   );
