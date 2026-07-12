@@ -58,7 +58,18 @@ export function Recompenses() {
                 <div className="absolute inset-0 bg-gold/3 pointer-events-none" />
 
                 <div className="relative p-8 text-center">
-                  <div className="text-3xl mb-4">👑</div>
+                  <div className="text-3xl mb-4"><motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-2"
+        >
+          <img
+            src="/CROWN-Cheer_COURONNE.PNG"
+            alt="Crown Cheer"
+            className="w-30 h-auto opacity-90"
+          />
+        </motion.div></div>
                   <p className="text-gold font-display font-black text-xs tracking-widest uppercase mb-2">{t.recompenses.prizeLabel}</p>
                   <h3 className="text-white font-display font-black text-lg leading-tight mb-3">{g.title}</h3>
                   <p className="text-gray-400 text-sm mb-6 leading-relaxed">{g.desc}</p>
