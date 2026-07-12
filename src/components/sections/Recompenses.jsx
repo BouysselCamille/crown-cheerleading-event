@@ -82,22 +82,7 @@ export function Recompenses() {
             {t.recompenses.note}
           </motion.p>
 
-          {/* Cheer spirit */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative border border-gold/40 bg-crown-gray rounded-2xl overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gold/3 pointer-events-none" />
-            <div className="relative px-5 py-5 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-              <div className="text-3xl flex-shrink-0">🌟</div>
-              <div className="flex-1">
-                <p className="text-gold font-display font-black text-xs tracking-widest uppercase mb-2">{t.recompenses.cheerSpirit.title}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{t.recompenses.cheerSpirit.desc}</p>
-              </div>
-            </div>
-          </motion.div></>) : (null)}
+        </>) : (null)}
 
       </div>
     </section >

@@ -102,7 +102,7 @@ badge: 'Judged under IASF / United Scoring System standards',
     title2: 'awaits you',
     subtitle: 'Because every athlete deserves to be recognised for their effort.',
     prizeLabel: 'Prize',
-    note: '* Teams with age exceptions will not be eligible. The three prizes will be awarded to different clubs. Judges will be consulted if scores are tied or point to the same club twice.',
+    note: 'Teams with age exceptions will not be eligible. The two ALLSTAR GRAND CHAMPIONS prizes will be awarded to different clubs. Judges will be consulted if scores are tied or point to the same club twice.',
     rewards: [
       { icon: '🥇', text: 'Every participant receives a medal' },
       { icon: '🏳️', text: 'Champions teams receive a banner' },
@@ -111,10 +111,6 @@ badge: 'Judged under IASF / United Scoring System standards',
       { icon: '🏟️', text: 'Competition on a 7-panel dynamic floor' },
       { icon: '🎯', text: 'Routines judged by a qualified Varsity panel' },
     ],
-    cheerSpirit: {
-      title: 'CHEER SPIRIT',
-      desc: 'A specific "Cheer Spirit" award will recognise the program who stands out for their respect, encouragement and sportsmanship.',
-    },
     grandChamps: [
       {
         title: '1ST ALLSTAR GRAND CHAMPION',
@@ -329,10 +325,6 @@ badge: 'Judged under IASF / United Scoring System standards',
             q: 'Can a university team register in an allstar category?',
             a: 'Yes, however they cannot register in university and allstar categories simultaneously. They will be subject to the same rules and judging criteria as allstar teams, will pay the allstar entry fee and will not be eligible for university awards.',
           },
-          // {
-          //   q: 'How is the Cheer Spirit title determined?',
-          //   a: "The Cheer Spirit title is awarded based on two combined criteria:\n\n• Observation by our volunteers throughout the entire competition, who assess attitude, respect, encouragement towards other teams, and overall sportsmanship.\n\n• Stories posted on social media tagging Crown Cheerleading Events during the day showcasing that Cheer Spirit.\n\nThe title goes to the program that stands out on both counts.",
-          // },
         ],
       },
       {

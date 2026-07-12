@@ -102,7 +102,7 @@ const fr = {
     title2: 'attend',
     subtitle: "Parce que chaque athlète mérite d'être récompensé pour son effort.",
     prizeLabel: 'Prix',
-    note: "* Les équipes avec des exceptions d'âge ne seront pas considérées. Les trois prix seront attribués à des clubs différents. Les juges seront consultés si les scores sont égaux ou désignent deux fois le même club.",
+    note: "Les équipes avec des exceptions d'âge ne seront pas considérées. Les deux prix ALLSTAR GRAND CHAMPIONS seront attribués à des clubs différents. Les juges seront consultés si les scores sont égaux ou désignent deux fois le même club.",
     rewards: [
       { icon: '🥇', text: 'Chaque participant reçoit une médaille' },
       { icon: '🏳️', text: 'Les champions reçoivent une bannière' },
@@ -111,10 +111,6 @@ const fr = {
       { icon: '🏟️', text: 'Compétition sur praticable dynamique de 7 panels' },
       { icon: '🎯', text: 'Routine jugées par un panel Varsity qualifié' },
     ],
-    cheerSpirit: {
-      title: 'CHEER SPIRIT',
-      desc: "Un prix spécifique de « Cheer Spirit » viendra récompenser le club exemplaire en matière de respect, d'encouragement et d'esprit sportif.",
-    },
     grandChamps: [
       {
         title: '1ER ALLSTAR GRAND CHAMPION',
@@ -333,10 +329,6 @@ const fr = {
               q: "Est-ce qu'une équipe universitaire peut s'inscrire dans la catégorie Allstar ?",
               a: "Oui, cependant elle ne peut pas s'inscrire en Allstar et en Universitaire. L'équipe suivra alors la réglementation Allstar, les prix d'inscription Allstar et ne sera pas éligible au prix de Next Gen Grand Champion.",
             },
-          // {
-          //   q: "Comment est déterminé le titre de Cheer Spirit ?",
-          //   a: "Le titre de Cheer Spirit est attribué sur la base de deux critères combinés :\n\n• L'observation de nos bénévoles tout au long de la compétition, qui évaluent l'attitude, le respect, l'encouragement envers les autres équipes et l'esprit sportif général.\n\n• Les stories publiées sur les réseaux sociaux tagguant Crown Cheerleading Events pendant la journée, mettant en valeur cet esprit Cheer Spirit.\n\nLe titre est décerné au club qui aura brillé par son exemplarité sur ces deux tableaux.",
-          // },
         ],
       },
       {
