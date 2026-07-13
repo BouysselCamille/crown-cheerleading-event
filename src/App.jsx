@@ -8,6 +8,7 @@ import { Maintenance } from './pages/Maintenance';
 import { NotFound } from './pages/NotFound';
 import { VerificationInscriptions } from './pages/VerificationInscriptions';
 import { GenerateurDevis } from './pages/GenerateurDevis';
+import { Admin } from './pages/Admin';
 
 const MAINTENANCE = import.meta.env.VITE_MAINTENANCE === 'true';
 
@@ -22,8 +23,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="/verification-inscriptions" element={<VerificationInscriptions />} />
-          <Route path="/generateur-devis" element={<GenerateurDevis />} />
+          <Route path="/admin-da7c27dc" element={<Admin />} />
+          <Route path="/admin-da7c27dc/verification-inscriptions" element={<VerificationInscriptions />} />
+          <Route path="/admin-da7c27dc/generateur-devis" element={<GenerateurDevis />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

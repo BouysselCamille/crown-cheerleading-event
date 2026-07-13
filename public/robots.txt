@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /admin-da7c27dc/
 
 Sitemap: https://crown-cheerleading-events.fr/sitemap.xml

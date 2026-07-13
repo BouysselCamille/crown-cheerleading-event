@@ -143,7 +143,7 @@ export function VerificationInscriptions() {
     <div className="min-h-screen bg-crown-black pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-6">
         <Link
-          to="/"
+          to="/admin-da7c27dc"
           className="inline-flex items-center gap-2 text-gold text-sm font-display font-semibold mb-10 hover:opacity-80 transition-opacity"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
