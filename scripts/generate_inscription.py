@@ -19,6 +19,8 @@ GRAY2       = "F0F0F0"
 WHITE       = "1A1A1A"
 LIGHT_GRAY  = "111111"
 MID_GRAY    = "555555"
+RED         = "B00000"
+RED_TEXT    = "FFFFFF"
 
 def fill(hex_color):
     return PatternFill("solid", fgColor=hex_color)
@@ -153,24 +155,30 @@ ws1.row_dimensions[9].height = 10
 ws1.row_dimensions[10].height = 22
 merge_style(ws1, "A10:G10", "  RÉSUMÉ & CALCUL DES FRAIS", GOLD_DARK, BLACK, size=10, bold=True)
 
+# ── Ligne 11 : Avertissement calculs automatiques ─────────────────────────────
+ws1.row_dimensions[11].height = 30
+merge_style(ws1, "A11:G11",
+    "⚠ Les calculs ci-dessous sont automatiques et se mettent à jour en remplissant la feuille. Ne pas modifier.",
+    RED, RED_TEXT, size=9, bold=True, h="center", wrap=True)
+
 summary_rows = [
-    (11, "Nombre total d'athlètes",             '=COUNTA(Athlètes!B5:B39)'),
-    (12, "Dont athlètes masculins",              '=COUNTIF(Athlètes!E5:E39,"M")'),
-    (13, "Accompagnateurs inclus (2/équipe)",    2),
-    (14, "Accompagnateurs supplémentaires",      '=MAX(0,COUNTA(Accompagnateurs!B5:B11)-2)'),
-    (15, "Coût accompagnateurs suppl. (€)",      '=C14*40'),
+    (12, "Nombre total d'athlètes",             '=COUNTA(Athlètes!B5:B39)'),
+    (13, "Dont athlètes masculins",              '=COUNTIF(Athlètes!E5:E39,"M")'),
+    (14, "Accompagnateurs inclus (2/équipe)",    2),
+    (15, "Accompagnateurs supplémentaires",      '=MAX(0,COUNTA(Accompagnateurs!B5:B11)-2)'),
+    (16, "Coût accompagnateurs suppl. (€)",      '=C15*40'),
 ]
 for row, label, value in summary_rows:
     ws1.row_dimensions[row].height = 22
     label_cell(ws1, row, 2, label, fg=LIGHT_GRAY, size=10)
     calc_cell(ws1, row, 3, value)
 
-ws1.row_dimensions[16].height = 10
+ws1.row_dimensions[17].height = 10
 
-# ── Ligne 17 : Prix par athlète (calculé automatiquement selon le type) ───────
-ws1.row_dimensions[17].height = 26
-merge_style(ws1, "A17:B17", "  Prix par athlète (€)", GRAY, MID_GRAY, size=9)
-cprix = ws1["C17"]
+# ── Ligne 18 : Prix par athlète (calculé automatiquement selon le type) ───────
+ws1.row_dimensions[18].height = 26
+merge_style(ws1, "A18:B18", "  Prix par athlète (€)", GRAY, MID_GRAY, size=9)
+cprix = ws1["C18"]
 cprix.value = '=IF(C8="Démo",35,IF(ISNUMBER(SEARCH("Allstar",C8)),40,IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),37.5,IF(C8<>"","?",""))))'
 cprix.fill = fill(GRAY2)
 cprix.font = font(color=GOLD_DARK, size=11, bold=True)
@@ -178,38 +186,38 @@ cprix.alignment = align(h="center")
 cprix.border = Border(bottom=Side(style="thin", color=GOLD_DARK))
 cprix.protection = Protection(locked=True)
 
-cnote17 = ws1.cell(row=17, column=4,
+cnote18 = ws1.cell(row=18, column=4,
     value='=IF(C8="Démo","Démo : 35 €",IF(ISNUMBER(SEARCH("Allstar",C8)),"Allstar : 40 €",IF(OR(ISNUMBER(SEARCH("Prep",C8)),ISNUMBER(SEARCH("Universitaire",C8))),"Universitaire / Prep : 37,50 €",IF(C8<>"","? €","← sélectionnez une division"))))')
-cnote17.fill = fill(GRAY2)
-cnote17.font = font(color=MID_GRAY, size=8, italic=True)
-cnote17.alignment = align(h="left")
-cnote17.protection = Protection(locked=True)
-ws1.merge_cells("D17:G17")
+cnote18.fill = fill(GRAY2)
+cnote18.font = font(color=MID_GRAY, size=8, italic=True)
+cnote18.alignment = align(h="left")
+cnote18.protection = Protection(locked=True)
+ws1.merge_cells("D18:G18")
 
-ws1.row_dimensions[18].height = 10
+ws1.row_dimensions[19].height = 10
 
-# ── Ligne 19 : TOTAL ESTIMÉ ──────────────────────────────────────────────────
-ws1.row_dimensions[19].height = 32
-merge_style(ws1, "A19:B19", "  TOTAL ESTIMÉ (athlètes + accomp. suppl.)", BLACK, GOLD, size=10, bold=True)
-ct = ws1["C19"]
-ct.value = "=C11*C17+C15"
+# ── Ligne 20 : TOTAL ESTIMÉ ──────────────────────────────────────────────────
+ws1.row_dimensions[20].height = 32
+merge_style(ws1, "A20:B20", "  TOTAL ESTIMÉ (athlètes + accomp. suppl.)", BLACK, GOLD, size=10, bold=True)
+ct = ws1["C20"]
+ct.value = "=C12*C18+C16"
 ct.fill = fill(BLACK)
 ct.font = Font(bold=True, color=GOLD, size=14, name="Calibri")
 ct.alignment = align(h="center")
 ct.border = Border(top=Side(style="medium", color=GOLD), bottom=Side(style="medium", color=GOLD))
 ct.protection = Protection(locked=True)
 
-ws1.row_dimensions[20].height = 10
+ws1.row_dimensions[21].height = 10
 
-# ── Lignes 21-22 : Notes ──────────────────────────────────────────────────────
-ws1.row_dimensions[21].height = 36
-merge_style(ws1, "A21:G21",
+# ── Lignes 22-23 : Notes ──────────────────────────────────────────────────────
+ws1.row_dimensions[22].height = 36
+merge_style(ws1, "A22:G22",
     "Ce document ne fait pas office de facture. Les tarifs affichés sur le site "
     "crown-cheerleading-events.fr font valeur de référence.",
     GOLD_DARK, BLACK, size=9, wrap=True, bold=False)
 
-ws1.row_dimensions[22].height = 50
-merge_style(ws1, "A22:G22",
+ws1.row_dimensions[23].height = 50
+merge_style(ws1, "A23:G23",
     "Un acompte de 30 % est requis à l'inscription. "
     "Toute annulation avant la fermeture des inscriptions donne droit à un remboursement de 70 %, "
     "les 30 % d'acompte restant acquis. Le formulaire d'inscription pour l'envoi de ce fichier sera accessible à partir du 10 septembre 2026.",
