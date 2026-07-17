@@ -66,6 +66,9 @@ export function Inscription() {
             <p className="text-gray-400 text-xs uppercase tracking-widest font-display font-semibold mb-5">
               {t.inscription.prepareLabel}
             </p>
+            <p className="text-gray-600 text-xs my-4">
+              {t.inscription.downloadNote}
+            </p>
             <a
               href="/docs/inscription-equipe.xlsx"
               download="Crown_CE_Inscription_Equipe.xlsx"
@@ -78,7 +81,7 @@ export function Inscription() {
               {t.inscription.downloadBtn}
             </a>
             <p className="text-gray-600 text-xs mt-4">
-              {t.inscription.downloadNote}
+              {t.inscription.downloadTip}
             </p></>
           )}
 

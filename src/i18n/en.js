@@ -141,6 +141,7 @@ badge: 'Judged under IASF / United Scoring System standards',
     prepareLabel: 'Prepare your file',
     downloadBtn: 'Download the registration Excel file',
     downloadNote: 'Submit the completed file when registering online',
+    downloadTip: "Tip: no Excel software? You can import and edit this file from your drive.",
   },
 
   tickets: {

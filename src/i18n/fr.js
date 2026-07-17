@@ -141,6 +141,7 @@ const fr = {
     prepareLabel: 'Préparez votre dossier',
     downloadBtn: "Télécharger le fichier Excel d'inscription",
     downloadNote: 'Fichier à remettre complété lors de votre inscription en ligne',
+    downloadTip: "Astuce : pas de logiciel Excel ? Vous pouvez importer et modifier ce fichier depuis votre drive.",
   },
 
   tickets: {
