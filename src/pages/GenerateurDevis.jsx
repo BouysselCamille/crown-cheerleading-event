@@ -45,6 +45,7 @@ export function GenerateurDevis() {
   const [numeroDevis, setNumeroDevis] = useState('');
   const [nomClub, setNomClub] = useState('');
   const [emailClub, setEmailClub] = useState('');
+  const [adresseClub, setAdresseClub] = useState('');
   const [nbAllstar, setNbAllstar] = useState('');
   const [nbPrep, setNbPrep] = useState('');
   const [nbDemo, setNbDemo] = useState('');
@@ -271,6 +272,16 @@ export function GenerateurDevis() {
                 className="w-full bg-crown-black border border-gold/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold transition-colors"
               />
             </label>
+            <label className="block md:col-span-2">
+              <span className="block text-sm font-display font-semibold text-white mb-1">Adresse du club</span>
+              <input
+                type="text"
+                placeholder="11 avenue Ledru Rollin, 75012, FRANCE"
+                value={adresseClub}
+                onChange={(e) => setAdresseClub(e.target.value)}
+                className="w-full bg-crown-black border border-gold/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold transition-colors"
+              />
+            </label>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -356,6 +367,7 @@ export function GenerateurDevis() {
             <div className="label">Destinataire</div>
             <div className="name">{nomClub || '—'}</div>
             <div className="email">{emailClub || '—'}</div>
+            <div>{adresseClub || '—'}</div>
           </div>
 
           <h2 className="section">Détail des prestations</h2>
