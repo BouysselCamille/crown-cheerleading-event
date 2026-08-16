@@ -24,7 +24,7 @@ export function Home() {
       <FAQ />
       <PlanAcces />
       <Contact />
-      {/* <Sponsors /> */}
+      <Sponsors />
     </>
   );
 }

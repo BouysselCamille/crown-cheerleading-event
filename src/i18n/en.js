@@ -11,7 +11,7 @@ const en = {
     ],
     extraLinks: [
       { label: 'Awards', href: '#awards' },
-      // { label: 'Partners', href: '#sponsors' },
+      { label: 'Partners', href: '#sponsors' },
       { label: 'FAQ', href: '#faq' },
     ],
     tickets: 'Tickets',

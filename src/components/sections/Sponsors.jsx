@@ -3,15 +3,17 @@ import { SectionTitle } from '../ui/SectionTitle';
 import { SPONSORS } from '../../constants/competitionData';
 import { useTranslation } from '../../i18n/index.jsx';
 
-function SponsorCard({ name, logo }) {
+function SponsorCard({ name, logo, url, bleed, className = '' }) {
+  const Wrapper = url ? 'a' : 'div';
+  const wrapperProps = url ? { href: url, target: '_blank', rel: 'noopener noreferrer' } : {};
 
   return (
-    <div className={`border border-gold/50 bg-crown-white rounded-xl h-28 flex items-center justify-center px-6 hover:bg-crown-white transition-colors`}>
+    <Wrapper {...wrapperProps} className={`border border-gold/50 bg-crown-white rounded-xl h-28 flex items-center justify-center overflow-hidden hover:bg-crown-white transition-colors ${logo && !bleed ? 'p-4' : ''} ${logo ? '' : 'px-6'} ${className}`}>
       {logo
-        ? <img src={logo} alt={name} className="max-h-16 max-w-full object-contain" />
+        ? <img src={logo} alt={name} className="w-full h-full object-contain" />
         : <span className={`font-display font-bold text-sm text-center ${style.text}`}>{name}</span>
       }
-    </div>
+    </Wrapper>
   );
 }
 
@@ -36,7 +38,12 @@ export function Sponsors() {
         </motion.div>
 
         <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
-          {SPONSORS.map(s => <SponsorCard key={s.name} {...s} />)}
+          {SPONSORS.map((s, i) => {
+            const isLastOdd = i === SPONSORS.length - 1 && SPONSORS.length % 2 !== 0;
+            return isLastOdd
+              ? <div key={s.name} className="col-span-2 flex justify-center"><SponsorCard {...s} className="w-1/2" /></div>
+              : <SponsorCard key={s.name} {...s} />;
+          })}
         </div>
 
         <motion.div
