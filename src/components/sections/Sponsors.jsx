@@ -3,12 +3,12 @@ import { SectionTitle } from '../ui/SectionTitle';
 import { SPONSORS } from '../../constants/competitionData';
 import { useTranslation } from '../../i18n/index.jsx';
 
-function SponsorCard({ name, logo, url, bleed, className = '' }) {
+function SponsorCard({ name, logo, url, bg, className = '' }) {
   const Wrapper = url ? 'a' : 'div';
   const wrapperProps = url ? { href: url, target: '_blank', rel: 'noopener noreferrer' } : {};
 
   return (
-    <Wrapper {...wrapperProps} className={`border border-gold/50 bg-crown-white rounded-xl h-28 flex items-center justify-center overflow-hidden hover:bg-crown-white transition-colors ${logo && !bleed ? 'p-4' : ''} ${logo ? '' : 'px-6'} ${className}`}>
+    <Wrapper {...wrapperProps} style={{ backgroundColor: bg || '#fff' }} className={`border border-gold/50 rounded-xl h-28 flex items-center justify-center overflow-hidden transition-colors ${logo ? 'p-4' : 'px-6'} ${className}`}>
       {logo
         ? <img src={logo} alt={name} className="w-full h-full object-contain" />
         : <span className={`font-display font-bold text-sm text-center ${style.text}`}>{name}</span>
