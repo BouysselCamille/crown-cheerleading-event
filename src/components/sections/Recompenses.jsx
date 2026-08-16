@@ -2,8 +2,6 @@ import { motion } from 'framer-motion';
 import { SectionTitle } from '../ui/SectionTitle';
 import { useTranslation } from '../../i18n/index.jsx';
 
-const MONEY_INFO = import.meta.env.VITE_MONEY_INFO === 'true';
-
 export function Recompenses() {
   const { t } = useTranslation();
 
@@ -41,59 +39,56 @@ export function Recompenses() {
           ))}
         </div>
 
-        {MONEY_INFO ? (<>
-          {/* Prix Grand Champion */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4"
-          >
-            {t.recompenses.grandChamps.map((g) => (
-              <div
-                key={g.title}
-                className="relative border border-gold bg-crown-gray rounded-2xl overflow-hidden"
-              >
-                {/* Glow */}
-                <div className="absolute inset-0 bg-gold/3 pointer-events-none" />
-
-                <div className="relative p-8 text-center">
-                  <div className="text-3xl mb-4"><motion.div
+        {/* Prix Grand Champion */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex justify-center mt-2"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4"
         >
-          <img
-            src="/CROWN-Cheer_COURONNE.PNG"
-            alt="Crown Cheer"
-            className="w-30 h-auto opacity-90"
-          />
-        </motion.div></div>
-                  <p className="text-gold font-display font-black text-xs tracking-widest uppercase mb-2">{t.recompenses.prizeLabel}</p>
-                  <h3 className="text-white font-display font-black text-lg leading-tight mb-3">{g.title}</h3>
-                  <p className="text-gray-400 text-sm mb-6 leading-relaxed">{g.desc}</p>
-                  <div className="gold-gradient rounded-xl py-3 px-6 inline-block">
-                    <span className="text-black font-display font-black text-2xl tracking-tight">
-                      {g.prize}
-                    </span>
-                  </div>
+          {t.recompenses.grandChamps.map((g) => (
+            <div
+              key={g.title}
+              className="relative border border-gold bg-crown-gray rounded-2xl overflow-hidden"
+            >
+              {/* Glow */}
+              <div className="absolute inset-0 bg-gold/3 pointer-events-none" />
+
+              <div className="relative p-8 text-center">
+                <div className="text-3xl mb-4"><motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="flex justify-center mt-2"
+                >
+                  <img
+                    src="/CROWN-Cheer_COURONNE.PNG"
+                    alt="Crown Cheer"
+                    className="w-30 h-auto opacity-90"
+                  />
+                </motion.div></div>
+                <p className="text-gold font-display font-black text-xs tracking-widest uppercase mb-2">{t.recompenses.prizeLabel}</p>
+                <h3 className="text-white font-display font-black text-lg leading-tight mb-3">{g.title}</h3>
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">{g.desc}</p>
+                <div className="gold-gradient rounded-xl py-3 px-6 inline-block">
+                  <span className="text-black font-display font-black text-2xl tracking-tight">
+                    {g.prize}
+                  </span>
                 </div>
               </div>
-            ))}
-          </motion.div>
+            </div>
+          ))}
+        </motion.div>
 
-          {/* Note */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-gray-600 text-xs text-center leading-relaxed max-w-2xl mx-auto mb-12"
-          >
-            {t.recompenses.note}
-          </motion.p>
-
-        </>) : (null)}
+        {/* Note */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-gray-600 text-xs text-center leading-relaxed max-w-2xl mx-auto mb-12"
+        >
+          {t.recompenses.note}
+        </motion.p>
 
       </div>
     </section >
