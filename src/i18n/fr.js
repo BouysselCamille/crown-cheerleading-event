@@ -137,11 +137,9 @@ const fr = {
     subtitle: 'Toutes les informations pour inscrire votre club à la compétition.',
     formTitle: "Formulaire d'inscription disponible le",
     formDate: '10 septembre',
-    formDesc: "Le formulaire d'inscription en ligne ouvrira le <strong>10 septembre</strong>. En attendant, les dirigeants peuvent dès maintenant télécharger le fichier Excel à compléter et à fournir au moment de l'inscription. <strong>Un fichier Excel par équipe</strong> sera requis.",
-    prepareLabel: 'Préparez votre dossier',
-    downloadBtn: "Télécharger le fichier Excel d'inscription",
-    downloadNote: 'Fichier à remettre complété lors de votre inscription en ligne',
-    downloadTip: "Astuce : pas de logiciel Excel ? Vous pouvez importer et modifier ce fichier depuis votre drive.",
+    formDesc: "L'inscription des équipes se fera sur la plateforme <strong>Cheer Genius</strong> à partir du <strong>10 septembre</strong>.",
+    prepareLabel: 'Ouverture le 10 septembre',
+    downloadBtn: "S'inscrire sur Cheer Genius",
   },
 
   tickets: {
