@@ -65,6 +65,7 @@ const fr = {
     subtitle: 'Profitez du tarif Early Bird pour réserver vos places au meilleur prix.',
     perAthlete: 'Tarif par athlète',
     noteAccompagnateurs: '<span class="text-white font-semibold">Accompagnateurs :</span> Chaque équipe bénéficie de <span class="text-gold font-semibold">2 accompagnateurs inclus</span> dans les frais d\'inscription.',
+    notePrep: 'Nouveau cette saison : la division <span class="text-gold font-semibold">Prep</span>. <a href="/division-prep" class="text-gold underline underline-offset-2 hover:text-gold-light">Découvrir ce que c\'est</a>.',
     docLabel: 'Catégories de compétition',
     docLink: '/docs/categories.html',
     ruleDocLabel: 'Règlement général',
@@ -469,6 +470,52 @@ const fr = {
       {
         title: '7. Billetterie Assoconnect',
         content: "L'achat de billets est géré par Assoconnect, soumis à sa propre politique de confidentialité. Nous vous invitons à la consulter sur le site Assoconnect.",
+      },
+    ],
+  },
+
+  prepArticle: {
+    back: "Retour à l'accueil",
+    label: 'Nouveau cette saison',
+    title: "Qu'est-ce que la division Prep ?",
+    subtitle: "Le guide pour comprendre cette catégorie avant d'inscrire votre équipe.",
+    sections: [
+      {
+        title: 'Une division pensée pour débuter',
+        content: "La division Prep (Cheer Prep) est conçue pour les équipes qui vivent leur première expérience compétitive. Les exigences de tumbling et de stunting y sont réduites par rapport aux divisions Allstar, pour permettre à chaque club de se présenter en compétition en toute confiance.",
+      },
+      {
+        title: 'La catégorie Prep, c\'est pour qui ? 🤔',
+        content: "👑 Les équipes qui découvrent la compétition.\n🌉 Les équipes entre le niveau 1 et le niveau 2 qui souhaitent progresser à leur rythme.\n🚀 Les équipes qui veulent commencer la saison avec une routine plus accessible pour prendre confiance avant de passer en All Star.\n\nLa division Prep est pensée pour accompagner la progression de chaque équipe, sans brûler les étapes 🩵",
+      },
+      {
+        title: 'Qui peut s\'inscrire ?',
+        content: "La Prep est ouverte à toutes les catégories d'âge, du plus jeune au plus expérimenté.",
+        info: [
+          { label: "Catégories d'âge", value: 'U8, U12, U16, U18, Open et Masters' },
+          { label: 'Athlètes par équipe', value: '5 à 30' },
+          { label: 'Niveaux autorisés', value: '1, 2 et 2.1' },
+          { label: 'Durée de routine', value: '2 minutes' },
+        ],
+      },
+      {
+        title: 'Règles spécifiques',
+        items: [
+          "Aucun toss n'est autorisé dans ces divisions (inclut les toss appelés « Sponge », load in ou smoosh). Toutes les cradles à hauteur de la taille sont interdites.",
+          "Prep Level 2.1 suit les règles de building du niveau 2 et les règles de tumbling du niveau 1.",
+        ],
+      },
+      {
+        title: 'Tarif',
+        content: "L'inscription en Prep suit le même tarif que la catégorie Universitaire : 37,50 EUR par athlète en Early Bird, 45,00 EUR en Entrée Générale.",
+      },
+      {
+        title: 'Aller plus loin',
+        content: "Le barème de notation complet est disponible dans le United Scoring System. Vous pouvez aussi consulter notre document de catégories ou le règlement général pour tous les détails.",
+        links: [
+          { label: 'Consulter les catégories de compétition', href: '/docs/categories.html' },
+        ],
+        embeds: ['/docs/prep-rubric.pdf', '/docs/prep-master-scoresheet.pdf'],
       },
     ],
   },

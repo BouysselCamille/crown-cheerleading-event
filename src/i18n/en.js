@@ -65,6 +65,7 @@ badge: 'Judged under IASF / United Scoring System standards',
     subtitle: 'Take advantage of the Early Bird rate to secure your spot at the best price.',
     perAthlete: 'Price per athlete',
     noteAccompagnateurs: '<span class="text-white font-semibold">Coaches & team staff:</span> Each team receives <span class="text-gold font-semibold">2 included passes</span> with their registration.',
+    notePrep: 'New this season: the <span class="text-gold font-semibold">Prep</span> division. <a href="/division-prep" class="text-gold underline underline-offset-2 hover:text-gold-light">Find out what it is</a>.',
     docLabel: 'Competition categories',
     docLink: '/docs/categories_en.html',
     ruleDocLabel: 'Competition general rules',
@@ -465,6 +466,52 @@ badge: 'Judged under IASF / United Scoring System standards',
       {
         title: '7. Assoconnect ticketing',
         content: "Ticket purchases are managed by Assoconnect, subject to its own privacy policy. We invite you to consult it on the Assoconnect website.",
+      },
+    ],
+  },
+
+  prepArticle: {
+    back: 'Back to home',
+    label: 'New this season',
+    title: 'What is the Prep division?',
+    subtitle: 'Everything you need to know before registering your team.',
+    sections: [
+      {
+        title: 'A division designed for first-timers',
+        content: "The Prep division (Cheer Prep) is designed for teams competing for the first time. Tumbling and stunting requirements are reduced compared to the Allstar divisions, so every club can step onto the competition floor with confidence.",
+      },
+      {
+        title: 'Who is the Prep category for? 🤔',
+        content: "👑 Teams discovering competition for the first time.\n🌉 Teams between level 1 and level 2 who want to progress at their own pace.\n🚀 Teams who want to start the season with a more accessible routine to build confidence before moving up to All Star.\n\nThe Prep division is designed to support every team's progression, without skipping steps 🩵",
+      },
+      {
+        title: 'Who can register?',
+        content: 'Prep is open to every age category, from the youngest to the most experienced.',
+        info: [
+          { label: 'Age categories', value: 'U8, U12, U16, U18, Open and Masters' },
+          { label: 'Athletes per team', value: '5 to 30' },
+          { label: 'Allowed levels', value: '1, 2 and 2.1' },
+          { label: 'Routine duration', value: '2 minutes' },
+        ],
+      },
+      {
+        title: 'Specific rules',
+        items: [
+          "No tosses permitted in these divisions — Clarification: This includes 'Sponge' (also known as load in or Squish) tosses. Clarification: All waist level cradles are illegal.",
+          "In the All Star Prep levelling system the 1st number refers to the building level, the 2nd to the tumbling level. Example: All Star Prep Level 2.1 follows level 2 building rules and level 1 tumbling rules.",
+        ],
+      },
+      {
+        title: 'Pricing',
+        content: 'Prep registration follows the same rate as the University category: 37.50 EUR per athlete Early Bird, 45.00 EUR General Entry.',
+      },
+      {
+        title: 'Go further',
+        content: 'The full scoring rubrics are available under United Scoring System. You can also check our categories document or the general rulebook for all the details.',
+        links: [
+          { label: 'View the competition categories', href: '/docs/categories.html' },
+        ],
+        embeds: ['/docs/prep-rubric.pdf', '/docs/prep-master-scoresheet.pdf'],
       },
     ],
   },

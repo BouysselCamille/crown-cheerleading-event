@@ -4,6 +4,7 @@ import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { PolitiqueConfidentialite } from './pages/PolitiqueConfidentialite';
 import { MentionsLegales } from './pages/MentionsLegales';
+import { PrepDivision } from './pages/PrepDivision';
 import { Maintenance } from './pages/Maintenance';
 import { NotFound } from './pages/NotFound';
 import { VerificationInscriptions } from './pages/VerificationInscriptions';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/division-prep" element={<PrepDivision />} />
           <Route path="/admin-da7c27dc" element={<Admin />} />
           <Route path="/admin-da7c27dc/verification-inscriptions" element={<VerificationInscriptions />} />
           <Route path="/admin-da7c27dc/generateur-devis" element={<GenerateurDevis />} />
