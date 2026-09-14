@@ -511,7 +511,10 @@ badge: 'Judged under IASF / United Scoring System standards',
         links: [
           { label: 'View the competition categories', href: '/docs/categories.html' },
         ],
-        embeds: ['/docs/prep-rubric.pdf', '/docs/prep-master-scoresheet.pdf'],
+        downloads: [
+          { label: 'Download the scoring rubric', href: '/docs/prep-rubric.pdf' },
+          { label: 'Download the master scoresheet', href: '/docs/prep-master-scoresheet.pdf' },
+        ],
       },
     ],
   },

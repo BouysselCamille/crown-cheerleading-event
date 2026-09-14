@@ -48,14 +48,19 @@ export function PrepDivision() {
                   ))}
                 </div>
               )}
-              {s.embeds && s.embeds.map((src, j) => (
-                <iframe
-                  key={j}
-                  src={src}
-                  title={`${s.title} ${j + 1}`}
-                  className="w-full h-[600px] mt-4 rounded-xl border border-gold/20"
-                />
-              ))}
+              {s.downloads && (
+                <div className="mt-3 flex flex-col gap-3">
+                  {s.downloads.map((dl, j) => (
+                    <a key={j} href={dl.href} download
+                      className="flex items-center justify-center gap-2 border border-gold/30 rounded-xl px-5 py-3 text-gold font-display font-semibold text-sm hover:bg-crown-gray transition-colors">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                      {dl.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </section>
           ))}
         </div>

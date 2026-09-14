@@ -316,7 +316,7 @@ const fr = {
           
           {
   q: "Qu'est-ce que la catégorie Prep ?",
-  a: "La catégorie Prep est conçue pour les équipes souhaitant vivre une première expérience compétitive. La routine dure 2 minutes, avec des exigences réduites en tumbling et en stunting. Pour plus de détails, consultez les scoring rubrics dans : United Scoring System > United Kingdom > Prep."
+  a: "La catégorie Prep est conçue pour les équipes souhaitant vivre une première expérience compétitive. La routine dure 2 minutes, avec des exigences réduites en tumbling et en stunting. Pour plus de détails, consultez les rubriques de notation dans : United Scoring System > United Kingdom > Prep."
 },
           {
             q: 'La compétition fournit-elle des spotteurs ?',
@@ -511,11 +511,14 @@ const fr = {
       },
       {
         title: 'Aller plus loin',
-        content: "Le barème de notation complet est disponible dans le United Scoring System. Vous pouvez aussi consulter notre document de catégories ou le règlement général pour tous les détails.",
+        content: "La rubrique de notation complète est disponible dans le United Scoring System. Vous pouvez aussi consulter notre document de catégories ou le règlement général pour tous les détails.",
         links: [
           { label: 'Consulter les catégories de compétition', href: '/docs/categories.html' },
         ],
-        embeds: ['/docs/prep-rubric.pdf', '/docs/prep-master-scoresheet.pdf'],
+        downloads: [
+          { label: 'Télécharger la rubrique de notation', href: '/docs/prep-rubric.pdf' },
+          { label: 'Télécharger la feuille de score', href: '/docs/prep-master-scoresheet.pdf' },
+        ],
       },
     ],
   },
