@@ -490,7 +490,7 @@ const fr = {
       },
       {
         title: 'Qui peut s\'inscrire ?',
-        content: "La Prep est ouverte à toutes les catégories d'âge, du plus jeune au plus expérimenté.",
+        content: "La division Prep est ouverte à toutes les catégories d'âge, du plus jeune au plus sage.",
         info: [
           { label: "Catégories d'âge", value: 'U8, U12, U16, U18, Open et Masters' },
           { label: 'Athlètes par équipe', value: '5 à 30' },

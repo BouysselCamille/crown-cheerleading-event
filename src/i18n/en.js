@@ -486,7 +486,7 @@ badge: 'Judged under IASF / United Scoring System standards',
       },
       {
         title: 'Who can register?',
-        content: 'Prep is open to every age category, from the youngest to the most experienced.',
+        content: 'Prep is open to every age category, from the youngest to the wisest.',
         info: [
           { label: 'Age categories', value: 'U8, U12, U16, U18, Open and Masters' },
           { label: 'Athletes per team', value: '5 to 30' },
