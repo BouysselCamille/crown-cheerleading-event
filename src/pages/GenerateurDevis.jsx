@@ -50,6 +50,7 @@ export function GenerateurDevis() {
   const [nbPrep, setNbPrep] = useState('');
   const [nbDemo, setNbDemo] = useState('');
   const [nbAccompagnateurs, setNbAccompagnateurs] = useState('');
+  const [montantDejaRegle, setMontantDejaRegle] = useState('');
 
   const dateEmission = useMemo(() => new Date().toLocaleDateString('fr-FR'), []);
 
@@ -68,7 +69,8 @@ export function GenerateurDevis() {
     [lineItems]
   );
   const acompte = round2(total * 0.3);
-  const solde = round2(total - acompte);
+  const dejaRegle = Math.min(toNumber(montantDejaRegle), total);
+  const solde = round2(total - (dejaRegle > 0 ? dejaRegle : acompte));
 
   const isReady = numeroDevis.trim() !== '' && nomClub.trim() !== '' && emailClub.trim() !== '' && lineItems.length > 0;
 
@@ -311,6 +313,24 @@ export function GenerateurDevis() {
             />
           </div>
 
+          <label className="block mb-6 max-w-xs">
+            <span className="block text-sm font-display font-semibold text-white mb-1">
+              Montant déjà réglé
+            </span>
+            <span className="block text-xs text-gray-500 mb-2">
+              Mise à jour d'un devis existant — laisser vide si acompte standard 30 %
+            </span>
+            <input
+              type="number"
+              min="0"
+              step="0.01"
+              inputMode="decimal"
+              value={montantDejaRegle}
+              onChange={(e) => setMontantDejaRegle(e.target.value)}
+              className="w-full bg-crown-black border border-gold/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-gold transition-colors"
+            />
+          </label>
+
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-gold/10 pt-6">
             <div>
               <span className="text-gray-500 text-sm uppercase tracking-widest font-display font-semibold">
@@ -416,24 +436,49 @@ export function GenerateurDevis() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><span className="badge">Acompte 30 %</span></td>
-                <td>
-                  À régler à réception du devis
-                  <div className="desc">(indispensable pour valider la place)</div>
-                </td>
-                <td className="num">{currency.format(acompte)}</td>
-                <td>À la réception du devis</td>
-              </tr>
-              <tr>
-                <td><span className="badge">Solde 70 %</span></td>
-                <td>
-                  Règlement du solde
-                  <div className="desc">(tarif Early Bird si avant le {EARLY_BIRD_DEADLINE})</div>
-                </td>
-                <td className="num">{currency.format(solde)}</td>
-                <td>Avant le {EARLY_BIRD_DEADLINE}</td>
-              </tr>
+              {dejaRegle > 0 ? (
+                <>
+                  <tr>
+                    <td><span className="badge">Déjà réglé</span></td>
+                    <td>
+                      Acompte réglé sur le devis initial
+                      <div className="desc">(mise à jour du devis)</div>
+                    </td>
+                    <td className="num">{currency.format(dejaRegle)}</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td><span className="badge">Solde restant</span></td>
+                    <td>
+                      Règlement du solde
+                      <div className="desc">(tarif Early Bird si avant le {EARLY_BIRD_DEADLINE})</div>
+                    </td>
+                    <td className="num">{currency.format(solde)}</td>
+                    <td>Avant le {EARLY_BIRD_DEADLINE}</td>
+                  </tr>
+                </>
+              ) : (
+                <>
+                  <tr>
+                    <td><span className="badge">Acompte 30 %</span></td>
+                    <td>
+                      À régler à réception du devis
+                      <div className="desc">(indispensable pour valider la place)</div>
+                    </td>
+                    <td className="num">{currency.format(acompte)}</td>
+                    <td>À la réception du devis</td>
+                  </tr>
+                  <tr>
+                    <td><span className="badge">Solde 70 %</span></td>
+                    <td>
+                      Règlement du solde
+                      <div className="desc">(tarif Early Bird si avant le {EARLY_BIRD_DEADLINE})</div>
+                    </td>
+                    <td className="num">{currency.format(solde)}</td>
+                    <td>Avant le {EARLY_BIRD_DEADLINE}</td>
+                  </tr>
+                </>
+              )}
             </tbody>
           </table>
 
