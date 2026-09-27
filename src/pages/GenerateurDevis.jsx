@@ -7,6 +7,8 @@ const PRICES = {
   prep: 37.5,
   demo: 35,
   accompagnateur: 40,
+  photographe: 40,
+  mascotte: 40,
 };
 
 const EARLY_BIRD_DEADLINE = '11/12/2026';
@@ -50,6 +52,8 @@ export function GenerateurDevis() {
   const [nbPrep, setNbPrep] = useState('');
   const [nbDemo, setNbDemo] = useState('');
   const [nbAccompagnateurs, setNbAccompagnateurs] = useState('');
+  const [nbPhotographe, setNbPhotographe] = useState('');
+  const [nbMascotte, setNbMascotte] = useState('');
   const [montantDejaRegle, setMontantDejaRegle] = useState('');
 
   const dateEmission = useMemo(() => new Date().toLocaleDateString('fr-FR'), []);
@@ -60,9 +64,11 @@ export function GenerateurDevis() {
       { label: 'Athlète — division Prep / Universitaire', qty: toNumber(nbPrep), pu: PRICES.prep },
       { label: 'Athlète — division Démo', qty: toNumber(nbDemo), pu: PRICES.demo },
       { label: 'Accompagnateur supplémentaire', qty: toNumber(nbAccompagnateurs), pu: PRICES.accompagnateur },
+      { label: 'Photographe', qty: toNumber(nbPhotographe), pu: PRICES.photographe },
+      { label: 'Mascotte', qty: toNumber(nbMascotte), pu: PRICES.mascotte },
     ];
     return items.filter((item) => item.qty > 0);
-  }, [nbAllstar, nbPrep, nbDemo, nbAccompagnateurs]);
+  }, [nbAllstar, nbPrep, nbDemo, nbAccompagnateurs, nbPhotographe, nbMascotte]);
 
   const total = useMemo(
     () => round2(lineItems.reduce((sum, item) => sum + item.qty * item.pu, 0)),
@@ -310,6 +316,18 @@ export function GenerateurDevis() {
               priceLabel={`${currency.format(PRICES.accompagnateur)} / personne`}
               value={nbAccompagnateurs}
               onChange={setNbAccompagnateurs}
+            />
+            <NumberField
+              label="Photographe"
+              priceLabel={`${currency.format(PRICES.photographe)} / personne`}
+              value={nbPhotographe}
+              onChange={setNbPhotographe}
+            />
+            <NumberField
+              label="Mascotte"
+              priceLabel={`${currency.format(PRICES.mascotte)} / personne`}
+              value={nbMascotte}
+              onChange={setNbMascotte}
             />
           </div>
 
